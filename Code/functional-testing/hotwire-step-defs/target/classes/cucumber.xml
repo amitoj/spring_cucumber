@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+	default-lazy-init="true">
+
+	<bean id="randomEmail" class="java.lang.String">
+		<constructor-arg
+			value="user#{new java.util.Random().nextDouble()}@hotwire.com" />
+	</bean>
+
+	<!-- this is from external projects -->
+	<import resource="classpath*:application-webdriver-context.xml" />
+
+	<!-- local definitions Add new context in alphabetical order to exclude 
+		duplicates -->
+	<import resource="classpath*:cucumber-accessibility-context.xml" />
+	<import resource="classpath*:cucumber-account-context.xml" />
+	<import resource="classpath*:cucumber-angular-context.xml" />
+	<import resource="classpath*:cucumber-application-context.xml" />
+	<import resource="classpath*:cucumber-authentication-context.xml" />
+    <import resource="classpath*:cucumber-bex-context.xml" />
+	<import resource="classpath*:cucumber-contact-context.xml" />
+	<import resource="classpath*:cucumber-couponcode-context.xml" />
+	<import resource="classpath*:cucumber-customer-care-module-context.xml" />
+	<import resource="classpath*:cucumber-deals-context.xml" />
+	<import resource="classpath*:cucumber-discount-context.xml" />
+	<import resource="classpath*:cucumber-help-context.xml" />
+	<import resource="classpath*:cucumber-job-context.xml" />
+	<import resource="classpath*:cucumber-legal-context.xml" />
+	<import resource="classpath*:cucumber-mail-context.xml" />
+	<import resource="classpath*:cucumber-my-trips-context.xml" />
+	<import resource="classpath*:cucumber-netscaler-context.xml" />
+	<import resource="classpath*:cucumber-partners-context.xml" />
+	<import resource="classpath*:cucumber-paypal-context.xml" />
+	<import resource="classpath*:cucumber-planningtools-context.xml" />
+	<import resource="classpath*:cucumber-purchase-context.xml" />
+	<import resource="classpath*:cucumber-rome-context.xml" />
+	<import resource="classpath*:cucumber-search-context.xml" />
+	<import resource="classpath*:cucumber-seo-context.xml" />
+	<import resource="classpath*:cucumber-tripstarter-context.xml" />
+	<import resource="classpath*:cucumber-golocalsearch-context.xml" />
+	<import resource="classpath*:cucumber-db-context.xml" />
+	<import resource="classpath*:cucumber-properties-context.xml" />
+	<import resource="classpath*:cucumber-about-us-context.xml" />
+	<import resource="classpath*:cucumber-contact-us-context.xml" />
+	<import resource="classpath*:helpcenter-context.xml" />	
+	<import resource="classpath*:cucumber-post-purchase-context.xml" />	
+	<import resource="classpath*:cucumber-validation-context.xml" />
+	<import resource="classpath*:cucumber-steps-context.xml" />
+
+
+	<!-- db integration -->
+	<import resource="classpath*:database-support-context.xml" />
+
+	<bean id="ExceptionConversionAdvice" class="com.hotwire.test.steps.util.ExceptionConversionAdvice" />
+	<aop:config>
+		<aop:advisor advice-ref="ExceptionConversionAdvice"
+			pointcut="bean(*Model)" />
+	</aop:config>
+
+</beans>

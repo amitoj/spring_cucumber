@@ -1,0 +1,35 @@
+@US
+Feature: Opaque CrossSell for Retail
+    When a user is searching for retail, we should try to steer the user towards an opaque solution.
+
+    Background:
+        Given default dataset
+        Given the application is accessible
+
+    @ACCEPTANCE @JANKY
+    Scenario Outline: The user is presented with a better opaque deal when searching retail hotels
+        Given The <crossSellType> opaque cross sell deal is activated
+        And I'm searching for a hotel in "<destinationLocation>"
+        And I want to travel between <startDateShift> days from now and <endDateShift> days from now
+        And I request quotes
+        When I choose retail hotels tab on results
+        And I see the cross sell deal in search results
+        And I navigate to the cross sell deal from search results
+        Then I will see the <crossSellType> opaque cross sell deal details
+
+    Examples:
+        | destinationLocation   | startDateShift | endDateShift | crossSellType |
+        | San Francisco, CA     | 3              |  5           | new           |
+
+    Scenario Outline: The user is presented with a retail solution when searching opaque hotels
+        Given I'm searching for a hotel in "<destinationLocation>"
+        And I want to travel between <startDateShift> days from now and <endDateShift> days from now
+        And I request quotes
+        When I choose <searchedMarket> hotels tab on results
+        And I see the cross sell deal in search results
+        And I navigate to the cross sell deal from search results
+        Then I will see the <expectedMarket> cross sell deal details
+
+    Examples:
+        | destinationLocation   | startDateShift | endDateShift | searchedMarket | expectedMarket |
+        | San Francisco, CA     | 3              |  5           | opaque         | retail         |

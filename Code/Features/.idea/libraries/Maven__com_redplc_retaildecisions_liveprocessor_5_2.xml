@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.redplc.retaildecisions:liveprocessor:5.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/redplc/retaildecisions/liveprocessor/5.2/liveprocessor-5.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/redplc/retaildecisions/liveprocessor/5.2/liveprocessor-5.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/redplc/retaildecisions/liveprocessor/5.2/liveprocessor-5.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

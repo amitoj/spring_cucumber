@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<beans profile="WebApp">
+    <bean id="payPalModel" class="com.hotwire.test.steps.purchase.paypal.PayPalModelWebApp">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+        <property name="payPalDeveloperUrl" value="https://developer.paypal.com/"/>
+        <property name="adminEmail" value="hotwirepal@gmail.com"/>
+        <property name="sandboxEmail" value="hotwire@paypal.com"/>
+        <property name="password" value="expedia1"/>
+    </bean>
+</beans>
+<beans profile="RowWebApp">
+<bean id="payPalModel" class="com.hotwire.spring.better.factories.EasyBakeProxyFactoryBean"
+      factory-method="buildAllwaysThrows" lazy-init="false">
+    <constructor-arg index="0" value="com.hotwire.test.steps.purchase.paypal.PayPalModel"/>
+    <constructor-arg index="1">
+        <bean id="pendingException" class="cucumber.api.PendingException">
+            <constructor-arg value="this is not the Model you are looking for...."/>
+        </bean>
+    </constructor-arg>
+</bean>
+</beans>
+<beans profile="MobileWebApp">
+<bean id="payPalModel" class="com.hotwire.spring.better.factories.EasyBakeProxyFactoryBean"
+      factory-method="buildAllwaysThrows" lazy-init="false">
+    <constructor-arg index="0" value="com.hotwire.test.steps.purchase.paypal.PayPalModel"/>
+    <constructor-arg index="1">
+        <bean id="pendingException" class="cucumber.api.PendingException">
+            <constructor-arg value="this is not the Model you are looking for...."/>
+        </bean>
+    </constructor-arg>
+</bean>
+</beans>
+
+</beans>

@@ -1,0 +1,410 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.hotwire.maven</groupId>
+        <artifactId>HotwireDeploymentParent</artifactId>
+        <version>1.8.0</version>
+    </parent>
+
+    <groupId>com.hotwire.phoenix.testing</groupId>
+    <artifactId>functional-testing</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>Parent for Phoenix functional testing</description>
+
+    <modules>
+        <module>bex-page-objects</module>
+        <module>bex-step-defs</module>
+        <module>c3-page-objects</module>
+        <module>c3-step-defs</module>
+        <module>common</module>
+        <module>database-support</module>
+        <module>desktop-page-objects</module>
+        <module>distributed-opaque-step-defs</module>
+        <module>hotel-supply-step-defs</module>
+        <module>hotwire-step-defs</module>
+        <module>mobile-api-step-defs</module>
+        <module>mobile-page-objects</module>
+        <module>xnet-api-1.0-step-defs</module>
+        <module>xnet-api-1.1-step-defs</module>
+    </modules>
+
+    <properties>
+        <cxf.version>2.7.14</cxf.version>
+        <restassured.version>2.4.0</restassured.version>
+
+        <bdd-support.version>1.0.1</bdd-support.version>
+
+        <cucumber.reporting.pattern>cucumber_*.json</cucumber.reporting.pattern>
+        <!--
+            The percentage of the tests can fail and the job is still marked as passed.
+            Default value is 0.0. Set up it for your job specially.
+            1.0 ~ 100%
+            0.50 ~ 50%
+            0.01 ~ 1%
+         -->
+        <scenarioFailureThreshold>0.0</scenarioFailureThreshold>
+        <graphite.server.alias>dev12</graphite.server.alias>
+        <graphite.server.port>8125</graphite.server.port>
+        <graphite.bdd.suite />
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>org.e-hoffman.testing</groupId>
+                <artifactId>FestWebDriver</artifactId>
+                <version>1.2.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.sourceforge.htmlcleaner</groupId>
+                <artifactId>htmlcleaner</artifactId>
+                <version>2.10</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.testing</groupId>
+                <artifactId>BDDSupport</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.dao</groupId>
+                <artifactId>GenericDaoApi</artifactId>
+                <version>1.0.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.domain.order</groupId>
+                <artifactId>OrderApi</artifactId>
+                <version>1.7.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.util</groupId>
+                <artifactId>SpringUtils</artifactId>
+                <version>1.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.testing</groupId>
+                <artifactId>SpringTestScope</artifactId>
+                <version>1.1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>hotwire.util</groupId>
+                <artifactId>HwCommons</artifactId>
+                <version>3.6.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>javax.mail</groupId>
+                <artifactId>mail</artifactId>
+                <version>1.4.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>3.3.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>2.4</version>
+            </dependency>
+
+            <dependency>
+                <groupId>aopalliance</groupId>
+                <artifactId>aopalliance</artifactId>
+                <version>1.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cglib</groupId>
+                <artifactId>cglib</artifactId>
+                <version>2.2.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>xml-apis</groupId>
+                <artifactId>xml-apis</artifactId>
+                <version>1.4.01</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.jayway.jsonpath</groupId>
+                <artifactId>json-path</artifactId>
+                <version>1.2.0</version>
+            </dependency>
+
+            <!--REST testing library-->
+            <dependency>
+                <groupId>com.jayway.restassured</groupId>
+                <artifactId>rest-assured</artifactId>
+                <version>${restassured.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.rubiconproject.oss</groupId>
+                <artifactId>jchronic</artifactId>
+                <version>0.2.6</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.oracle</groupId>
+                <artifactId>ojdbc6</artifactId>
+                <version>11.2.0.3.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>2.7</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-api</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-bundle-jaxrs</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-frontend-jaxws</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.cxf</groupId>
+                <artifactId>cxf-rt-transports-http</artifactId>
+                <version>${cxf.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.neethi</groupId>
+                <artifactId>neethi</artifactId>
+                <version>3.0.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.codehaus.jettison</groupId>
+                <artifactId>jettison</artifactId>
+                <version>1.3.7</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.qa</groupId>
+                <artifactId>HwQaSystems</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.qa</groupId>
+                <artifactId>HwQaBase</artifactId>
+                <version>1.0.0-SNAPSHOT</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>bex-page-objects</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>bex-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>c3-page-objects</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>c3-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>database-support</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>desktop-page-objects</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>distributed-opaque-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>hotel-supply-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>hotwire-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>mobile-api-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>mobile-page-objects</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>xnet-api-1.0-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.phoenix.testing</groupId>
+                <artifactId>xnet-api-1.1-step-defs</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.hotwire.maven</groupId>
+                <artifactId>bdd-support</artifactId>
+                <version>${bdd-support.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.hotwire.maven</groupId>
+                    <artifactId>cucumber-fail-build-at-end-plugin</artifactId>
+                    <version>${bdd-support.version}</version>
+                    <executions>
+                        <execution>
+                            <id>execution</id>
+                            <goals>
+                                <goal>fail-at-end</goal>
+                            </goals>
+                            <phase>post-integration-test</phase>
+                            <configuration>
+                                <cucumberReportFilePattern>${cucumber.reporting.pattern}</cucumberReportFilePattern>
+                                <scenarioFailureThreshold>${scenarioFailureThreshold}</scenarioFailureThreshold>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <!-- Use:
+
+                        -Dgraphite.server.alias=dev12
+                        -Dgraphite.bdd.suite=%suite.name%
+
+                        to send request into graphite
+                    -->
+                    <groupId>com.hotwire.maven</groupId>
+                    <artifactId>cucumber-aggregation-plugin</artifactId>
+                    <version>${bdd-support.version}</version>
+                    <inherited>false</inherited>
+                    <executions>
+                        <execution>
+                            <id>execution</id>
+                            <goals>
+                                <goal>aggregate</goal>
+                            </goals>
+                            <phase>post-integration-test</phase>
+                            <configuration>
+                                <outputDirectory>${project.build.directory}/cucumber</outputDirectory>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+
+                <plugin>
+                    <groupId>com.hotwire.maven</groupId>
+                    <artifactId>cucumber-testng-report-plugin</artifactId>
+                    <version>${bdd-support.version}</version>
+                    <executions>
+                        <execution>
+                            <id>execution</id>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <phase>post-integration-test</phase>
+                            <configuration>
+                                <cucumberInputReportFile>${project.build.directory}/cucumber/cucumber.json</cucumberInputReportFile>
+                                <testNgOutputReportFile>${project.build.directory}/testng-report.xml</testNgOutputReportFile>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <scm>
+        <connection>scm:perforce://depot/phoenix/main/modules/functional-testing/</connection>
+        <developerConnection>scm:perforce://depot/phoenix/main/modules/functional-testing/</developerConnection>
+    </scm>
+
+    <repositories>
+        <repository>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <id>hotwire-public</id>
+            <url>http://nexus01.hotwire.com:8081/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <snapshots>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+            <id>hotwire-public</id>
+            <url>http://nexus01.hotwire.com:8081/nexus/content/groups/public/</url>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>

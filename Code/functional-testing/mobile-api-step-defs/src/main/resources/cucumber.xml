@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+       default-lazy-init="true">
+
+    <bean id="webDriverFactory" class="com.hotwire.util.webdriver.WebDriverManager" />
+
+    <!--
+        to use seleniumGrid just set system property seleniumGridServerUrl
+        with valid url.. For example,  -DseleniumGridUrl=http://localhost:4444/wd/hub
+    -->
+
+    <!--
+        webDriverInstance doesn't have a destroy-method because lifecycle
+        of this bean is is controlled from webDriverFactory class
+    -->
+
+    <bean id="webdriverInstance"
+          factory-bean="webDriverFactory"
+          factory-method="getWebDriverInstance"
+          destroy-method="quit" />
+
+    <import resource="classpath*:mobile-api-context.xml"/>
+
+
+</beans>

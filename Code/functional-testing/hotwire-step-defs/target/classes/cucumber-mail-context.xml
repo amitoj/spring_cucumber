@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+
+    <beans profile="WebApp, MobileWebApp, RowWebApp">
+        <bean id="mailModel" class="com.hotwire.test.steps.mail.MailModelImpl">
+            <property name="host" value="mail.expedia.com"/>
+            <property name="user" value="qa_regression"/>
+            <property name="password" value="Hotwire656!"/>
+            <property name="webdriverInstance" ref="webdriverInstance"/>
+        </bean>
+    </beans>
+
+
+
+</beans>

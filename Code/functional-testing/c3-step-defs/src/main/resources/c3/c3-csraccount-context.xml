@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+
+    <bean id="csrAccount" class="com.hotwire.test.steps.tools.bean.c3.C3CsrAccount">
+        <property name="firstName" value="Test"/>
+        <property name="lastName" value="HotwireCSR"/>
+        <!--<property name="userCategory" value="Hotwire Employee"/>-->
+        <property name="email" value="test.hotwire.valid.csr@hotwire.com"/>
+        <property name="username" value="csrcroz1" />
+        <property name="password" value="Admin1234!" />
+        <!--<property name="location" value="Hotwire"/>-->
+        <!--<property name="userLevelId" value="3001"/>-->
+    </bean>
+
+    <bean id="csrAccoutModel" class="com.hotwire.test.steps.tools.c3.csraccount.C3CSRAccountModel" />
+
+</beans>

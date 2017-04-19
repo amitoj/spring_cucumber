@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+  <beans profile="MobileWebApp">
+    <bean id="myTripsModel" class="com.hotwire.test.steps.account.mytrips.MyTripsModelMobileWebApp">
+      <property name="webdriverInstance" ref="webdriverInstance" />
+    </bean>
+  </beans>
+
+  <beans profile="WebApp">
+    <bean id="myTripsModel" class="com.hotwire.test.steps.account.mytrips.MyTripsModelWebApp">
+        <property name="webdriverInstance" ref="webdriverInstance" />
+    </bean>
+  </beans>
+
+  <beans profile="RowWebApp">
+    <bean id="myTripsModel" class="com.hotwire.spring.better.factories.EasyBakeProxyFactoryBean" factory-method="buildAllwaysThrows" lazy-init="false">
+      <constructor-arg index="0" value="com.hotwire.test.steps.account.mytrips.MyTripsModel" />
+      <constructor-arg index="1">
+        <bean id="pendingException" class="cucumber.api.PendingException">
+          <constructor-arg value="this is not the Model you are looking for...." />
+        </bean>
+      </constructor-arg>
+    </bean>
+  </beans>
+</beans>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="netScalerModelTemplate" class="com.hotwire.test.steps.netscaler.NetScalerModelTemplate" abstract="true">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+    </bean>
+
+    <beans profile="WebApp">
+        <bean id="netScalerModel" parent="netScalerModelTemplate" class="com.hotwire.test.steps.netscaler.NetScalerModelWebApp"/>
+    </beans>
+
+    <beans profile="MobileWebApp">
+        <bean id="netScalerModel" parent="netScalerModelTemplate" class="com.hotwire.test.steps.netscaler.NetScalerModelMobileWebApp"/>
+    </beans>
+
+    <beans profile="RowWebApp">
+        <bean id="netScalerModel" parent="netScalerModelTemplate" class="com.hotwire.test.steps.netscaler.NetScalerModelRowWebApp"/>
+    </beans>
+
+</beans>

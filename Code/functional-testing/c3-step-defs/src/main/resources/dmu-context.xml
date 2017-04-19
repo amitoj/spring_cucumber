@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--environment map-->
+    <util:map id="dmuProfiles">
+        <entry key="dev" value-ref="dmuUser"/>
+        <entry key="qa" value-ref="dmuQaUser" />
+        <!--<entry key="preprod" value="jdbc:oracle:thin:@ppdb01:1521:prprd" />-->
+    </util:map>
+
+    <bean id="dmuUser" class="com.hotwire.test.steps.tools.bean.dmu.DMUAccountInfo">
+        <property name="host" value="dev01.dev.hotwire.com" />
+        <property name="username" value="testuser"/>
+        <property name="password" value="testuser"/>
+    </bean>
+
+    <bean id="dmuQaUser" parent="dmuUser">
+        <property name="host" value="qadmu01.qa.hotwire.com" />
+        <property name="username" value="ansnitko"/>
+        <property name="password" value="ansnitko"/>
+    </bean>
+
+    <bean id="dmuProcedureInfo" class="com.hotwire.test.steps.tools.bean.dmu.DMUProcedureInfo">
+        <property name="carVendor" value="AF" />
+    </bean>
+
+    <bean id="dmuModel" class="com.hotwire.test.steps.tools.dmu.DMUModel" />
+
+
+</beans>

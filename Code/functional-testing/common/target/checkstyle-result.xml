@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="6.3">
+<file name="C:\p4\phoenix\main\modules\functional-testing\common\src\main\java\com\hotwire\testing\UnexpectedPageTestException.java">
+<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\p4\phoenix\main\modules\functional-testing\common\src\main\java\com\hotwire\testing\UnimplementedTestException.java">
+<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\p4\phoenix\main\modules\functional-testing\common\src\main\java\com\hotwire\testing\ZeroResultsTestException.java">
+<error line="0" severity="error" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+</checkstyle>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.e-hoffman.testing:FestWebDriver:1.2.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/e-hoffman/testing/FestWebDriver/1.2.0/FestWebDriver-1.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/e-hoffman/testing/FestWebDriver/1.2.0/FestWebDriver-1.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/e-hoffman/testing/FestWebDriver/1.2.0/FestWebDriver-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

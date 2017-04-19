@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bex-page-objects/bex-page-objects.iml" filepath="$PROJECT_DIR$/bex-page-objects/bex-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bex-step-defs/bex-step-defs.iml" filepath="$PROJECT_DIR$/bex-step-defs/bex-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c3-page-objects/c3-page-objects.iml" filepath="$PROJECT_DIR$/c3-page-objects/c3-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/c3-step-defs/c3-step-defs.iml" filepath="$PROJECT_DIR$/c3-step-defs/c3-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common/common.iml" filepath="$PROJECT_DIR$/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/database-support/database-support.iml" filepath="$PROJECT_DIR$/database-support/database-support.iml" />
+      <module fileurl="file://$PROJECT_DIR$/desktop-page-objects/desktop-page-objects.iml" filepath="$PROJECT_DIR$/desktop-page-objects/desktop-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/distributed-opaque-step-defs/distributed-opaque-step-defs.iml" filepath="$PROJECT_DIR$/distributed-opaque-step-defs/distributed-opaque-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/functional-testing.iml" filepath="$PROJECT_DIR$/functional-testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel-supply-step-defs/hotel-supply-step-defs.iml" filepath="$PROJECT_DIR$/hotel-supply-step-defs/hotel-supply-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotwire-step-defs/hotwire-step-defs.iml" filepath="$PROJECT_DIR$/hotwire-step-defs/hotwire-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobile-api-step-defs/mobile-api-step-defs.iml" filepath="$PROJECT_DIR$/mobile-api-step-defs/mobile-api-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mobile-page-objects/mobile-page-objects.iml" filepath="$PROJECT_DIR$/mobile-page-objects/mobile-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xnet-api-1.0-step-defs/xnet-api-1.0-step-defs.iml" filepath="$PROJECT_DIR$/xnet-api-1.0-step-defs/xnet-api-1.0-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xnet-api-1.1-step-defs/xnet-api-1.1-step-defs.iml" filepath="$PROJECT_DIR$/xnet-api-1.1-step-defs/xnet-api-1.1-step-defs.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+       <bean class="com.hotwire.test.steps.search.SearchSteps" ></bean>
+       <bean class="com.hotwire.test.steps.purchase.car.CarPurchaseSteps" > </bean>
+       <bean class="com.hotwire.test.steps.search.car.CarSearchSteps" > </bean>
+       <bean class="com.hotwire.test.steps.purchase.PurchaseSteps"></bean>
+       <bean class="com.hotwire.test.steps.partners.PartnersSteps"></bean>
+       <bean class="com.hotwire.test.steps.purchase.car.steps.CarPurchaseInsuranceSteps"></bean>
+       <bean class="com.hotwire.test.steps.search.hotel.HotelSearchSteps"></bean>
+       <bean class="com.hotwire.test.steps.purchase.hotel.HotelPurchaseSteps"></bean>
+       <bean class="com.hotwire.test.steps.purchase.paypal.PayPalPurchaseSteps"></bean>
+       <bean class="com.hotwire.test.steps.authentication.AuthenticationSteps"></bean>
+       <bean class="com.hotwire.test.steps.account.AccountAccessSteps"></bean>
+
+
+       <bean class="com.hotwire.test.steps.purchase.AggregatedSteps" id="aggregatedSteps"/>
+       <bean class="com.hotwire.test.steps.purchase.car.AggregatedCarPurchase" id = "aggregatedCarPurchase">
+              <constructor-arg ref="aggregatedSteps"></constructor-arg>
+              <property name="startPage" value="UHP"></property>
+              <property name="endPage" value="CONFIRMATION" ></property>
+              <property name="carType" value="OPAQUE"></property>
+              <property name="insurance" value="false"></property>
+              <property name="driversAge" value="25"></property>
+              <property name="paymentMethod" value="CreditCard"></property>
+              <property name="loginWithRandomUser" value="true"></property>
+
+       </bean>
+       <bean class="com.hotwire.test.steps.purchase.hotel.AggregatedHotelPurchase" id = "aggregatedHotelPurchase">
+              <constructor-arg ref="aggregatedSteps"></constructor-arg>
+              <property name="startPage" value="UHP"></property>
+              <property name="endPage" value="CONFIRMATION" ></property>
+              <property name="hotelType" value="OPAQUE"></property>
+              <property name="insurance" value="false"></property>
+              <property name="location" value="SFO"></property>
+              <property name="numberOfAdults" value="2"></property>
+              <property name="numberOfChildren" value="0"></property>
+              <property name="numberOfRooms" value="1"></property>
+              <property name="guestPurchase" value="true"></property>
+              <property name="paymentMethod" value="CreditCard"></property>
+              <property name="loginWithRandomUser" value="false"></property>
+       </bean>
+</beans>

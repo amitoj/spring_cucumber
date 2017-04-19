@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.hotwire.phoenix.testing</groupId>
+        <artifactId>features-parent</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+        <relativePath>features-parent/pom.xml</relativePath>
+    </parent>
+
+    <artifactId>Features</artifactId>
+    <packaging>pom</packaging>
+
+    <!--
+        NOTICE:
+
+        # Start smoke suite on local machine(application_url=http://localhost:7001)
+        mvn clean install - -fail-at-end  -Psmoke,localhost
+
+        # Start acceptance suite on dev01 in multi threaded mode (“mt”)
+        mvn clean install - -fail-at-end  -Pacceptance,mt
+
+        # Start regression suite against QA in multi threaded mode with 12 threads
+        mvn clean install - -fail-at-end  -Pregression,mt  -Dapplication_url="http://www.qa.hotwire.com" -Dcucumber.thread.count=12
+
+        # Debug configuration (for example)
+        mvn clean install - -fail-at-end  -Plocalhost -DotherTags=@DEV
+
+     -->
+
+    <modules>
+        <module>../../modules/functional-testing</module>
+        <module>features-parent</module>
+        <module>Platform_SF</module>
+        <module>MobileAPIs_GSI</module>
+        <module>Supply_SF</module>
+        <module>Tools_GSI</module>
+        <module>Web_GSI</module>
+        <module>DistributionAPIs</module>
+        <module>Web_SF</module>
+        <module>Core_SF</module>
+        <module>SharedServices_SF</module>
+    </modules>
+
+</project>

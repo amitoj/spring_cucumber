@@ -1,0 +1,223 @@
+Please read the HOW_COME.txt file to understand the design decisions that went in the application design.
+
+********************************************************************************************************************************************************************
+*** Do not put whitespace in file, directory, or package names. IDE runners won't be able to parse file paths with spaces, treating them like arguments instead. ***
+********************************************************************************************************************************************************************
+
+To run individual tests from an IDE...
+
+1)  Pull in the maven project containing the feature file... (follow standard maven procedures)
+    Make sure you use a maven ide plugin to configure your project in the IDE
+
+Once the project (or module in Idea parlance) is configured...
+
+FOR IDEA
+
+There are two possible ways to run the application in IDEA
+
+  1) One is running the selected feature file via an "external tool", that tool happens to be java... more in a second.
+
+  2) The other way is run the the test as via a main method with run/debug as application functionality.
+
+The trade offs:
+
+  When running an external tool you can not (easily) debug the test.
+
+  When running as a java main method you will have to type in the feature file name... very annoying.
+
+
+Recommendation: run as an external tool when running tests, and debug as a main method application as your about to go through a very annoying process anyway.
+
+Configuring External tool execution in IDEA:
+
+	Open "Settings"
+
+	Under "External Tools" menu
+
+	Click "add"
+
+	On the "Edit Tool" enter the following values with out quotes for each field
+
+		Name:  "Run"
+		Group: "Cucumber"
+		Description: "Cucumber"
+		Program:  "$JDKPath$/bin/java"  (reverse the slashes on windows)
+		Parameters: "-cp $Classpath$:$OutputPath$ cucumber.cli.Main $FilePath$ --glue com.hotwire --monochrome" (replace : with ; on windows and add "" around $Classpath$:$OutputPath$)
+		Working Directory: "$ModuleFileDir$/target" (reverse the slash on windows)
+
+		Press Save
+
+	Now you can right click on any *.feature file and click on the "Cucumber" -> "Run" menu and you will run that test.
+
+ 
+Configuring Application run in IDEA:
+
+	Under the "Run" menu select "Edit Configuration..."
+   
+	On the "Run/Debug Window"
+   
+	Cick the "+" button and select "Application"
+   
+	For the following field the the values without quotes
+   
+		Name: "Cucumber"
+   		Main method: "cucumber.cli.Main"
+   		VM Options: "-ea"
+   		Program Arguments: "$FilePath$ --glue com.hotwire.test.steps --tags @US --monochrome"
+   		Working Directory: "$MODULE_DIR$/target/" (reverse the slashes on windows)
+   		Use classpath of Module:  Make sure your module is selected...
+
+   if you want to run mobile tests also pass in -DtargetAppType=MobileWebApp in VM Arguments.
+   
+   Now here is the problem:
+   
+   You will have to replace the $FilePath$ with the actual full path of your feature file (or directory containing multiple feature files).
+   
+   Then you will be able to debug the test(s) in those feature files.
+   
+   Sorry for the inconvenience in debugging, blame IDEA, or switch to Eclipse.... though IDEA is working on a plugin for cucumber-jvm.
+
+   Example Program Arguments:
+   "../src/test/resources/hotel.feature --glue com.hotwire.test.steps --monochrome" <-- run all the features in the hotel.feature file
+   "../src/test/resources --glue com.hotwire.test.steps" <-- run all the features in test/resources
+   "../src --glue com.hotwire.test.steps" <-- run all the features present anywhere under "/src"
+
+FOR ECLIPSE
+
+2)  Right click on the feature file and select "Debug As" or "Run As"
+
+  Create a new "Java Application" execution.
+  
+3) Under the "Main" tab....  
+
+  3.1)  It should have your Project name in the "Project:" field.... ***TODO: test replacing with a system prop for the currently select files project****
+  3.2)  Enter "cucumber.cli.Main" without quotes for the "Main class" field.
+
+4) Under the tab for "Arguments"
+
+  4.1)  For "Program Arguments", enter...
+
+    ${selected_resource_loc}
+    --glue com.hotwire.test.steps
+    --monochrome
+
+  This will allow any selected feature file to be run, and ensure useful logging is sent to the IDE's console.
+
+  4.2) Under "VM Arguments..."
+    -enableassertions:com.hotwire...
+    
+    if you want to run mobile tests also pass in -DtargetAppType=MobileWebApp
+
+    This will turn on java assert() statements, which is need to allow the Then steps to throw assertion exceptions if the code a test is testing is broken.
+
+STEPS 2 - 4 will be saved so you will not have to repeat them again.
+
+5) Click the "Run" or "Debug" button.
+
+
+From command line:
+
+Standard maven commands are supported.
+
+--------------------------------------------
+--------------------------------------------
+MOBILE USERS:
+--------------------------------------------
+--------------------------------------------
+HOW TO RUN THE TESTS ON AN ANDROID EMULATOR
+Step 1: Install Android SDK and make sure that you can start the emulator on your machine
+http://developer.android.com/sdk/installing/index.html
+
+Step 2: Start the emulator installed on your machine
+
+Step 3: Get the list of all Android devices connected to your machine:
+C:\Program Files (x86)\Android\android-sdk\platform-tools>adb devices
+List of devices attached
+emulator-5554   device
+
+Step 4: Get the Android WebDriver app from WebDriver Android server apk:
+http://code.google.com/p/selenium/downloads/detail?name=android-server-2.21.0.apk&can=2&q=
+
+Step 5: Install WebDriver App on the device/emulator if it is not installed. This has to be done only once.
+C:\Program Files (x86)\Android\android-sdk\platform-tools>adb -s <device ID> -e
+ install -r C:\Users\prbhat\Downloads\android-server-2.21.0.apk
+
+Step 6: Start WebDriver on emulator by going to the installed apps and clicking on WebDriver app installed in step 4.
+
+Step 7: Forward traffic from localhost port to WebDriver port on emulator. Note WebDriver always starts at port 8080.
+C:\Program Files (x86)\Android\android-sdk\platform-tools>adb -s <device ID> forward tcp:8085 tcp:8080
+In this case, I am forwarding from my localhost 8085 port to the WebDriver port which is 8080.
+You can test this by going to http://localhost:8085/wd/hub/status/
+If the webdriver is up and running & the port forward works it should show {status:0}
+
+Step 8: Set up Cucumber to start Selenium grid by adding the following parameters:
+-DlocalGrid=true -DseleniumGridUrl=http://localhost:8085/wd/hub -DtargetAppType=MobileWebApp
+
+Step 9: Run any feature file. You will start seeing the tests being run on the emulator now.
+
+--------------------------------------------
+HOW TO RUN THE TESTS ON AN ANDROID PHONE
+Step 1: Turn the phone on and connect it to your machine. Make sure that you have installed the needed drivers for the
+laptop to recognize the phone.
+
+Step 2: Get the list of all Android devices connected to your machine:
+C:\Program Files (x86)\Android\android-sdk\platform-tools>adb devices
+List of devices attached
+HT12KHL04937    device
+emulator-5554   device
+
+Step 3: Get the Android WebDriver app from WebDriver Android server apk:
+http://code.google.com/p/selenium/downloads/detail?name=android-server-2.21.0.apk&can=2&q=
+
+Step 4: Install WebDriver App on the device if it is not installed. This has to be done only once.
+C:\Program Files (x86)\Android\android-sdk\platform-tools>adb -s <device ID> -e
+ install -r C:\Users\prbhat\Downloads\android-server-2.21.0.apk
+
+Step 5: Start WebDriver on device by going to the installed apps and clicking on WebDriver app installed in step 3.
+
+Step 6: Forward traffic from localhost port to WebDriver port on device/emulator. Note WebDriver always starts at port 8080.
+C:\Program Files (x86)\Android\android-sdk\platform-tools>adb -s <device ID> forward tcp:8085 tcp:8080
+In this case, I am forwarding from my localhost 8085 port to the WebDriver port which is 8080.
+You can test this by going to http://localhost:8085/wd/hub/status/
+If the webdriver is up and running & the port forward works it should show {status:0}
+
+Step 7: Set up Cucumber to start Selenium grid by adding the following parameters:
+-DlocalGrid=true -DseleniumGridUrl=http://localhost:8085/wd/hub -DtargetAppType=MobileWebApp
+
+
+--------------------------------------------------------
+HOW TO RUN THE TESTS ON AN IPHONE DEVICE FROM ECLIPSE
+
+Step 1: To enable the tests to run on an iPhone, the iWebDriver app must be installed on the phone. It is not available in the app store, 
+so it must be built and installed manually through XCode.
+
+Step 2: Make sure that the iPhone has wifi turned on and can access the intended test environment i.e. QACI or QA through wifi. 
+
+Step 3: Launch the iWebDriver on the phone. At the bottom it should say 'Started at http://172.17.xxx.xxx:3001/wd/hub'
+
+Step 4: create or modify your run configuration and set the following under 'VM arguments':
+-enableassertions:com.hotwire�
+-Dspring.profiles.active=MobileWebApp
+-DlocalGrid=true 
+-DseleniumGridUrl=[enter the full URL displayed in the launched iWebDriver app here]
+
+step 5: run the feature file.
+
+Tips: 
+- the ip address of the iPhone may change if the wifi connection is recycled. Don't forget to change the address in the run configuration.
+- the iWebDriver app may occasionally crash when running big feature files with a lot of test cases. If it happens relaunch the app and try running
+  the feature file again. If it crashed repeatedly then the file may be too big. It is advisable to keep feature files small and/or 
+  break big files into several small ones.
+  
+
+--------------------------------------------
+Other information
+HTC Drivers for all HTC phones
+http://www.htc.com/www/software/htc-sync/
+
+WebDriver Android server apk:
+http://code.google.com/p/selenium/downloads/detail?name=android-server-2.21.0.apk&can=2&q=
+
+Selinim setup page to install Android Driver:
+http://code.google.com/p/selenium/wiki/AndroidDriver#Get_Started
+--------------------------------------------

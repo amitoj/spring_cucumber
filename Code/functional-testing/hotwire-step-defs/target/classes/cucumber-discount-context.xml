@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+  ~ Copyright 2014 Hotwire. All Rights Reserved.
+  ~
+  ~ This software is the proprietary information of Hotwire.
+  ~ Use is subject to license terms.
+  -->
+
+<beans default-lazy-init="true" xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+    <bean id="discountParameters" class="com.hotwire.test.steps.discount.DiscountParametersImpl"/>
+    <bean id="discountModelTemplate" abstract="true" class="com.hotwire.test.steps.discount.DiscountModelTemplate">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+        <property name="applicationUrl" ref="applicationUrl"/>
+        <property name="sessionModifingParams" ref="sessionModifingParams"/>
+        <property name="purchaseParameters" ref="purchaseParameters"/>
+        <property name="discountParameters" ref="discountParameters"/>
+        <property name="searchParameters" ref="searchParameters"/>
+        <property name="hwGenericDaoProxy" ref="hwGenericDaoProxy"/>
+    </bean>
+    <bean id="discountModel" parent="discountModelTemplate" class="com.hotwire.test.steps.discount.DelegatingDiscountModel">
+        <property name="carDiscountModel" ref="carDiscountModel"/>
+        <property name="hotelDiscountModel" ref="hotelDiscountModel"/>
+        <property name="airDiscountModel" ref="airDiscountModel"/>
+    </bean>
+    <bean id="hwGenericDaoProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="${remote_url}/springWebApp/ejbRemote/caching/HwGenericDao"/>
+        <property name="serviceInterface" value="hotwire.eis.dao.HwGenericDao"/>
+    </bean>
+    <beans profile="WebApp">
+        <bean id="carDiscountModel" parent="discountModelTemplate" class="com.hotwire.test.steps.discount.car.CarDiscountModelWebApp"/>
+        <bean id="hotelDiscountModel" parent="discountModelTemplate" class="com.hotwire.test.steps.discount.hotel.HotelDiscountModelWebApp"/>
+        <bean id="airDiscountModel" parent="discountModelTemplate" class="com.hotwire.test.steps.discount.air.AirDiscountModelWebApp"/>
+    </beans>
+    <beans profile="RowWebApp">
+        <bean id="airDiscountModel" class="com.hotwire.spring.better.factories.EasyBakeProxyFactoryBean" factory-method="buildAllwaysThrows" lazy-init="false">
+            <constructor-arg index="0" value="com.hotwire.test.steps.discount.DiscountModel"/>
+            <constructor-arg index="1">
+                <bean id="pendingException" class="cucumber.api.PendingException">
+                    <constructor-arg value="this is not the Model you are looking for...."/>
+                </bean>
+            </constructor-arg>
+        </bean>
+        <bean id="carDiscountModel" class="com.hotwire.spring.better.factories.EasyBakeProxyFactoryBean" factory-method="buildAllwaysThrows" lazy-init="false">
+            <constructor-arg index="0" value="com.hotwire.test.steps.discount.DiscountModel"/>
+            <constructor-arg index="1">
+                <bean id="pendingException" class="cucumber.api.PendingException">
+                    <constructor-arg value="this is not the Model you are looking for...."/>
+                </bean>
+            </constructor-arg>
+        </bean>
+        <bean id="hotelDiscountModel" parent="discountModelTemplate" class="com.hotwire.test.steps.discount.hotel.HotelDiscountModelRowWebApp"/>
+    </beans>
+    <beans profile="MobileWebApp">
+        <bean id="airDiscountModel" class="com.hotwire.spring.better.factories.EasyBakeProxyFactoryBean" factory-method="buildAllwaysThrows" lazy-init="false">
+            <constructor-arg index="0" value="com.hotwire.test.steps.discount.DiscountModel"/>
+            <constructor-arg index="1">
+                <bean id="pendingException" class="cucumber.api.PendingException">
+                    <constructor-arg value="this is not the Model you are looking for...."/>
+                </bean>
+            </constructor-arg>
+        </bean>
+        <bean id="carDiscountModel" class="com.hotwire.spring.better.factories.EasyBakeProxyFactoryBean" factory-method="buildAllwaysThrows" lazy-init="false">
+            <constructor-arg index="0" value="com.hotwire.test.steps.discount.DiscountModel"/>
+            <constructor-arg index="1">
+                <bean id="pendingException" class="cucumber.api.PendingException">
+                    <constructor-arg value="this is not the Model you are looking for...."/>
+                </bean>
+            </constructor-arg>
+        </bean>
+        <bean id="hotelDiscountModel" parent="discountModelTemplate" class="com.hotwire.test.steps.discount.hotel.HotelDiscountModelMobileWebApp"/>
+    </beans>
+</beans>
+	

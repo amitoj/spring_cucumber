@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<body>
+<iframe id="_yuiResizeMonitor1" title="Text Resize Monitor" tabindex="-1" role="presentation"
+        style="position: absolute; visibility: visible; background-color: transparent;
+        border-width: 0px; width: 2em; height: 2em; left: 0px; top: -23px;">
+    <html> </html>
+</iframe>
+<div class="caseEntryLayout themeBgColorDark">
+    <div class="header themeAreaBorder">
+        <div id="tileName-header">
+            <div>
+                <div class="fLft headerLabel">
+                    <strong>Case Entry</strong>
+                </div>
+                <div class="fLft headerItineraryNumber"> </div>
+                <div class="fRt headerVisibilityLink">
+                    <div id="showlink" style="display:none">
+                        <a href="#">Show</a>
+                    </div>
+                    <div id="hidelink" style="display:block">
+                        <a href="#">Hide</a>
+                    </div>
+                </div>
+                <div class="clr"></div>
+            </div>
+        </div>
+    </div>
+    <div class="themeBgColorLight themeAreaBorder layoutContent">
+        <div class="fLft leftColumn themeAreaBorder themeBgColorNone ">
+            <div id="tileName-L1">
+                <div id="caseEntryFrameFormComp" class=" " data-jsname="CaseEntryFrameFormComp">
+                    <div class="hiddenClientErrorValidation" style="display: none;">
+                        <div class="errorMessages clientErrMsgs ">
+                            <h6>Error</h6>
+                            <p>Please correct the following field(s):</p>
+                            <ul></ul>
+                        </div>
+                    </div>
+                    <div id="caseEntryFrameContent" class="formFieldContainer">
+                        <form id="caseEntryMethodOfContactForm" method="post" name="caseEntryMethodOfContactForm">
+                            <input type="hidden" value="3" name="actionType">
+                            <input type="hidden" value="c3-case-notes" name="inputId">
+                            <div class="formField shortFormField methodOfContactField">
+                                <div class="fLft">
+                                    <label>Method of contact*</label>
+                                    <select id="methodOfContact" name="methodOfContact">
+                                        <option selected="selected" value="0"> - Select - </option>
+                                        <option value="1"> Research </option>
+                                        <option value="2"> Email </option>
+                                        <option value="5"> Chat </option>
+                                        <option value="3"> Outbound call </option>
+                                        <option value="4"> Inbound call </option>
+                                    </select>
+                                </div>
+                                <div class="fRt">* = required field</div>
+                                <div class="clr"></div>
+                            </div>
+                        </form>
+                        <div id="caseEntryNoteFormContainer">
+                            <form id="caseEntryNoteForm" method="post" name="caseEntryNoteForm">
+                                <input type="hidden" value="1" name="actionType">
+                                <input type="hidden" value="0" name="methodOfContact">
+                                <input type="hidden" value="c3-case-notes" name="inputId">
+                                <input type="hidden" value="false" name="hasCurrentCaseSavedNotes">
+                                <div id="saveNote" class="formField">
+                                    <label><span>Notes</span></label>
+                                    <div id="noteHint" style="margin-top: 55px; background-color: rgb(255, 255, 255);
+                                    color: rgb(255, 0, 0); font-size: 10px; margin-left: 4px; position: absolute;">
+                                        Do not enter credit card numbers into case notes.
+                                    </div>
+                                    <textarea id="note" class="textArea" cols="56" rows="3" name="c3CaseNote">
+
+                                    </textarea>
+                                </div>
+                                <div class="formField">
+                                    <div style="float:left">
+                                        <input class="formButton disabled" type="submit" value="Save note">
+                                        <input class="formButton disabled" type="button" value="Close case">
+                                    </div>
+                                    <div style="float:right"> </div>
+                                    <div class="clr"></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div id="closeCaseFormContainer">
+                            <form id="closeCaseForm" autocomplete="off" method="post" name="closeCaseForm">
+                                <input type="hidden" value="6" name="actionType">
+                                <input type="hidden" value="0" name="methodOfContact">
+                                <input type="hidden" value="" name="framesetForwardId">
+                                <input type="hidden" value="" name="c3CaseNote">
+                                <input type="hidden" value="false" name="emailOptedIn">
+                                <input type="hidden" value="" name="frameParameterString">
+                                <input type="hidden" value="c3-case-notes" name="inputId">
+                            </form>
+                        </div>
+                    </div>
+                    <div id="caseEntryNoteFormValidator" class=" " data-jsname="DynamicFormValidationComp">
+                    </div>
+                    <div id="closeCaseFormValidator" class=" " data-jsname="CloseCaseFormValidationComp">
+                        <span></span>
+                        <div id="closeCaseFormValidator_tooltip"
+                             class="HwTilesComp TooltipBalloonComp C3TooltipComp yui-module yui-overlay
+                             yui-tt yui-overlay-hidden" data-jsname="TooltipBalloonComp"
+                             style="visibility: hidden; z-index: 2; width: 300px;">
+                            <div class="beak"></div>
+                            <div class="bd">You must complete all required fields (*) before closing this case</div>
+                        </div>
+                    </div>
+                    <div id="discardCaseConfirmPopupLayer" class="HwTilesComp PopupLayerComp"
+                         data-jsname="ConfirmPopupLayerComp">
+                        <div id="discardCaseConfirmPopupLayer-panel_c"
+                             class="yui-panel-container shadow yui-overlay-hidden" style="visibility: hidden;
+                             left: 799px; top: 10px; z-index: 200;">
+                            <div id="discardCaseConfirmPopupLayer-panel"
+                                 class="popupLayer yui-module yui-overlay yui-panel" style="display: block;
+                                 visibility: inherit; width: 320px;">
+                                <a class="container-close" href="#">Close</a>
+                            </div>
+                        </div>
+                        <div class="rightColumn fLft">
+                            <div id="tileName-R1"> </div>
+                            <div id="tileName-R2">
+                                <div id="genRandom0" class="SearchLinkComp" data-jsname="SearchLinkComp">
+                                    <div class="searchLink">
+                                        <div class="fLft mr10">
+                                            <input class="resultsField" type="text" value="" name="searchURL">
+                                            <br>
+                                            <input class="resultsButton" type="button" value="Latest Result URL">
+                                        </div>
+                                        <div class="fRt">
+                                            <input class="detailsField" type="text" value="" name="detailsURL">
+                                            <br>
+                                            <input class="detailsButton" type="button" value="Latest Details URL">
+                                        </div>
+                                        <div class="clr"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clr"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

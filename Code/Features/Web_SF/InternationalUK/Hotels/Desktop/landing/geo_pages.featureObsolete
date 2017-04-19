@@ -1,0 +1,27 @@
+Feature: Hotel geo pages
+
+  Owner: Intl team
+
+  Background:
+    Given default dataset
+    Given the application is accessible
+
+  @ROW
+  Scenario Outline: landing page fare finder destination is prefilled. RTC-4673
+    Given I'm from "United Kingdom" POS
+    When I select a top destination city
+    Then I should see corresponding fare finder destination
+    When I select <destination> on the landing page
+    Then I should see corresponding fare finder destination
+
+  Examples:
+    | destination   |
+    | airport       |
+    | landmark      |
+
+  @ROW
+  Scenario: Check availability for selected hotel. RTC-6564
+    Given I'm from "United Kingdom" POS
+    When I select a top destination city
+    And access destination popular hotel
+    Then I should get corresponding hotel landing page

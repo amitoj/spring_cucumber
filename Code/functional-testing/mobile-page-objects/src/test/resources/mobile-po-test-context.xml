@@ -1,0 +1,50 @@
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+      <import resource="classpath*:application-webdriver-context.xml"/>
+
+      <bean id="navigateHome" class="com.hotwire.util.webdriver.predicates.NavigateTo">
+         <property name="url" value="${application_url}"/>
+         <property name="pageClass">
+           <bean class="java.lang.Class" factory-method="forName">
+             <constructor-arg value="com.hotwire.selenium.mobile.MobileHotwireHomePage"/>
+           </bean>
+         </property>
+      </bean>
+  
+      <bean id="homePage" factory-bean="navigateHome" factory-method="apply">
+         <constructor-arg ref="webdriverInstance"/>
+      </bean>
+      
+      
+  
+      <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="properties">
+            <props>
+                <prop key="desiredProxyFactory">nullProxyFactory</prop>
+                <prop key="application_url">http://dev01.dev.hotwire.com:7001/mobile</prop>
+                <prop key="remote_url">http://dev01.dev.hotwire.com:7101</prop>
+                <prop key="use_cluster">0</prop>
+                <!-- or MobileWebApp or AppContext -->
+                <prop key="localGrid">false</prop>
+                <prop key="seleniumGridUrl">http://this.invalid.url.will.result.in.a.localgrid.on.the.local.port/</prop>
+                <prop key="localGridPort">0</prop>
+                <!-- if this port is not 0, will start grid on that specific port, very bad for automation, good for iphone development -->
+                <prop key="known_good_username">savedCreditCard@hotwire.com</prop>
+                <prop key="known_good_password">password</prop>
+                <prop key="known_users_name">Test Booking</prop>
+                <prop key="browserType">firefox</prop>
+                <prop key="maxActiveBrowsers">1</prop>
+                <prop key="ieDriverUrl">http://selenium.googlecode.com/files/IEDriverServer_x64_2.26.2.zip</prop>
+                <prop key="ieDriverPath">${user.home}/development/windows/internetexplorer/x64/2.26.2/IEDriverServer.exe</prop>
+           </props>
+        </property>
+    </bean>
+  
+  <bean id="userAgentValue" class="java.lang.String" factory-method="valueOf" >
+    <constructor-arg value=""/>
+  </bean> 
+  
+  
+</beans>  

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.hotwire.phoenix.testing</groupId>
+        <artifactId>SpringMVC_MobileAPIs</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>mobile-api</artifactId>
+
+    <properties>
+        <api_application_url>http://dev04.dev.hotwire.com:7001</api_application_url>
+        <application_url>http://dev04.dev.hotwire.com:7001</application_url>
+        <remote_url>http://dev04.dev.hotwire.com:7101</remote_url>
+
+        <!-- custom maven exec plugin configuration -->
+        <custom.spring.profile>MobileApi</custom.spring.profile>
+        <custom.cucumber.output.json>cucumber_mobile_api.json</custom.cucumber.output.json>
+        <custom.primary.tag>@MobileApi</custom.primary.tag>
+
+        <!--<testCategoryTags5>~CLUSTER3</testCategoryTags5>-->
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hotwire.phoenix.testing</groupId>
+            <artifactId>mobile-api-step-defs</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>Custom</id>
+                        <phase>test</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.hotwire.maven</groupId>
+                <artifactId>cucumber-fail-build-at-end-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

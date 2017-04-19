@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-init-method="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:map id="hotelCouponCodeMap" map-class="java.util.HashMap">
+        <entry key="valid" value="CCC10"/>
+        <entry key="valid mobile" value="CCMOB10D"/>
+        <entry key="valid native app" value="CCAPP10D"/>
+        <entry key="minimum 3 star rating" value="CCALL15D"/>
+        <entry key="minimum amount" value="CCC10MinAmount"/>
+        <entry key="invalid start date" value="CCC10FutureStart"/>
+        <entry key="invalid end date" value="CCC10Expired"/>
+    </util:map>
+
+    <bean id="hwGenericDaoProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="${remote_url}/springWebApp/ejbRemote/caching/HwGenericDao"/>
+        <property name="serviceInterface" value="hotwire.eis.dao.HwGenericDao"/>
+    </bean>
+
+    <bean id="abstractCouponCodeModel" abstract="true"
+        class="com.hotwire.test.steps.couponcode.CouponCodeModelTemplate">
+        <property name="webdriverInstance" ref="webdriverInstance" />
+        <property name="hwGenericDaoProxy" ref="hwGenericDaoProxy"/>
+    </bean>
+
+    <beans profile="WebApp">
+        <bean id="couponCodeModel" parent="abstractCouponCodeModel"
+            class="com.hotwire.test.steps.couponcode.CouponCodeModelWebApp" />
+    </beans>
+    <beans profile="RowWebApp">
+        <bean id="couponCodeModel" parent="abstractCouponCodeModel"
+            class="com.hotwire.test.steps.couponcode.CouponCodeModelRowWebApp" />
+    </beans>
+    <beans profile="MobileWebApp">
+        <bean id="couponCodeModel" parent="abstractCouponCodeModel"
+            class="com.hotwire.test.steps.couponcode.CouponCodeModelMobileWebApp" />
+    </beans>
+</beans>

@@ -1,0 +1,1197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eccfe2a0-4c19-41e6-a3b7-7330addae1c2" name="Default" comment="" />
+    <ignored path="Features.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/Supply_SF/SupplyJobs/target/" />
+    <ignored path="$PROJECT_DIR$/Supply_SF/HotelXnet/XNet/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/target/" />
+    <ignored path="$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs/mobile-api/target/" />
+    <ignored path="$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs/target/" />
+    <ignored path="$PROJECT_DIR$/features-parent/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/common/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/c3-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/c3-page-objects/target/" />
+    <ignored path="$PROJECT_DIR$/Platform_SF/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/distributed-opaque-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/hotel-supply-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/Web_GSI/target/" />
+    <ignored path="$PROJECT_DIR$/Core_SF/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.0-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/DistributionAPIs/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/mobile-api-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/SharedServices_SF/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/mobile-page-objects/target/" />
+    <ignored path="$PROJECT_DIR$/Tools_GSI/target/" />
+    <ignored path="$PROJECT_DIR$/MobileAPIs_GSI/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/database-support/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.1-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/Supply_SF/HotelXnet/XNet11/target/" />
+    <ignored path="$PROJECT_DIR$/Supply_SF/target/" />
+    <ignored path="$PROJECT_DIR$/Web_SF/target/" />
+    <ignored path="$PROJECT_DIR$/Supply_SF/Site/target/" />
+    <ignored path="$PROJECT_DIR$/Supply_SF/HotelXnet/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/bex-step-defs/target/" />
+    <ignored path="$PROJECT_DIR$/../../modules/functional-testing/bex-page-objects/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Features$Scenario__External_link_to_theme_page_farefinder___RTC_3957.coverage" NAME="Scenario: External link to theme page farefinder - RTC-3957 Coverage Results" MODIFIED="1424911597881" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1425407694769" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Features$Scenario__Hotel_user_traveler_info_input_validation.coverage" NAME="Scenario: Hotel user traveler info input validation Coverage Results" MODIFIED="1425587292695" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$Scenario__Inline_validation_for_one_page_billing_RTC_5402.coverage" NAME="Scenario: Inline validation for one page billing RTC-5402 Coverage Results" MODIFIED="1424910290995" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$Scenario__RTC__5363.coverage" NAME="Scenario: RTC: 5363 Coverage Results" MODIFIED="1424990088280" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$Scenario__Verify_discount_banners_as_a_registered_user.coverage" NAME="Scenario: Verify discount banners as a registered user Coverage Results" MODIFIED="1425405197130" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$Scenario__Verify_that_user_can_edit_saved_credit_card_on_billing_page__RTC_1436.coverage" NAME="Scenario: Verify that user can edit saved credit card on billing page. RTC-1436 Coverage Results" MODIFIED="1425510422136" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$Scenario__Validate_information_consistency_in_confirmation_email__1_.coverage" NAME="Scenario: Validate information consistency in confirmation email (1) Coverage Results" MODIFIED="1425406175018" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$Scenario__Validate_information_consistency_in_confirmation_email.coverage" NAME="Scenario: Validate information consistency in confirmation email Coverage Results" MODIFIED="1425412198535" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>cucumber.api.cli.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Features$jslave.coverage" NAME="jslave Coverage Results" MODIFIED="1425405792585" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/Features$MainConfig.coverage" NAME="MainConfig Coverage Results" MODIFIED="1425408648149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Features" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="hotel_purchase.feature" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Web_SF/ConsumerHotel/Purchase/hotel_purchase.feature">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="6307">
+              <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ApplicationSetupSteps.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/application/ApplicationSetupSteps.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="425" max-vertical-offset="5321">
+              <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#13700#0" expanded="false" />
+                <element signature="e#1336#1337#0" expanded="false" />
+                <element signature="e#1388#1389#0" expanded="false" />
+                <element signature="e#1466#1467#0" expanded="false" />
+                <element signature="e#1525#1526#0" expanded="false" />
+                <element signature="e#2576#2577#0" expanded="false" />
+                <element signature="e#2640#2641#0" expanded="false" />
+                <element signature="e#2750#2751#0" expanded="false" />
+                <element signature="e#2780#2781#0" expanded="false" />
+                <element signature="e#2855#2856#0" expanded="false" />
+                <element signature="e#2902#2903#0" expanded="false" />
+                <element signature="e#3628#3629#0" expanded="false" />
+                <element signature="e#3696#3697#0" expanded="false" />
+                <element signature="e#3798#3799#0" expanded="false" />
+                <element signature="e#3865#3866#0" expanded="false" />
+                <element signature="e#4814#4815#0" expanded="false" />
+                <element signature="e#4877#4878#0" expanded="false" />
+                <element signature="e#5560#5561#0" expanded="false" />
+                <element signature="e#5617#5618#0" expanded="false" />
+                <element signature="e#5714#5715#0" expanded="false" />
+                <element signature="e#5769#5770#0" expanded="false" />
+                <element signature="e#6112#6113#0" expanded="false" />
+                <element signature="e#6174#6175#0" expanded="false" />
+                <element signature="e#6280#6281#0" expanded="false" />
+                <element signature="e#6344#6345#0" expanded="false" />
+                <element signature="e#6435#6436#0" expanded="false" />
+                <element signature="e#6492#6493#0" expanded="false" />
+                <element signature="e#6570#6571#0" expanded="false" />
+                <element signature="e#6620#6621#0" expanded="false" />
+                <element signature="e#6702#6703#0" expanded="false" />
+                <element signature="e#6754#6755#0" expanded="false" />
+                <element signature="e#6837#6838#0" expanded="false" />
+                <element signature="e#6898#6899#0" expanded="false" />
+                <element signature="e#7046#7047#0" expanded="false" />
+                <element signature="e#7100#7101#0" expanded="false" />
+                <element signature="e#7251#7252#0" expanded="false" />
+                <element signature="e#7309#7310#0" expanded="false" />
+                <element signature="e#7413#7414#0" expanded="false" />
+                <element signature="e#7473#7474#0" expanded="false" />
+                <element signature="e#7567#7568#0" expanded="false" />
+                <element signature="e#7632#7633#0" expanded="false" />
+                <element signature="e#7844#7845#0" expanded="false" />
+                <element signature="e#7907#7908#0" expanded="false" />
+                <element signature="e#8116#8117#0" expanded="false" />
+                <element signature="e#8186#8187#0" expanded="false" />
+                <element signature="e#8250#8251#0" expanded="false" />
+                <element signature="e#8296#8297#0" expanded="false" />
+                <element signature="e#8803#8804#0" expanded="false" />
+                <element signature="e#8862#8863#0" expanded="false" />
+                <element signature="e#9172#9173#0" expanded="false" />
+                <element signature="e#9236#9237#0" expanded="false" />
+                <element signature="e#9322#9323#0" expanded="false" />
+                <element signature="e#9380#9381#0" expanded="false" />
+                <element signature="e#9502#9503#0" expanded="false" />
+                <element signature="e#9568#9569#0" expanded="false" />
+                <element signature="e#9918#9919#0" expanded="false" />
+                <element signature="e#9985#9986#0" expanded="false" />
+                <element signature="e#10076#10077#0" expanded="false" />
+                <element signature="e#10131#10132#0" expanded="false" />
+                <element signature="e#10248#10249#0" expanded="false" />
+                <element signature="e#10317#10318#0" expanded="false" />
+                <element signature="e#10430#10431#0" expanded="false" />
+                <element signature="e#10490#10491#0" expanded="false" />
+                <element signature="e#10805#10806#0" expanded="false" />
+                <element signature="e#10889#10890#0" expanded="false" />
+                <element signature="e#10983#10984#0" expanded="false" />
+                <element signature="e#11038#11039#0" expanded="false" />
+                <element signature="e#11120#11121#0" expanded="false" />
+                <element signature="e#11174#11175#0" expanded="false" />
+                <element signature="e#11238#11239#0" expanded="false" />
+                <element signature="e#11286#11287#0" expanded="false" />
+                <element signature="e#11429#11430#0" expanded="false" />
+                <element signature="e#11500#11501#0" expanded="false" />
+                <element signature="e#11606#11607#0" expanded="false" />
+                <element signature="e#11671#11672#0" expanded="false" />
+                <element signature="e#13408#13409#0" expanded="false" />
+                <element signature="e#13456#13457#0" expanded="false" />
+                <element signature="e#13525#13526#0" expanded="false" />
+                <element signature="e#13572#13573#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cucumber-application-context.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-application-context.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2941">
+              <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cucumber.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1207">
+              <caret line="56" column="33" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebdriverAwareModel.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/common/WebdriverAwareModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="1207">
+              <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+              <folding>
+                <element signature="e#0#2568#0" expanded="false" />
+                <element signature="imports" expanded="false" />
+                <element signature="e#691#692#0" expanded="false" />
+                <element signature="e#731#732#0" expanded="false" />
+                <element signature="e#2078#2079#0" expanded="false" />
+                <element signature="e#2116#2117#0" expanded="false" />
+                <element signature="e#2492#2493#0" expanded="false" />
+                <element signature="e#2563#2564#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="helpcenter-context.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/helpcenter-context.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="629">
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Web_SF/InternationalUK/Hotels/Desktop/purchase/one_page_billing.feature" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/application/ApplicationModelTemplate.java" />
+        <option value="$PROJECT_DIR$/Web_SF/InternationalUK/Hotels/Desktop/purchase/liveprocessor.feature" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/deals/DealsModelWebApp.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/deals/DealSteps.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/GlobalFooter.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/deals/VacationsPage.java" />
+        <option value="$PROJECT_DIR$/Web_SF/SEO/canonical_url.feature" />
+        <option value="$PROJECT_DIR$/Web_SF/ConsumerHotel/HotelSearch/hotel_search.feature" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/billing/AbstractBillingPage.java" />
+        <option value="$PROJECT_DIR$/Web_SF/ConsumerHotel/MWeb/hotel-discount.feature" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/search/hotel/HotelSearchModelMobileWebApp.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-purchase-context.xml" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/billing/onepage/HotelBillingOnePage.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-account-context.xml" />
+        <option value="$PROJECT_DIR$/Web_SF/ConsumerHotel/Purchase/Help_Centre_email_module/help_centre_module.feature" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/common/billing/HotelBillingPage.java" />
+        <option value="$PROJECT_DIR$/Web_SF/ConsumerHotel/EmailPastPurchaseDetails/hotel-validation.feature" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/hotel/HotelPurchaseModel.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/hotel/HotelPurchaseModelTemplate.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/hotel/HotelPurchaseSteps.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/billing/onepage/HotelCreditCardFragment.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/DelegatingPurchaseModel.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/hotel/HotelPurchaseModelWebApp.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/pom.xml" />
+        <option value="$PROJECT_DIR$/Web_SF/ConsumerHotel/ExecuteCustomerSearch/billing_page.feature" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/search/hotel/HotelSearchModelWebApp.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/account/AccountAccessWebApp.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/account/AccountTripsPage.java" />
+        <option value="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/account/CarAccountAccessSteps.java" />
+        <option value="$PROJECT_DIR$/Web_SF/ConsumerHotel/Purchase/hotel_purchase.feature" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+      </PATH>
+      <PATH>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$RootNode" />
+        </PATH_ELEMENT>
+        <PATH_ELEMENT>
+          <option name="myItemId" value="functional-testing" />
+          <option name="myItemType" value="org.jetbrains.idea.maven.navigator.MavenProjectsStructure$ProjectNode" />
+        </PATH_ELEMENT>
+      </PATH>
+    </treeState>
+  </component>
+  <component name="P4ConfigProject">
+    <option name="connectionMethod" value="CLIENT" />
+    <option name="port" value="perforce:1666" />
+    <option name="protocol" value="p4java" />
+    <option name="username" value="v-jhernandeziniguez" />
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="996" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Features" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="options.lastSelected" value="vcs.Perforce" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="SearchEverywhereHistoryKey" value="input#newCreditCardPaymentRadioButton&#9;PSI&#9;JAVA://com.hotwire.selenium.desktop.row.elements.Input" />
+    <property name="OverrideImplement.combined" value="true" />
+    <property name="OverrideImplement.overriding.sorted" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Web_SF" />
+    <property name="farbluer.p4intellij.p4server" value="perforce:1666" />
+    <property name="farbluer.p4intellij.p4user" value="v-jhernandeziniguez" />
+    <property name="farbluer.p4intellij.p4workspace" value="v-jhernandeziniguez-SJE-JHINIGUEZ-V" />
+    <property name="simplep4plugin_settings" value="P4PORT=perforce:1666&#10;P4CLIENT=v-jhernandeziniguez-SJE-JHINIGUEZ-V&#10;P4USER=v-jhernandeziniguez" />
+  </component>
+  <component name="RunManager" selected="Cucumber java.Scenario: User wants to view a past purchase of a hotel that has been turned off after the time of purchase. RTC-1339">
+    <configuration default="false" name="Scenario: User wants to view a past purchase of a hotel that has been turned off after the time of purchase. RTC-1339" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="myFilePath" value="$PROJECT_DIR$/Web_SF/ConsumerHotel/Purchase/hotel_purchase.feature" />
+      <option name="GLUE" value="com.hotwire.test.steps" />
+      <option name="myNameFilter" value="User wants to view a past purchase of a hotel that has been turned off after the time of purchase. RTC-1339" />
+      <option name="myGeneratedName" value="Scenario: User wants to view a past purchase of a hotel that has been turned off after the time of purchase. RTC-1339" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <option name="VM_PARAMETERS" value="-ea -Dspring.profiles.active=WebApp -DtargetAppType=WebApp -Dapplication_url=http://dev05.dev.hotwire.com:7001" />
+      <option name="PROGRAM_PARAMETERS" value=" --format org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;User wants to view a past purchase of a hotel that has been turned off after the time of purchase. RTC-1339&quot;" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Web_SF" />
+      <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list />
+            </option>
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" value="" />
+      <option name="GLUE" value="com.hotwire.test.steps" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <option name="VM_PARAMETERS" value="-ea -Dspring.profiles.active=WebApp -DtargetAppType=WebApp -Dapplication_url=http://dev05.dev.hotwire.com:7001" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Scenario: Verify that user can edit saved credit card on billing page. RTC-1436" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="cucumber.api.cli.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="myFilePath" value="$PROJECT_DIR$/Web_SF/ConsumerHotel/ExecuteCustomerSearch/billing_page.feature" />
+      <option name="GLUE" value="com.hotwire.test.steps" />
+      <option name="myNameFilter" value="Verify that user can edit saved credit card on billing page. RTC-1436" />
+      <option name="myGeneratedName" value="Scenario: Verify that user can edit saved credit card on billing page. RTC-1436" />
+      <option name="MAIN_CLASS_NAME" value="cucumber.api.cli.Main" />
+      <option name="VM_PARAMETERS" value="-ea -Dspring.profiles.active=WebApp -DtargetAppType=WebApp -Dapplication_url=http://jslave12.hotwire.com:7001" />
+      <option name="PROGRAM_PARAMETERS" value=" --format org.jetbrains.plugins.cucumber.java.run.CucumberJvmSMFormatter --monochrome --name &quot;Verify that user can edit saved credit card on billing page. RTC-1436&quot;" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Web_SF" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Cucumber java.Scenario: Verify that user can edit saved credit card on billing page. RTC-1436" />
+      <item index="1" class="java.lang.String" itemvalue="Cucumber java.Scenario: User wants to view a past purchase of a hotel that has been turned off after the time of purchase. RTC-1339" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Cucumber java.Scenario: User wants to view a past purchase of a hotel that has been turned off after the time of purchase. RTC-1339" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="StructuralSearchPlugin">
+    <searchConfiguration name="user defined" text="webdriverInstance" recursive="true" caseInsensitive="true" type="JAVA" history="1" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\v-jhernandeziniguez\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eccfe2a0-4c19-41e6-a3b7-7330addae1c2" name="Default" comment="" />
+      <created>1424812665985</created>
+      <option name="number" value="Default" />
+      <updated>1424812665985</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1296" height="996" extended-state="7" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.00390625" sideWeight="0.49825174" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3990964" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3277027" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35585585" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23125" sideWeight="0.50174826" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4966216" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.00390625" sideWeight="0.49825174" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39977476" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831326" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4759036" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23125" sideWeight="0.50174826" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="CheckStyle" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32421875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.049698796" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/billing/onepage/HotelBillingOnePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="588" max-vertical-offset="2448">
+          <caret line="70" column="31" selection-start-line="70" selection-start-column="31" selection-end-line="70" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/billing/onepage/HotelCreditCardFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.625" vertical-offset="5729" max-vertical-offset="6341">
+          <caret line="385" column="20" selection-start-line="385" selection-start-column="20" selection-end-line="385" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/hotel/HotelPurchaseSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3206" max-vertical-offset="11356">
+          <caret line="239" column="25" selection-start-line="239" selection-start-column="25" selection-end-line="239" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/DelegatingPurchaseModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="955" max-vertical-offset="2261">
+          <caret line="88" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="88" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/PurchaseSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3971" max-vertical-offset="6783">
+          <caret line="283" column="20" selection-start-line="283" selection-start-column="20" selection-end-line="283" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/purchase/hotel/HotelPurchaseModelWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1360" max-vertical-offset="18717">
+          <caret line="143" column="47" selection-start-line="142" selection-start-column="80" selection-end-line="142" selection-end-column="100" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="279" max-vertical-offset="884">
+          <caret line="36" column="34" selection-start-line="36" selection-start-column="34" selection-end-line="36" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="6834">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web_SF/ConsumerHotel/ExecuteCustomerSearch/billing_page.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71938777" vertical-offset="568" max-vertical-offset="1173">
+          <caret line="50" column="61" selection-start-line="50" selection-start-column="61" selection-end-line="50" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.4.RELEASE/spring-jdbc-4.1.4.RELEASE-sources.jar!/org/springframework/jdbc/support/AbstractFallbackSQLExceptionTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33125" vertical-offset="693" max-vertical-offset="1615">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.4.RELEASE/spring-jdbc-4.1.4.RELEASE-sources.jar!/org/springframework/jdbc/support/SQLExceptionSubclassTranslator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33125" vertical-offset="761" max-vertical-offset="1224">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-jdbc/4.1.4.RELEASE/spring-jdbc-4.1.4.RELEASE-sources.jar!/org/springframework/jdbc/core/JdbcTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.809375" vertical-offset="5538" max-vertical-offset="25653">
+          <caret line="415" column="0" selection-start-line="415" selection-start-column="0" selection-end-line="415" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/mail/MailModelImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8143" max-vertical-offset="8857">
+          <caret line="544" column="34" selection-start-line="544" selection-start-column="34" selection-end-line="544" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/account/AccountAccessSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33272058" vertical-offset="601" max-vertical-offset="5661">
+          <caret line="75" column="16" selection-start-line="75" selection-start-column="16" selection-end-line="75" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/search/hotel/HotelSearchModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33272058" vertical-offset="4188" max-vertical-offset="4879">
+          <caret line="265" column="9" selection-start-line="265" selection-start-column="9" selection-end-line="265" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/db/DbModelImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2776699" vertical-offset="9972" max-vertical-offset="12495">
+          <caret line="637" column="18" selection-start-line="636" selection-start-column="8" selection-end-line="637" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/account/AccountTripsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1600" max-vertical-offset="3060">
+          <caret line="139" column="102" selection-start-line="139" selection-start-column="102" selection-end-line="139" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/account/AccountAccessModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33272058" vertical-offset="1026" max-vertical-offset="2550">
+          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/account/AccountAccessWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5463" max-vertical-offset="10370">
+          <caret line="373" column="0" selection-start-line="373" selection-start-column="0" selection-end-line="373" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/account/CarAccountAccessSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1156">
+          <caret line="43" column="36" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#2755#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#2690#2691#0" expanded="false" />
+            <element signature="e#2749#2750#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/about/us/AboutUsSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6085919" vertical-offset="0" max-vertical-offset="952">
+          <caret line="24" column="52" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/mobile-page-objects/src/main/java/com/hotwire/selenium/mobile/results/MobileHotelResultsPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="7448" max-vertical-offset="8602">
+          <caret line="485" column="64" selection-start-line="485" selection-start-column="64" selection-end-line="485" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-contact-us-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-rome-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-search-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2601">
+          <caret line="19" column="55" selection-start-line="19" selection-start-column="55" selection-end-line="19" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-seo-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="918">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-steps-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="867">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-tripstarter-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-validation-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-about-us-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="170" max-vertical-offset="442">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-accessibility-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-account-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="6987">
+          <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-angular-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-authentication-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="846" max-vertical-offset="1377">
+          <caret line="13" column="73" selection-start-line="13" selection-start-column="73" selection-end-line="13" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-bex-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-contact-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="531">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/search/hotel/HotelSearchSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="8204" max-vertical-offset="13345">
+          <caret line="578" column="35" selection-start-line="578" selection-start-column="35" selection-end-line="578" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/search/hotel/HotelSearchModelWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16643">
+          <caret line="76" column="57" selection-start-line="76" selection-start-column="57" selection-end-line="76" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/common/WebdriverAwareModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="205" max-vertical-offset="1207">
+          <caret line="30" column="47" selection-start-line="30" selection-start-column="47" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#2568#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+            <element signature="e#731#732#0" expanded="false" />
+            <element signature="e#2078#2079#0" expanded="false" />
+            <element signature="e#2116#2117#0" expanded="false" />
+            <element signature="e#2492#2493#0" expanded="false" />
+            <element signature="e#2563#2564#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/helpcenter-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="96" max-vertical-offset="629">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/application/ApplicationModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33251232" vertical-offset="120" max-vertical-offset="3315">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hotwire/maven/webdriver-support/1.0.0/webdriver-support-1.0.0.jar!/com/hotwire/util/webdriver/functions/ExpectedPageName.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35433072" vertical-offset="205" max-vertical-offset="1105">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/hotwire/maven/webdriver-support/1.0.0/webdriver-support-1.0.0.jar!/com/hotwire/util/webdriver/po/AbstractPageObject.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.070866145" vertical-offset="367" max-vertical-offset="1819">
+          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/application/ApplicationModelWebApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50246304" vertical-offset="2142" max-vertical-offset="5508">
+          <caret line="177" column="17" selection-start-line="177" selection-start-column="17" selection-end-line="177" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/search/SearchModelTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4359606" vertical-offset="27" max-vertical-offset="2499">
+          <caret line="31" column="55" selection-start-line="31" selection-start-column="55" selection-end-line="31" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/search/hotel/HotelSearchModelTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3768473" vertical-offset="0" max-vertical-offset="24259">
+          <caret line="64" column="58" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/src/main/java/com/hotwire/selenium/desktop/us/HomePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6256158" vertical-offset="171" max-vertical-offset="1955">
+          <caret line="50" column="11" selection-start-line="50" selection-start-column="11" selection-end-line="50" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber-application-context.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="2941">
+          <caret line="15" column="42" selection-start-line="15" selection-start-column="42" selection-end-line="15" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/resources/cucumber.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="714" max-vertical-offset="1207">
+          <caret line="56" column="33" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/src/main/java/com/hotwire/test/steps/application/ApplicationSetupSteps.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="5389">
+          <caret line="30" column="3" selection-start-line="30" selection-start-column="3" selection-end-line="30" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#13700#0" expanded="false" />
+            <element signature="e#1336#1337#0" expanded="false" />
+            <element signature="e#1388#1389#0" expanded="false" />
+            <element signature="e#1466#1467#0" expanded="false" />
+            <element signature="e#1525#1526#0" expanded="false" />
+            <element signature="e#2576#2577#0" expanded="false" />
+            <element signature="e#2640#2641#0" expanded="false" />
+            <element signature="e#2750#2751#0" expanded="false" />
+            <element signature="e#2780#2781#0" expanded="false" />
+            <element signature="e#2855#2856#0" expanded="false" />
+            <element signature="e#2902#2903#0" expanded="false" />
+            <element signature="e#3628#3629#0" expanded="false" />
+            <element signature="e#3696#3697#0" expanded="false" />
+            <element signature="e#3798#3799#0" expanded="false" />
+            <element signature="e#3865#3866#0" expanded="false" />
+            <element signature="e#4814#4815#0" expanded="false" />
+            <element signature="e#4877#4878#0" expanded="false" />
+            <element signature="e#5560#5561#0" expanded="false" />
+            <element signature="e#5617#5618#0" expanded="false" />
+            <element signature="e#5714#5715#0" expanded="false" />
+            <element signature="e#5769#5770#0" expanded="false" />
+            <element signature="e#6112#6113#0" expanded="false" />
+            <element signature="e#6174#6175#0" expanded="false" />
+            <element signature="e#6280#6281#0" expanded="false" />
+            <element signature="e#6344#6345#0" expanded="false" />
+            <element signature="e#6435#6436#0" expanded="false" />
+            <element signature="e#6492#6493#0" expanded="false" />
+            <element signature="e#6570#6571#0" expanded="false" />
+            <element signature="e#6620#6621#0" expanded="false" />
+            <element signature="e#6702#6703#0" expanded="false" />
+            <element signature="e#6754#6755#0" expanded="false" />
+            <element signature="e#6837#6838#0" expanded="false" />
+            <element signature="e#6898#6899#0" expanded="false" />
+            <element signature="e#7046#7047#0" expanded="false" />
+            <element signature="e#7100#7101#0" expanded="false" />
+            <element signature="e#7251#7252#0" expanded="false" />
+            <element signature="e#7309#7310#0" expanded="false" />
+            <element signature="e#7413#7414#0" expanded="false" />
+            <element signature="e#7473#7474#0" expanded="false" />
+            <element signature="e#7567#7568#0" expanded="false" />
+            <element signature="e#7632#7633#0" expanded="false" />
+            <element signature="e#7844#7845#0" expanded="false" />
+            <element signature="e#7907#7908#0" expanded="false" />
+            <element signature="e#8116#8117#0" expanded="false" />
+            <element signature="e#8186#8187#0" expanded="false" />
+            <element signature="e#8250#8251#0" expanded="false" />
+            <element signature="e#8296#8297#0" expanded="false" />
+            <element signature="e#8803#8804#0" expanded="false" />
+            <element signature="e#8862#8863#0" expanded="false" />
+            <element signature="e#9172#9173#0" expanded="false" />
+            <element signature="e#9236#9237#0" expanded="false" />
+            <element signature="e#9322#9323#0" expanded="false" />
+            <element signature="e#9380#9381#0" expanded="false" />
+            <element signature="e#9502#9503#0" expanded="false" />
+            <element signature="e#9568#9569#0" expanded="false" />
+            <element signature="e#9918#9919#0" expanded="false" />
+            <element signature="e#9985#9986#0" expanded="false" />
+            <element signature="e#10076#10077#0" expanded="false" />
+            <element signature="e#10131#10132#0" expanded="false" />
+            <element signature="e#10248#10249#0" expanded="false" />
+            <element signature="e#10317#10318#0" expanded="false" />
+            <element signature="e#10430#10431#0" expanded="false" />
+            <element signature="e#10490#10491#0" expanded="false" />
+            <element signature="e#10805#10806#0" expanded="false" />
+            <element signature="e#10889#10890#0" expanded="false" />
+            <element signature="e#10983#10984#0" expanded="false" />
+            <element signature="e#11038#11039#0" expanded="false" />
+            <element signature="e#11120#11121#0" expanded="false" />
+            <element signature="e#11174#11175#0" expanded="false" />
+            <element signature="e#11238#11239#0" expanded="false" />
+            <element signature="e#11286#11287#0" expanded="false" />
+            <element signature="e#11429#11430#0" expanded="false" />
+            <element signature="e#11500#11501#0" expanded="false" />
+            <element signature="e#11606#11607#0" expanded="false" />
+            <element signature="e#11671#11672#0" expanded="false" />
+            <element signature="e#13408#13409#0" expanded="false" />
+            <element signature="e#13456#13457#0" expanded="false" />
+            <element signature="e#13525#13526#0" expanded="false" />
+            <element signature="e#13572#13573#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Web_SF/ConsumerHotel/Purchase/hotel_purchase.feature">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="85" max-vertical-offset="6307">
+          <caret line="5" column="15" selection-start-line="5" selection-start-column="15" selection-end-line="5" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

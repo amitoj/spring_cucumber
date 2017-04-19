@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="no-js" data-version="v2.30.1.139076008cd6916fb324f8a367888414e0ad293b" data-language="en_US" lang="en">
+<head>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta charset="UTF-8" />
+  
+  <link rel="dns-prefetch" href="//a.intentmedia.net"/>
+  <link rel="dns-prefetch" href="//images.trvl-media.com"/>
+  <link rel="dns-prefetch" href="//a.travel-assets.com/"/>
+  <link rel="dns-prefetch" href="//b.travel-assets.com/"/>
+  <link rel="dns-prefetch" href="//c.travel-assets.com/"/>
+  
+  <title>Getting Search Results | Hotwire</title>
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  
+
+  
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" sizes="16x16 32x32" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico"  sizes="16x16 32x32" />
+
+  
+  <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    html {
+        background: #f5f5f5;
+        font-size: 106.25%;
+        line-height: 1.45;
+        font-family: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+
+    #pageInterstitial img {
+        max-width: 75%
+    }
+
+    img {
+        position: relative;
+        border: 0;
+        -ms-interpolation-mode: bicubic;
+        vertical-align: middle;
+    }
+
+    #pageInterstitial hr {
+        display: block;
+        clear: both;
+        max-width: 90%;
+        height: 1px;
+        border: 0;
+        border-top: 0.058823529411764705em solid;
+        margin: 1.3529411764705883em auto 1.411764705882353em auto;
+        padding: 0;
+        border-color: #c7c7c7;
+    }
+
+    #pageInterstitial {
+        display: none;
+        width: 24em;
+        max-width: 100%;
+        padding-top: 2em;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    #pageInterstitial .msg {
+        max-width: 90%;
+        margin: 0 auto;
+        font: bold 1.66666666667em 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+                padding-top: 2em;
+        color: #00355f;
+    }
+  
+     #pageInterstitial .isEurostarMsg {
+        max-width: 90%;
+        margin: 0 auto;
+        font: bold 13px "Tahoma","Geneva", Arial, sans-serif;
+        padding-top: 2em;
+        color: #00355f;
+    }
+
+    #pageInterstitial .imgLogoLarge {
+        max-width: 70%;
+        margin: 0 auto;
+        padding-top: 5em;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #pageInterstitial .imgLogoLarge.fallback {
+        display: none;
+    }
+
+    .ie8 #pageInterstitial .imgLogoLarge.fallback {
+        display: block;
+        width: auto;
+        height: 100px;
+        padding-top: 2em;
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='//ak-static.hotwirestatic.com/x/static/images/core/shell/large-hotwire-logo.png?ver=f2dcfd5e',sizingMethod='scale')";
+    }
+
+    .ie8 #pageInterstitial .imgLogoLarge {
+        display: none;
+    }
+
+    #pageInterstitial .imgPriming {
+        display: none;
+    }
+
+    .ie8 #pageInterstitial .imgPriming {
+        display: inline;
+    }
+
+    #pageInterstitial .imgLoading, #pageInterstitial .imgPriming {
+        padding-top: 2em;
+    }
+
+    #pageInterstitial .logo + .msg {
+        padding-top: 0;
+    }
+
+    .cssanimations.svg .loader {
+        background-image: url(/static/ui_toolkit/v2-0/images/loader-light.svg);
+    }
+
+    .ie10.cssanimations.svg .loader, .cssanimations.no-svg .loader, .no-cssanimations.no-svg .loader, .no-cssanimations .loader {
+        background-image: url(/static/ui_toolkit/v2-0/images/loader-light.png);
+    }
+
+    .no-cssanimations.no-svg .loader, .no-cssanimations .loader {
+        background-image: url(/static/ui_toolkit/v2-0/images/loader-light.gif);
+    }
+
+    .loader-overlay .loader {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1.0588235294117647em;
+        margin-left: -1.0588235294117647em;
+    }
+
+    .loader {
+        display: inline-block;
+        position: relative;
+        width: 2.1176470588235294em;
+        height: 2.1176470588235294em;
+        overflow: hidden;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        -webkit-background-size: contain;
+        -moz-background-size: contain;
+        -ms-background-size: contain;
+        -o-background-size: contain;
+        -ms-background-size: contain;
+        background-size: contain;
+        line-height: 1;
+    }
+
+    @media screen and (min-height: 35.2941176em) {
+        #pageInterstitial .imgPriming {
+            display: inline;
+        }
+    }
+
+    .has-interstitial #mainContent, .has-interstitial #wizard, .has-interstitial #header, .has-interstitial #footer, .has-interstitial #historyTabs {
+        display: none;
+    }
+
+    .has-interstitial #pageInterstitial {
+        display: block;
+    }
+</style>
+
+  
+
+  
+  
+    <script src="//b.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/core/js/uitk-lib-bundle-min.js"></script>
+
+  
+  <!--[if lt IE 8]>
+    <script src="//b.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/core/js/uitk-ltie8-bundle-min.js"></script>
+
+  <![endif]-->
+
+  
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+
+  
+
+  
+  
+
+  
+</head>
+
+<body class="wrap cf l-results has-interstitial">
+      <div id="pageInterstitial">
+            <div class="logo">
+                <div class="imgLogoLarge" style="background-image: url(/static/default/default/images/hotwire/hw_logo_2015.svg)"></div>
+                <div class="imgLogoLarge fallback"></div>
+					<hr />
+            </div>
+			<div class="msg">
+					Hurry! Prices and inventory are limited
+			</div>
+        <div class="imgLoading">
+<span class="loader loader-light loader-animated loading pageInterstitialLoader" aria-hidden="true" title="Loading..."></span>        </div>
+		
+			<img src="/static/default/default/images/hotwire/loading-animation.gif" class="imgPriming" />
+    </div>
+    <div id="modalInterstitial" style="display:none">
+        <div class="updating">Updating your results</div>
+        <span class="modalInterstitialWrapper">
+            Please wait ...
+<span class="loader loader-light loader-animated loading ajaxInterstitialLoader" aria-hidden="true" title="Loading..."></span>        </span>
+    </div>
+
+                <script id="firstAjaxJS" type="text/javascript">
+            document.documentElement.className += ' responsive';
+        window.pageModel = {};
+        window.releaseVersion = "trunk-trunk.ci.1309141";
+        /*<script id="dependency" type="text/javascript">*/
+(function() {
+    "use strict";
+
+    var dependencyMap = {};
+
+    var DependencyNode = function() {
+        if(arguments.length === 1) {
+            this.name = arguments[0];
+        } else if(arguments.length === 2) {
+            this.name = 'require';
+            this.dependencies = arguments[0];
+            this.factory = arguments[1];
+        } else if(arguments.length === 3) {
+            this.name = arguments[0];
+            this.dependencies = arguments[1];
+            this.factory = arguments[2];
+        } else {
+            throw new Error('Invalid arguments passed to new DependencyNode');
+        }
+    };
+
+    DependencyNode.prototype = {
+        "name": undefined,
+        "value": undefined,
+        "factory": undefined,
+        "dependencies": [],
+        "waitingDependencies": [],
+
+        /**
+         * update this node to include the passed dependencies and factory method
+         *
+         * @param dependencies - An array of DependencyNodes to add to the current note
+         * @param factory - The factory method to use
+         */
+        "update": function(dependencies, factory){
+            this.dependencies = dependencies;
+            this.factory = factory;
+        },
+
+        /**
+         * Add a single dependency (dependencyNode) or list of dependencies (array) to this node
+         *
+         * @param dependencies the list (as array) or single (dependencyNode) dependencies required to execute this node
+         */
+        "addDependencies": function(dependencies) {
+            // if object convert to a []
+            if(dependencies.constructor != Array) {
+                dependencies = [dependencies];
+            }
+
+            // push all the elements into the dependency list
+            this.dependencies = this.dependencies.concat(dependencies);
+        },
+
+        /**
+         * For internal use only. Add to the list of waiting dependencies.
+         * There is a node waiting on this dependency to execute. When this node gets executed try to execute all of the
+         * nodes waiting on this element too.
+         *
+         * @param waitingDependencies The list (array) or single (dependencyNode) dependency that is waiting waiting to execute
+         */
+        "addWaiting": function(waitingDependencies) {
+            // if object convert to a []
+            if(!waitingDependencies.constructor != Array) {
+                waitingDependencies = [waitingDependencies];
+            }
+
+            // push the items into the waiting list
+            this.waitingDependencies = this.waitingDependencies.concat(waitingDependencies);
+        },
+
+        /**
+         * Execute the dependencies of this node. This could be done for several reasons all of which stem form the app
+         * trying to require THIS node.
+         * @return {*} The ordered list of dependency values or false if there is any waiting dependency.
+         */
+        "executeDependencies": function() {
+            var childVals = [];
+            for(var i=0; i<this.dependencies.length; i++) {
+                var dependency = this.dependencies[i];
+
+                var depValue = dependency.execute();
+                if(typeof depValue === 'undefined') {
+                    throw new Error('Define cannot return undefined. ' + dependency.name);
+                }else if(depValue) {
+                    childVals.push(depValue);
+                } else {
+                    // There is a child dependency that wasn't able to execute.
+                    // Queue this node as waiting for that child to execute.
+                    dependency.addWaiting(this);
+                    return false;
+                }
+            }
+            return childVals;
+        },
+
+        /**
+         * Execute the this dependency and its required dependency
+         * @return {*} The dependency if it is able to execute. If there is a missing dependency return false.
+         */
+        "execute": function() {
+            // If we have already calculated the value don't mess around just return it
+            if(this.value) {
+                return this.value;
+            }
+
+            // Otherwise we need to calculate it
+            if(this.factory) {
+                var childVals = this.executeDependencies();
+                if(childVals) {
+                    this.value = this.factory.apply({}, childVals);
+
+                    for(var i=0; i<this.waitingDependencies.length; i++) { // Now that we have executed this dependency we need to run anything waiting too
+                        this.waitingDependencies[i].execute();
+                    }
+                    this.waitingDependencies = [];
+                    return this.value;
+                }
+            }
+            return false; // It isn't defined yet so we can't execute this chain
+        }
+    };
+
+    function findCircularDependencies(startingNode, currentNode) {
+        if(!currentNode) {
+            // This is the first pass
+            // we don't want to check if they are the same yet
+            currentNode = startingNode;
+        } else {
+            // Not the first pass make sure we haven't found the starting node
+            if(startingNode === currentNode) {
+                return true; // We found a circular dependency
+            }
+        }
+
+        // Loop over all the children to make sure they don't have the dependency
+        for(var i=0; i<currentNode.dependencies.length; i++) {
+            if(findCircularDependencies(startingNode, currentNode.dependencies[i])) {
+                return true; // propagate the true value
+            }
+        }
+
+        return false; // we hit the end, we can return false
+    }
+
+    function convertDependencyListToNodes(dependencies) {
+        var dependencyList = [];
+        if(typeof dependencies === 'string') { // handle the case where the caller only gives us a single string
+            dependencies = [dependencies];
+        }
+
+        // convert dependency strings into actual dependency object before adding them to the current node
+        for(var i=0; i<dependencies.length; i++) {
+            var depName = dependencies[i];
+            if(depName == '') {
+                break;  // Don't process anything with an empty string as a dependency
+            }
+            var depNode = dependencyMap[depName];
+            if(!depNode) {
+                // we create new dependencies if this depends on something that is not already available
+                depNode = new DependencyNode(depName);
+                dependencyMap[depName] = depNode;
+            }
+            dependencyList.push(depNode);
+        }
+
+        return dependencyList;
+    }
+
+    /**
+     * This function defines a dependency and its required dependencies.
+     *
+     * The factory method will be executes with the dependencies as parameters.
+     * (ex define('myDep', [depA, depB], function(){}) will execute the function with parameters depA, depB)
+     *
+     * @param id -The name of this dependency
+     * @param dependencies - A list of dependencies
+     * @param factory - The method to run when this dependency is required by another dependency.
+     */
+    window.define = function(id, dependencies, factory) {
+        // If we don't list the dependencies assume they are empty
+        if(typeof dependencies === 'function') {
+            factory = dependencies;
+            dependencies = [];
+        }
+
+        var node, dependencyList;
+
+        dependencies = convertDependencyListToNodes(dependencies);
+
+        if(dependencyMap[id] && dependencyMap[id].factory) {
+            if(id) {
+                throw new Error('Dependency already defined ' + id);
+            } else {
+                throw new Error('Dependency already defined with no ID');
+            }
+
+        } else if(dependencyMap[id]) {
+            node = dependencyMap[id];
+            node.update(dependencies, factory);
+            node.execute();
+        } else {
+            node = new DependencyNode(id, dependencies, factory);
+            dependencyMap[id] = node;
+        }
+
+        if(findCircularDependencies(node)) {
+            throw new Error('Dependency is circular');
+        }
+    };
+    window.define.amd = {};
+
+    /**
+     * This function executes the give dependencies as long as they are defined. If they are not defined it will be
+     * added as an empty node which will be executed after it is defined.
+     *
+     * require(dependencies) - Will execute the dependency chain but does not return anything.
+     * require(dependencies, callback) - Will execute the dependency chain and pass the requested object to the given
+     *                                   function. This function will be run one all the dependencies in the chain are
+     *                                   available.
+     * require(dependencies, overrides) - Overrides allow the user to specify a specific value to use instead of the
+     *                                    globally loaded dependencies.
+     * require(dependencies, callback, overrides)
+     */
+    window.require = function() {
+        var dependencies, factory, overrides;
+        var defaultCallback = function() {
+            return false;
+        };
+
+        dependencies = convertDependencyListToNodes(arguments[0]);
+        if(!dependencies || dependencies.length == 0) {
+            throw new Error('Require without dependency. This is redundant.');
+        }
+
+        if(arguments.length == 1) {
+            factory = defaultCallback;
+            overrides = {};
+        } else if(arguments.length == 2) {
+            if(typeof arguments[1] === 'function') {
+                factory = arguments[1];
+                overrides = {};
+            } else {
+                factory = defaultCallback;
+                overrides = arguments[1];
+            }
+        } else {
+            factory = arguments[1];
+            overrides = arguments[2];
+        }
+
+        var node = new DependencyNode(dependencies, factory);
+        node.factory = factory;
+        node.addDependencies(dependencies);
+
+        node.execute();
+    };
+
+    /**
+     * This method is provided for testing only. It should NEVER EVER EVER be called by live code.
+     * It will cause just about anything to break. Clearing the dependencies wipes out the dependency map, losing
+     * references to all define()s and require()s.
+     *
+     * Again, don't call this ever!
+     *
+     * @private
+     * @deprecated
+     */
+    window._clearDependencies = function() {
+        dependencyMap = {};
+    };
+
+    /**
+     * This method is provided for testing only. It should never be called by live code. It will cause just about
+     * anything to break. Removing a dependency could cause unexpected behavior because some modules that depend on a
+     * module may succeed while others will fail.
+     *
+     * Please do not call this!
+     *
+     * @param id - The ID of the element you wish to remove
+     * @private
+     * @deprecated
+     */
+    window._clearDependency = function(id) {
+        delete dependencyMap[id];
+        for(var dep in dependencyMap) {
+            dep = dependencyMap[dep];
+            for(var i=0; i<dep.dependencies.length; i++) {
+                if(dep.dependencies[i].name === id) {
+                    if(!dependencyMap[id]) {
+                        dependencyMap[id] = new DependencyNode(id);
+                    }
+                    dep.dependencies[i] = dependencyMap[id];
+                    dep.dependencies[i].addWaiting(dep);
+                }
+            }
+        }
+    };
+
+    /**
+     * This method is provided for testing only. It should never be called by live code. It will cause just about
+     * anything to break. Resetting a the dependencies causes all the dependedncies to be re-executed the next time they
+     * are required. This can be used in conjunction with @see{window._clearDependency} to allow Unit tests to provide
+     * different implementations of dependencies at run time.
+     *
+     * Please do not call this!
+     *
+     * @private
+     * @deprecated
+     */
+    window._resetDependencies = function() {
+        for(var dep in dependencyMap) {
+            dep = dependencyMap[dep];
+            dep.value = false;
+        }
+    };
+
+    function mapNames(arry) {
+        var i, mappedArray = [];
+        for (i = 0; i < arry.length; i++) {
+            mappedArray.push(arry[i].name);
+        }
+        return mappedArray;
+    }
+
+    /**
+     * This is a debug method provided for the purpose of debugging any issues with dependency management. This code
+     * will list out all the named dependencies (non-require blocks) and any other dependencies that are waiting on that
+     * node.
+     *
+     * Syntax is as follows:
+     * &lt;dependency name&gt; [&lt;List of waiting dependencies&gt;]
+     *
+     * @private
+     */
+    window._printWaitingDependencies = function() {
+        for(var dep in dependencyMap) {
+            dep = dependencyMap[dep];
+            if(dep.waitingDependencies.length > 0) {
+                var out = dep.name + '[' + mapNames(dep.waitingDependencies) + ']';
+                console.log(out);
+            }
+        }
+    };
+
+    /**
+     * This is a debug method provided for the purpose of debugging any issues with dependency management. This code
+     * will list out all the named dependencies (non-require blocks), all the dependencies required for this block to
+     * execute and any nodes that are currently waiting on this node to execute.
+     *
+     * Syntax is as follows:
+     * &lt;dependency name&gt; (&lt;List of dependencies required for this node to execute&gt;) [&lt;List of waiting dependencies&gt;]
+     *
+     * @private
+     */
+    window._printDependencies = function() {
+        var dep, out;
+        for(dep in dependencyMap) {
+            dep = dependencyMap[dep];
+            out = dep.name + '(' + mapNames(dep.dependencies) + ')[' + mapNames(dep.waitingDependencies) + ']';
+            console.log(out);
+        }
+        console.log("() - this node's dependencies, [] - dependencies that are currently waiting on this node");
+    };
+
+}());               
+        window.define.amd = {
+            "uitk": true,
+            "jQuery": true
+        };
+    /*<script id="config" type="text/javascript">*/
+    define('config', function(){
+        "use strict";
+        return {
+            
+            headerScripts: {
+                // Any extra header info goes here
+            },
+            abacusConfig: {
+                // A/B values go here
+                metaRewards:false,
+                hotelSRCSESortBar: false,             // global from imports
+                getHotelRankingTestEnabled:0, 
+                isMealPlanTestEnabled:0,            
+                taapControlExperimentVariant: 0, 
+                taapConditionalExperimentVariant: 0, 
+
+            },
+            
+            displayMessageWithRedBoldText: false,
+            isInstallmentFeatureEnabled: false,
+
+            // Configs should be moved out of the wizard model. They do not change between requests
+            maxStayLength: 28,
+            // PDO (Price Display Optimization) flag is set by POS (point of sale/supply) according to domain config.
+            pdoFeatureEnabled: false,
+            // dateRegEx property is meant to be used in a regex literal,
+            // passing it to a RegExp constructor throws off the backslash escaping
+            dateRegex: /^(?:0*[1-9]|1[012])[- /.](?:0*[1-9]|[12][0-9]|3[01])(?:[- /.](?:20)*\d\d)*$/,
+            isTablet: false,
+            isMobile: false,
+            // this util function is in config because it needs to be available to firstXHR
+            getHash: function() {
+                var query = window.location.href.split('#')[1] || "";
+                return query;
+            },
+
+            months: ['Jan', 'Feb', 'Mar', 'Apr',
+                'May', 'Jun', 'Jul', 'Aug',
+                'Sept', 'Oct', 'Nov', 'Dec'],
+            days: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
+            delayAfterPageRender: true,
+            dataUrl: '/Hotel-Search?inpAjax=true&responsive=true',
+            hashParam: '',
+            siteId: '30031',
+            locale: 'en_US',
+            langId: 1033,
+            isTD: false,
+            isBarclays: false,
+            isAARP: false,
+            isHotelSRHideExpediaRateText: true,
+            calDateFormat: 'mmddyy',
+            calDateSeparator: '/',
+            calStartDayOfTheWeek: 0,
+            calMonths: ['January','February','March','April','May','June','July','August','September','October','November','December'],
+            calDaysOfTheWeek: ['S','M','T','W','T','F','S'],
+            calClose: 'Close',
+            /*  Jira Bug MAIN-124370 Cannot get to TD HSR page, calNightText is munged causing JS error */
+            calNightText: ['one night','nights','1 night trip','# night trip'],
+            toplisting: {
+                delay: 2000,
+                isCacheEnabled: true
+            },
+            googleMapUrl: '',
+            isTaapAgent: false,
+            isPerceivePageDisplay: false,
+            devMode: false,
+            initializeViews: true,
+            isCountFiltersOnClient: true,
+            isTaapHotelTypeFilterEnabled: false
+        };
+    });
+    window.uitkUseNativeEvents = true;
+
+    // **** SEE /static/hotels/retailsearch/views/googleanalytics.js ****
+    // if GA is on, it will defined googleAnalyticsConfig -->
+
+    // all modules are singletons so this factory should only run once
+    // defined as a module now it can be mocked
+    define('googleAnalyticsScript', function() {
+        var ga = document.createElement('script');
+        ga.type = 'text/javascript';
+        ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        return {};
+    });
+/*<script type="text/javascript">*/
+"use strict";
+define('performanceLogger', [], function() {
+    var performanceLogger = {
+        restart: function() {},
+        logTime: function() {},
+        publish: function() {}
+    };
+
+    if(window.performance && window.performance.timing && window.performance.now) {
+        performanceLogger = {
+            isFirstRequest: true,
+            startTime: 0,                                                               // For the first request the start time is = window.performance.timing.navigationStart (a delta of 0)
+            deltas: [],
+            restart: function() {
+                this.isFirstRequest = false;
+                this.deltas = [];
+                this.startTime = window.performance.now();                              // for subsequent requests, the start time needs to be offset by the time between navigationStart and now() (thatfully that is what .now() gives us)
+            },
+            logTime: function(id) {
+                var timeSinceStart = window.performance.now() - this.startTime,
+                    timeAlreadyLogged = this.getTimeAlreadyLogged(),
+                    currentEventTime = timeSinceStart - timeAlreadyLogged;
+                if(id) {
+                    this.deltas.push({
+                        id: id,
+                        time: currentEventTime
+                    });
+                } else {
+                    this.logError('ID must not be blank');
+                }
+            },
+            publish: function() {
+                var that = this;
+                require('dctk', function(dctk) {
+                    var delta, params;
+                    if(dctk.loggingAdapter) {
+                        for(var i=0; i<that.deltas.length; i++) {
+                            delta = that.deltas[i];
+                            params = that.buildParamsForTrx(delta.id, delta.time);
+                            dctk.loggingAdapter.logTrxEvent('navTiming', params);
+                        }
+                    }
+                });
+            },
+            buildParamsForTrx: function(id, time) {
+                var params = [];
+                params.push('clEventName01=' + id);
+                params.push('clEventTime01=' + time);
+
+                if(this.isFirstRequest) {
+                    params.push('clEventName02=isFirstXHR.true');
+                } else {
+                    params.push('clEventName02=isFirstXHR.false');
+                }
+
+                return params;
+            },
+            getTimeAlreadyLogged: function () {
+                var output = 0,
+                    deltas = this.deltas;
+                for(var i=0; i<deltas.length; i++) {
+                    output += (deltas[i] && deltas[i].time) ? deltas[i].time : 0;
+                }
+                return output;
+            },
+            logError: function(msg) {
+                require('logger', function(logger){
+                    logger.logMessage('[performanceLogger] Error ' + msg, []);
+                });
+            }
+        };
+    }
+
+    return performanceLogger;
+        require('performanceLogger', function(performanceLogger) {
+            performanceLogger.logTime('interstitialShow');
+        });
+        require(['config', 'performanceLogger'], function(config, performanceLogger){
+    "use strict";
+    // json caching. attaching these to window object as we can't return after wrapping inside require
+    window.timeToLive = 5 * 60 * 1000; // 5 minutes in milliseconds
+    window.useSavedState = function (state) {
+        if(!state) {
+            return false;
+        }
+        var isValidTimeToLive = window.timeToLive > 0;
+        var hasStateNotExpired = state.expirationTime && state.expirationTime > new Date().getTime();
+        var isSameRelease = state.metaData && state.metaData.releaseVersion &&
+            state.metaData.releaseVersion === window.releaseVersion;
+        return (isValidTimeToLive && hasStateNotExpired && isSameRelease);
+    };
+
+    window.handleError = function(isFirstAjax, httpStatus, textStatus, responseText, error) {
+        require('ajaxErrorHandler', function(ajaxErrorHandler) {
+            ajaxErrorHandler.handleError(isFirstAjax, httpStatus, textStatus, responseText, error);
+        });
+    };
+
+    window.isFirstXHR = true;
+
+    window.firstXHR = function(window, XMLHttpRequest, ActiveXObject) {
+        /*
+        HORRIBLE HACK to fix an IE bug
+        This replace refreshes the page and allows us to replace the URL fragment on the second page load without
+        triggering a full page load. By doing it early we can at least prevent an additional AJAX request.
+        */
+        var isMSIE = /*@cc_on!@*/0;
+        if (isMSIE && window.location.hash) {
+            window.location.replace(window.location.hash); // in normal browsers this does not cause a full page refresh
+        }
+        /* end of HACK */
+
+        // We don't have any fast back info. We need to setup & execute the AJAX call
+        var xmlHttp,
+            ajaxQuery = config.getHash(),
+            headers = {
+                "X-Requested-With": "XMLHttpRequest",
+                "Accept": "application/json, text/javascript",
+                "Content-type": "application/x-www-form-urlencoded"
+            };
+
+        if(!ajaxQuery) {
+            ajaxQuery = "destination=";
+        }
+
+        ajaxQuery += "&hashParam=" + config.hashParam;
+
+        try {
+            xmlHttp = new XMLHttpRequest(); // Try creating the default XMLHTTPRequest
+        } catch(e) {
+            try {
+                xmlHttp = new ActiveXObject("Microsoft.XMLHttp"); // Of course IE has to be different
+            } catch(ex) {
+                // will probably never run .. but just in case
+                throw new Error('Unable to create XMLHTTP object');
+            }
+        }
+
+        // Setup the callback function to handle the response
+        xmlHttp.onreadystatechange = function() {
+            if (this.readyState === 4) {
+                var self = this;
+                if(this.status >= 400) {
+                    window.handleError(true, self.status, self.statusText, self.responseText);
+                } else if (this.status === 0 || !this.responseText) {    // This happens when the user cancels the request (cancel button, refresh, back/forward, ect)
+                    require('ajaxErrorHandler', function(ajaxErrorHandler) {
+                        var responseText = (self.responseText) ? self.responseText : "";
+                        ajaxErrorHandler.handleError(true, self.status, self.statusText, responseText, new Error("First XHR status 0 or no response"));
+                    });
+                } else {
+                    require(['jquery', 'utils', 'presenter', 'config'], function($, utils, presenter, config){
+                        performanceLogger.logTime('ajaxResponse');
+                        // Parse JSON
+                        try {
+                            window.pageModel = $.parseJSON(xmlHttp.responseText);
+
+                            if(window.pageModel) {
+                                window.pageModel.request = utils.queryToObject(utils.getHash());
+                            } else {
+                                window.handleError(true, xmlHttp.status, xmlHttp.statusText, xmlHttp.responseText);
+                            }
+                        } catch(err) {
+                            // Matching JQuery.ajax here by passing 'parseerror'
+                            window.handleError(true, xmlHttp.status, 'error while parsing JSON', xmlHttp.responseText, err);
+                        }
+
+                        // Render the HTML
+                        try {
+                            require(['allModules','Application'], function (allModules, Application) {
+                                new Application(config).start();
+                                presenter.registerModules(allModules);
+                                presenter.render(window.pageModel);
+                                performanceLogger.logTime('render');
+
+                                // Hide the interstitial
+                                require(['interstitialCtrl'], function(interstitialCtrl){
+                                    try {
+                                        if (window.pageModel === null || !window.pageModel || window.pageModel.handler !== "redirect") {
+                                            interstitialCtrl.hideInterstitials();
+                                        }
+                                    } catch(err) {
+                                        window.handleError(true, xmlHttp.status, 'error while hiding the interstitial', xmlHttp.responseText, err);
+                                    }
+                                });
+
+                                // After Page Render
+                                try {
+                                    if (config.delayAfterPageRender) {
+                                        setTimeout(presenter.executeAfterPageRender, 50); // roll down the event queue
+                                        performanceLogger.logTime('afterPageRender');
+                                    } else {
+                                        presenter.executeAfterPageRender();
+                                        performanceLogger.logTime('afterPageRender');
+                                    }
+                                } catch(err) {
+                                    window.handleError(true, xmlHttp.status, 'error while executing after page render. delay=' + config.delayAfterPageRender, xmlHttp.responseText, err);
+                                }
+                            });
+                        } catch(err) {
+                            window.handleError(true, xmlHttp.status, 'error while calling presenter.render()', xmlHttp.responseText, err);
+                        }
+
+                        // Save History
+                        require(['formController', 'historyManager'], function(formController, historyManager){
+                            try {
+                                if(window.pageModel && window.pageModel.metaData && window.pageModel.metaData.isRetryRequest) {
+                                    formController.updateHashFromForm();
+                                }
+                                historyManager.saveState(window.pageModel);
+                            } catch(err) {
+                                window.handleError(true, xmlHttp.status, 'error while saving history', xmlHttp.responseText, err);
+                            }
+                        });
+                    });
+                }
+            }
+        };
+
+        // Execute the request. Use all the headers, and parameters
+        xmlHttp.open("POST", config.dataUrl, true);
+
+        for(var header in headers) {
+            if (headers.hasOwnProperty(header)) {
+                xmlHttp.setRequestHeader(header, headers[header]);
+            }
+        }
+        xmlHttp.send(ajaxQuery);
+    };
+    window.firstXHR(window, window.XMLHttpRequest, window.ActiveXObject);
+});
+      
+    </script>
+ 
+
+
+  
+  
+    <link rel='stylesheet' type='text/css' href='//a.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/core/minifiedCss/brands/exp-responsive.css'/>
+<!--[if lt IE 8]>
+    <link rel='stylesheet' type='text/css' href='//a.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/core/minifiedCss/ie7.css'/>
+<![endif]-->
+<!--[if IE 8]>
+    <link rel='stylesheet' type='text/css' href='//a.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/core/minifiedCss/brands/exp-ie8.css'/>
+<![endif]-->
+
+      <div id="experiments">
+
+<script type="text/javascript">
+    window.dctk = window.dctk || {};
+
+    (function( window, logging, undefined ) {
+        logging.pageStartTime = new Date().getTime();
+        logging.pageName = "page.Hotels.Search";
+        logging.guid = "7251b6e6dbd8443fa678f5abf7124f33";
+        logging.data = "clEventName04=responsive|";
+    })( window, window.dctk.logging = window.dctk.logging || {} );
+</script>
+
+<script src="//b.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/datacapture/js/client-logging-bundle-min.js"></script>
+
+
+        <link rel="stylesheet" href="/minify/hotelSearch.css-min-3162861541.css?v=trunk-trunk-ci-1309141-1" /><!-- 32 ms -->
+       
+        
+    <script id="headJS" type="text/javascript">
+        var interval;
+        function defineShims() {
+            if(window.Handlebars && window.Modernizr) {
+                try {
+                    define('Handlebars', function(){
+                        return Handlebars;
+                    });
+                } catch (e) {}
+
+                try {
+                    define('Modernizr', function(){
+                        return Modernizr;
+                    });
+                } catch(e) {}
+
+                clearInterval(interval);
+            }
+        }
+        require(['jQuery'], function(){
+            interval = setInterval(defineShims, 10);
+        });
+
+define('ajaxErrorHandler', ['config'], function(config){
+    var ajaxErrorHandler = {
+        "handleError": function(isFirstAjax, httpStatus, textStatus, responseText, error) {
+            var isHtml = false;
+            if (!config.hashParam && httpStatus === 400) {
+                require('interstitialCtrl', function(interstitialCtrl) {
+                    interstitialCtrl.showAjaxInterstitial();
+                });
+                require('dctk', function(dctk){
+                    dctk.loggingAdapter.logMessage('ajax auth failure', ['responsive=true']);
+                });
+                location.reload(true);
+            }
+            // First we want to display something to the user.
+            if (/<!DOCTYPE html/.test(responseText)) {
+                // the response from the server is an HTML document. Just write it out (this is likely a "We're Stuffed" page)
+                document.close();
+                document.write(responseText);
+                document.close();
+                isHtml = true;
+            } else {
+                // worst case is we don't know what to render, just render a generic error
+                this.handleSoftError();
+            }
+
+            // Now we can log something to client side logs so that we know it happened and can fix it later
+            require('logger', function(logger){
+                var additionalParams = {
+                    "isFirstAjax": isFirstAjax,
+                    "httpStatus": httpStatus,
+                    "textStatus": textStatus,
+                    "location": encodeURIComponent(window.location.href),
+                    "isHtml": isHtml
+                };
+
+                if(!error) {
+                    error = new Error('Error while processing XHR'); // we need to add a dummy error so the DCT doesn't disallow us
+                }
+
+                logger.logError('Error while processing XHR', error, additionalParams);
+            });
+        },
+        "handleSoftError": function() {
+            require(['presenter', 'interstitialCtrl', 'uitk', 'config'], function(presenter, interstitialCtrl, uitk, config){
+                window.pageModel = {
+                    "error": {
+                        "status": status,
+                        "isErrorMessage": true
+                    },
+                    "wizard": {
+                        "isDatelessSearch": false,
+                        "isError": true,
+                        "selRoomIndex": 1,
+                        rooms: [{"adults":2, childAges:[]}]
+                    }
+                };
+                presenter.render(window.pageModel);
+                uitk.publish('hsr.interstitial.hide');
+                if (config.delayAfterPageRender) {
+                    setTimeout(presenter.executeAfterPageRender, 50); // roll down the event queue
+                } else {
+                    presenter.executeAfterPageRender();
+                }
+            });
+        }
+    };
+
+    return ajaxErrorHandler;
+});    </script>
+
+<script src="/minify/templates.hsr.2.30031.en_US.marionette.sortbarResponsive.legacyHeader-min-1508065963.js?v=trunk-trunk-ci-1309141-1"></script><!-- 31 ms -->
+
+<script src="/minify/views.hsr.2.30031.en_US.marionette.sortbarResponsive.legacyHeader-min-969898319.js?v=trunk-trunk-ci-1309141-1"></script><!-- 47 ms -->
+     
+
+        <!-- Sitespect AA Test Control -->
+        <!-- Sitespect Hook -->
+    <!-- BEGIN SITESPECT.FTL -->
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+<!-- END SITESPECT.FTL -->
+
+
+
+    <div id="edsContainer"></div>
+    <!--tlpageName:page.hotel-search-frame-->
+
+    <style>
+        body .cols-row.site-content {
+            padding-left: 0;
+        }
+        #xp-hdr {
+            float: none !important;
+        }
+
+        #xp-hdr, .sub-header {
+            margin: 0 auto;
+        }
+
+        #xp-hdr, .xp-hdr-width, #tab-navigation, .sub-header {
+            width: 1176px !important;
+        }
+
+        .sub-header nav {
+            padding: 0 12px !important;
+        }
+    </style>
+    <div id="header">
+
+
+
+
+<!--ActivityId:f2b2ba1d-8f0a-400d-a302-e0df85af62ed;-->
+
+
+<script src="/minify/headUtil-min-1425006475.js?v=trunk-trunk-ci-1309141-1"></script><!-- 0 ms -->
+
+<link rel="stylesheet" type="text/css" href="/static/default/default/styles/30031/HotwireStyling.css">
+
+<div class="headerBuffer">
+    <div class="hwGlobalHeader headerCenter">
+        <div class="sub_header">
+            <div class="yui3-g">
+                <div class="yui3-u-2-3">
+                    <div class="yui3-g">
+                        <div class="hwLogo yui3-u-1-3">
+                            <div class="hotwireLogo">
+                                <a href="http://www.hotwire.com/" >
+                                    <img width="165" height="35" alt="Hotwire.com Home" src="http://ak-static.hotwirestatic.com/x/static/images/core/shell/medium-hotwire-logo.png?ver=f2dcfd5e">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="hwTabMenuSection yui3-u-2-3">
+                            <div class="hwMainNavigation borderless">
+                                <div>
+                                    <a onclick="AnalyticsSupport.storeLinkId({moduleName:'NAV-TABS',linkName:'HOTELS'});" href="http://www.hotwire.com/hotel" >
+                                        <span>Hotels</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a onclick="AnalyticsSupport.storeLinkId({moduleName:'NAV-TABS',linkName:'CARS'});" href="http://www.hotwire.com/car/index.jsp" >
+                                        <span>Cars</span>
+                                    </a>
+                                </div>
+                                <div>
+                                    <a onclick="AnalyticsSupport.storeLinkId({moduleName:'NAV-TABS',linkName:'FLIGHTS'});" href="http://www.hotwire.com/air/index.jsp" >
+                                        <span>Flights</span>
+                                    </a>
+                                </div>
+                                <div class="vacations ">
+                                    <a onclick="AnalyticsSupport.storeLinkId({moduleName:'NAV-TABS',linkName:'PACKAGES'});" href="http://www.hotwire.com/package/index.jsp" >
+                                        <span> Vacations </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="yui3-u-1-3">
+                    <div class="rightTabMenu">
+
+                        <div class="helpCenter">
+                            <a href="http://vacation.hotwire.com/p/support.htm#MostPopularAnswers" >
+                                <img border="0" alt="helpcenter" src="http://ak-static.hotwirestatic.com/x/static/images/core/shell/help_icon.png?ver=f2dcfd5e">
+                            </a>
+                        </div>
+
+                        <div class="itineraryLookUp">
+                            <div id="genRandom3" class="itineraryLookUpModule" data-jsname="ItineraryLookUpModule">
+                                <div class="itineraryBlock">
+                                    <a href="https://vacation.hotwire.com/user/forgotitin" >
+                                        <span class="lookup">
+                                            Itinerary Lookup
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div style="clear:both"></div>
+    </div>
+
+
+
+        <form id="searchForm" action="/Hotel-Search" method="POST">
+<div id="hotwireRateTabLinks">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+
+    <style type="text/css">
+        body.wrap.cf.l-results, body.cols-row.site-content {
+            background-color: #ffffff;
+        }
+        .off-canvas .site-content, .l-results .site-content, .l-2column-d .site-content {
+            background-color: #ffffff;
+        }
+    </style>
+
+<link rel="stylesheet" href="/minify/hotwirePageStyling-min-2733455181.css?v=trunk-trunk-ci-1309141-1" /><!-- 16 ms -->
+</div>
+
+<div id="historyTabs" class="box hidden">
+    <div class="cols-row">
+         <div id="historyTabContainer"></div>
+    </div>
+</div>
+
+            <div id="wizard">
+    <div id="wizardResponsiveContainer" class="cols-row site-content cf"></div>
+            </div>
+
+            <div id="mainContent" class="site-content-wrap">
+<div id="airAttachContainer"></div>
+                <div class="site-content cols-row cf" role="region">
+        <div id="headerAdsContainer" class="horizontal-ad medium-ad large-ad">
+    <div id="CENTERTOP1" class="ad" style="overflow:hidden;width:740px;max-height:50px;margin-left:auto;margin-right:auto;"></div>
+    <script>
+(function (w) { try { w.expads = w.expads || {}; w.expads.slots = w.expads.slots || {}; w.expads.slots["CENTERTOP1"] = { height: 50, width: 740, path: "/11850712/hotwire.us_en/hotels/results/CT1", sizeMap: {}, slotTargeting: {"placementId":"DEFAULT-CENTERTOP1"} }; } catch (e) { console.log(e.message); } })(window);    </script>
+        </div>
+
+    <img id="hookLogicPageViewPixel" base-url="//beam.hlserve.com/travel?action=pageview&programId=1&domain=vacationhotwirecom.trunk.sb.karmalab.net&culture=en-US&publisher=expedia&pageName=Hotel-Search&publisherUserGuid=7251b6e6dbd8443fa678f5abf7124f33&userIP=10.0.17.158&userAgent=Mozilla%2F5.0+%28Windows+NT+6.1%3B+WOW64%29+AppleWebKit%2F537.36+%28KHTML%2C+like+Gecko%29+Chrome%2F41.0.2272.76+Safari%2F537.36&testVersion=6410.0" style="display:none;" />
+<div id="errorContainer"></div>
+    <div id="backToRetailSearchContainer"></div>
+    <div id="pageTitleContainer"></div>
+    <div id="disambigContainer"></div>
+    <div id="filterOrientation">
+        <ul id="orientationTaapHotelTypeContainer" class="filterOrientationContainer"></ul>
+    <span id="orientationHotelNameContainer" class="filterOrientationContainer"></span>
+<ul id="orientationRatingContainer" class="filterOrientationContainer"></ul>
+<ul id="orientationPoiContainer" class="filterOrientationContainer"></ul>
+<ul id="orientationNeighborhoodContainer" class="filterOrientationContainer"></ul>
+<ul id="orientationAmenitiesContainer" class="filterOrientationContainer"></ul>
+<ul id="orientationPriceContainer" class="filterOrientationContainer"></ul>
+<ul id="orientationLodgingContainer" class="filterOrientationContainer"></ul>
+<ul id="orientationMealplansContainer" class="filterOrientationContainer"></ul>
+<ul id="orientationAccessibilityContainer" class="filterOrientationContainer"></ul>
+    </div>
+
+                    <aside id="acol" class="col hsrFilters" role="complementary">
+                        <!-- A-Column Content Here... -->
+    <div id="googleMapContainer"></div>
+    <div class="showFilterDisclaimer">
+        <div class="uitk-tooltip theme-click show-arrow on fade mid right acoldis" id="myTooltipID">
+            <div class="tooltip-inner"><p class="last">Find what you want faster, filter by price or neighborhood.<BR><a href='javascript:void(0);' class='gotIt' data-track-exit="HOT:SR:FilterPopUp">Got it.</a></p></div>
+            <span class="tooltip-arrow"></span>
+        </div>
+    </div>
+    <div id="hotelNameContainer"></div>
+<h3 id="filterHeaderContainer" class="filterHeader"></h3>                        <fieldset id="taapHotelTypeContainer" class="filterContainer"></fieldset>
+<fieldset id="ratingContainer" class="filterContainer rangeFilter"></fieldset>
+<fieldset id="priceFilterContainer" class="filterContainer rangeFilter"></fieldset>
+<fieldset id="poiFilterContainer" class="filterContainer rangeFilter"></fieldset>
+<fieldset id="neighborhoodContainer" class="filterContainer"></fieldset>
+<fieldset id="neighborhoodContainer2" class="filterContainer"></fieldset>
+<fieldset id="lodgingTypecontainer" class="filterContainer"></fieldset>
+<fieldset id="mealplansContainer" class="filterContainer"></fieldset>
+<fieldset id="amenitiesContainer" class="filterContainer"></fieldset>
+<fieldset id="accessibilitiesContainer" class="filterContainer"></fieldset>
+    <div id="familyHotelsContainer"></div>
+                    </aside>
+
+                    <section id="bcol" class="col" role="main">
+                        <div class="bColumn">
+<div id="cityContainer"></div><div id="sortContainer"></div>
+    <div id="searchSmartFinderContainer"></div>
+    <div id="compressionContainer" ></div>
+    <div class="showFilterDisclaimerSmall">
+        <div class="uitk-tooltip theme-click show-arrow on fade bottom left bcoldis" id="myTooltipID2">
+            <div class="tooltip-inner"><p class="last">Find what you want faster, filter by price or neighborhood.<BR><a href='javascript:void(0);' class='gotIt' data-track-exit="HOT:SR:FilterPopUp">Got it.</a></p></div>
+            <span class="tooltip-arrow"></span>
+        </div>
+    </div>
+<div id="themeContainer"></div>    <div id="matrixContainer"></div>
+    <h2 class="visuallyhidden">Hotel Search Results</h2>
+<section id="resultsContainer" class="segmented-list resultsContainer" >
+
+
+
+
+  
+
+
+
+
+</section>    <div id="dynamicTooltip" class="hidden">
+        <p>This comparison price is the highest price at which this hotel is available on Hotwire for at least one of the next 14 days.</p>
+    </div>
+<div id="paginationContainer"></div>
+    <ul id="disclaimerContainer"></ul>
+        <div id="bottomAdsContainer">
+            <div class="ad-container horizontal-ad large-ad medium-ad">
+    <div id="CENTERMIDDLE1" class="ad" style="overflow:hidden;width:728px;max-height:90px;margin-left:auto;margin-right:auto;"></div>
+    <script>
+(function (w) { try { w.expads = w.expads || {}; w.expads.slots = w.expads.slots || {}; w.expads.slots["CENTERMIDDLE1"] = { height: 90, width: 728, path: "/11850712/hotwire.us_en/hotels/results/CM1", sizeMap: {}, slotTargeting: {"placementId":"DEFAULT-CENTERMIDDLE1"} }; } catch (e) { console.log(e.message); } })(window);    </script>
+            </div>
+                    <div class="ad-container horizontal-ad large-ad">
+<div id="large-adsense-footer" class="ad adsense_footer large_ad" name="adsense" style="height:0px; overflow:hidden;">
+    <div id="large-adsense-footer-content" class="adsense_footer_content">
+        <h2 class="ad_header_gtfooter">SPONSORED LISTINGS</h2>
+        <div class="ad_gtfooter_container">
+            <div id="large-adsense-footer-content-section1-container" class="ad_inner_gtfooter">
+                <div id="large-adsense-footer-content-section1"></div>
+            </div>
+            <div id="large-adsense-footer-content-section2-container" class="ad_inner_gtfooter">
+                <div id="large-adsense-footer-content-section2"></div>
+            </div>
+            <div id="large-adsense-footer-content-section3-container" class="ad_inner_gtfooter">
+                <div id="large-adsense-footer-content-section3"></div>
+            </div>
+        </div>
+    </div>
+</div>                    </div>
+                    <div class="ad-container horizontal-ad medium-ad">
+<div id="medium-adsense-footer" class="ad adsense_footer medium_ad" name="adsense" style="height:0px; overflow:hidden;">
+    <div id="medium-adsense-footer-content" class="adsense_footer_content">
+        <h2 class="ad_header_gtfooter">SPONSORED LISTINGS</h2>
+        <div class="ad_gtfooter_container">
+            <div id="medium-adsense-footer-content-section1-container" class="ad_inner_gtfooter">
+                <div id="medium-adsense-footer-content-section1"></div>
+            </div>
+            <div id="medium-adsense-footer-content-section2-container" class="ad_inner_gtfooter">
+                <div id="medium-adsense-footer-content-section2"></div>
+            </div>
+            <div id="medium-adsense-footer-content-section3-container" class="ad_inner_gtfooter">
+                <div id="medium-adsense-footer-content-section3"></div>
+            </div>
+        </div>
+    </div>
+</div>                    </div>
+            <div class="ad-container horizontal-ad small-ad">
+    <div id="CENTERMIDDLE2" class="ad" style="overflow:hidden;width:468px;max-height:60px;margin-left:auto;margin-right:auto;"></div>
+    <script>
+(function (w) { try { w.expads = w.expads || {}; w.expads.slots = w.expads.slots || {}; w.expads.slots["CENTERMIDDLE2"] = { height: 60, width: 468, path: "/11850712/hotwire.us_en/hotels/results/CM2", sizeMap: {}, slotTargeting: {"placementId":"DEFAULT-CENTERMIDDLE2"} }; } catch (e) { console.log(e.message); } })(window);    </script>
+            </div>
+                    <div class="ad-container horizontal-ad small-ad">
+<div id="small-adsense-footer" class="ad adsense_footer small_ad" name="adsense" style="height:0px; overflow:hidden;">
+    <div id="small-adsense-footer-content" class="adsense_footer_content">
+        <h2 class="ad_header_gtfooter">SPONSORED LISTINGS</h2>
+        <div class="ad_gtfooter_container">
+            <div id="small-adsense-footer-content-section1-container" class="ad_inner_gtfooter">
+                <div id="small-adsense-footer-content-section1"></div>
+            </div>
+            <div id="small-adsense-footer-content-section2-container" class="ad_inner_gtfooter">
+                <div id="small-adsense-footer-content-section2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+                    </div>
+        </div>
+                        </div>
+                    </section>
+
+        <aside id="ccol" class="ad-container">
+    <div id="RIGHT1" class="ad" style="overflow:hidden;width:160px;max-height:600px;margin-left:auto;margin-right:auto;"></div>
+    <script>
+(function (w) { try { w.expads = w.expads || {}; w.expads.slots = w.expads.slots || {}; w.expads.slots["RIGHT1"] = { height: 600, width: 160, path: "/11850712/hotwire.us_en/hotels/results/R1", sizeMap: {}, slotTargeting: {"placementId":"DEFAULT-RIGHT1"} }; } catch (e) { console.log(e.message); } })(window);    </script>
+<div id="adsense-D-column" class="ad adsense_D_column" name="adsense" >
+    <div>
+        <div id="googleAd">
+            <h2 class="ad_header_dcol">SPONSORED LISTINGS</h2>
+            <div id="ad_dcol_container">
+                <div id="adsense_dcol_container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <div id="RIGHT2" class="ad" style="overflow:hidden;width:160px;max-height:600px;margin-left:auto;margin-right:auto;"></div>
+    <script>
+(function (w) { try { w.expads = w.expads || {}; w.expads.slots = w.expads.slots || {}; w.expads.slots["RIGHT2"] = { height: 600, width: 160, path: "/11850712/hotwire.us_en/hotels/results/R2", sizeMap: {}, slotTargeting: {"placementId":"DEFAULT-RIGHT2"} }; } catch (e) { console.log(e.message); } })(window);    </script>
+        </aside>
+                </div>
+            </div>
+        </form>
+    <div id="footer">
+<!-- NEW_EXPEDIA_FOOTER -->
+
+
+<script type="text/javascript">
+    if (typeof $LAB === 'object' && typeof $LAB.queueScript === 'function') {
+        $LAB.queueScript('//tags.tiqcdn.com/utag/expedia/hotwire/dev/utag.js');
+    }
+    else {
+        (function(a,b,c,d){
+            a='//tags.tiqcdn.com/utag/expedia/hotwire/dev/utag.js';
+            b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
+            a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
+        })();
+    }
+</script>
+
+<link rel="stylesheet" href="/minify/global-footer-bundle-min-4094781541.css?v=trunk-trunk-ci-1309141-1" /><!-- 0 ms -->
+
+<script language="JavaScript" type="text/javascript" src="http://www.expedia.com/static/default/default/scripts/external/opinionlab/oo_engine.js?v=1"></script>
+
+<div id="hotwire-footer">
+    <div id="hotwire-site-footer-main">
+        <div class="hotwire-column-links-container">
+            <div id="col1">
+                <ul id="travel-with-hotwire-col" class="left-column">
+                    <li class="column-title-text">Travel with Hotwire</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/deals/index.jsp">Deals</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/activities/index">Activities</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/planning/index.jsp">Planning tools</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/app">Mobile app</a></li>
+                </ul>
+            </div>
+            <div id="col2">
+                <ul id="hotwire-col" class="center-column">
+                    <li class="column-title-text">Hotwire</li>
+                    <li><a class="col-link" href="http://www.hotwire.com/en/content/mission?cc=us">About us</a></li>
+                    <li><a class="col-link" href="http://www.lifeatexpedia.com/">Careers</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/site-map">Site map</a></li>
+                </ul>
+            </div>
+            <div id="col3">
+                <ul id="customer-service-col" class="center-column">
+                    <li class="column-title-text">Customer service</li>
+                    <li><a class="col-link" href="http://helpcenter.hotwire.com/category?categoryName=Hotels&">Contact us</a></li>
+                    <li><a class="col-link" href="http://helpcenter.hotwire.com/articles/en_US/FAQ/Can-I-cancel-or-make-changes-to-my-reservation?">Help center</a></li>
+                    <li><a class="col-link" rel="nofollow" target="_top" href="javascript:void(0)" onclick="OpinionLab.O_LC();return false;">Feedback</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/account-unverified/emailsubscriptions/landing">Manage subscriptions</a></li>
+                </ul>
+            </div>
+            <div id="col4">
+                <ul id="travel-partners-col" class="center-column">
+                    <li class="column-title-text">Travel partners</li>
+                    <li><a class="col-link" href="http://www.expedia.com/">Expedia</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/">Hotels.com</a></li>
+                    <li><a class="col-link" href="http://www.carrentals.com/">Carrentals.com</a></li>
+                    <li><a class="col-link" href="http://www.venere.com/">Venere.com</a></li>
+                    <li><a class="col-link" href="http://www.classicvacations.com/">Classicvacations</a></li>
+                    <li><a class="col-link" href="http://www.egencia.com/">Egencia</a></li>
+                </ul>
+            </div>
+            <div id="col5">
+                <ul id="site-maps-col" class="center-column">
+                    <li class="column-title-text">Site maps</li>
+                    <li><a class="col-link" href="http://www.hotwire.com/hotel/">Hotels</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/car/index.jsp">Cars</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/air/index.jsp">Flights</a></li>
+                </ul>
+            </div>
+            <div id="col6">
+                <ul id="our-policies-col" class="right-column">
+                    <li class="column-title-text">Our Policies</li>
+                    <li><a class="col-link" href="http://www.hotwire.com/en/content/privacy-policy?cc=us">Privacy policy</a></li>
+                    <li><a class="col-link" href="http://www.hotwire.com/en/content/terms-use?cc=us">Terms of use</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copywrite-container">
+            <div id="thin-line-background">
+                <hr class="thin-line-top"></hr>
+            </div>
+            <div class="copyright-text">
+                &copy;2000-2015 Hotwire, Inc. All rights reserved. Hotwire, Inc. is not reponsible for content on external sites. Hotwire, the Hotwire logo, Hot Fare, Hot Rate,
+                "4-star hotels. 2-star prices." and TripStarter are either registered trademarks or trademarks of Hotwire, Inc. in the US and/or other countires. Other logos
+                or product and company names mentioned herein may be the property of their respective owners. CST 2053390-40; NST 20003-0209.
+            </div>
+        </div>
+    </div>
+    <div id="hotwire-site-footer-mobile">
+        <div class="hotwire-column-links-container">
+            <div class="col1-mobile">
+                <a class="column-title-text" href="http://www.hotwire.com/app">Mobile app</a>
+                <div class="pipe">|</div>
+                <a class="column-title-text" href="http://www.hotwire.com/en/content/mission?cc=us">About us</a>
+                <div class="pipe">|</div>
+                <a class="column-title-text" href="http://www.lifeatexpedia.com/">Careers</a>
+                <div class="pipe">|</div>
+                <a class="column-title-text" href="http://www.hotwire.com/en/content/terms-use?cc=us">Legal</a>
+            </div>
+        </div>
+        <div class="copyright-text">
+            &copy;2000-2015 Hotwire, Inc. All rights reserved. Hotwire, Inc. is not reponsible for content on external sites. Hotwire, the Hotwire logo, Hot Fare, Hot Rate,
+            "4-star hotels. 2-star prices." and TripStarter are either registered trademarks or trademarks of Hotwire, Inc. in the US and/or other countires. Other logos
+            or product and company names mentioned herein may be the property of their respective owners.
+            CST 2053390-40; NST 20003-0209.
+        </div>
+    </div>
+</div>    </div>
+<div id="regionUrgencyMessageContainer" class="hidden"></div>
+        <div id="hiddenElements" style="display:none">
+            <input type="hidden" id="pageId" value="page.Hotel-Search">
+            <div id="iframeContainer"></div>
+            <div id="dcOPMContainer"  data-url="//fls.doubleclick.net/activityi;src=2588783;type=nausc547;cat=nauss482;"></div>
+            <div id="dcMSContainer" data-url="//fls.doubleclick.net/activityi;src=4207470;type=sales530;cat=hotwi605;"></div>
+<div id="retargetingPartnersContainer"></div>
+        </div>
+        <script type="text/javascript">
+            window.onunload = function() {};
+        </script>
+<script>
+    (function(w) { w.expads = w.expads || {}; w.expads.targeting = {"eapid":"0","mc1":"7251b6e6dbd8443fa678f5abf7124f33","activity":"f2b2ba1d-8f0a-400d-a302-e0df85af62ed","ssl":false,"sb":["S"],"email":false}; w.expads.configuration = w.expads.configuration || {}; w.expads.configuration["loggingEnabled"] = true; w.expads.configuration["clientLoggingPerfBeaconUrl"] = '/cl/1x1.gif'; w.expads.configuration["clientLoggingMessageBeaconUrl"] = '/cl/2x2.gif'; w.expads.configuration["dctkBeaconServerUrl"] = '/clientLog'; w.expads.configuration["dctkClientLoggingURL"] = '//b.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/datacapture/js/client-logging-bundle-min.js'; w.expads.configuration["dctkData"] = ''; w.expads.configuration["dctkLogKey"] = 'page.Hotels.Search%7Cf2b2ba1d-8f0a-400d-a302-e0df85af62ed%7C14bebec60f8%7C0e5e61a2bc9fedbb66d712d9fc304488'; w.expads.configuration["guid"] = '7251b6e6dbd8443fa678f5abf7124f33'; w.expads.configuration["title"] = "Advertisement"; w.expads.configuration["slots"] = {}; })(window);</script><script>
+(function (w) { w.ExpIntentMedia = { reloadIMScript: function () { if (window.IntentMedia && window.IntentMedia.Event && window.IntentMedia.Event.trigger) { IntentMedia.Event.trigger('IntentMediaRefresh'); } else { var script = document.createElement('script'); script.src = 'http://a.cdn.intentmedia.net/javascripts/intent_media_hotwire.js'; document.getElementsByTagName("head")[0].appendChild(script); } }, mergeIMProps: function (propsToMerge) { if (typeof propsToMerge === 'object') { for (var attrname in propsToMerge) { if (propsToMerge.hasOwnProperty(attrname) && typeof propsToMerge[attrname] !== 'function') { window.IntentMediaProperties[attrname] = propsToMerge[attrname]; } } } }, fillExitUnit: function () { if (typeof(window.IntentMedia) === 'object' && typeof(window.IntentMedia.fill_exit_unit) === 'function') { window.IntentMedia.fill_exit_unit(); } }, pageIdUpdated: function () { if (typeof(window.IntentMedia) === 'object' && typeof(window.IntentMedia.page_id_updated) === 'function') { window.IntentMedia.page_id_updated(); } }, isIntentMediaLoaded: function () { return (typeof(window.IntentMedia) === 'object'); } }; w.IntentMediaProperties = {"page_id":"hotels.results.retail.redesign","site_language":"en","site_country":"US","site_currency":"USD","display_format_type":"Desktop","show_ads":"N","show_exit_units":"N"}; })(window);</script>    <script id="bottomQueueAndRun" type="text/javascript" >
+        require(['jQuery', 'Handlebars', 'Modernizr', 'uitk'], function($, Handlebars, Modernizer, uitk) {
+            $LAB.script("/minify/bottom.hsr.2.30031.en_US.marionette.sortbarResponsive.legacyHeader-min-923197682.js?v=trunk-trunk-ci-1309141-1")
+        });
+/*<script id="dependencyShim" type="text/javascript" >*/
+$LAB.queueWait(function(){
+    define('jQuery', ['jquery'], function() {
+        return window.jQuery;
+    });
+});
+    </script>
+<!-- Time taken in millis:  ms -->
+
+<script>
+    $LAB
+    .queueScript("//b.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/datacapture/js/analytics-core-bundle-min.js")
+
+    
+
+    
+    // Minimal DCTK interface before it's fully loaded
+    var dctk = window.dctk || {};
+    if (!dctk.onReady) {
+        dctk._onReadyCallbacks = [];
+        dctk.onReady = function (callback) {
+            this._onReadyCallbacks.push(callback);
+        };
+    }
+</script>
+
+
+
+
+    </div>      
+    
+      <script type="text/javascript">
+  $LAB.setGlobalDefaults({AlwaysPreserveOrder:true});
+  $LAB
+    .queueScript("//c.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/core/js/uitk-jquery-jstemplate-bundle-min.js")
+
+  ;$LAB
+    .queueScript("//a.travel-assets.com/uitoolkit/2-30/139076008cd6916fb324f8a367888414e0ad293b/core/js/uitk-core-bundle-min.js")
+
+      .queueWait(function(){
+        uitk.init();
+        uitk.initSocial();
+      });
+</script>
+    
+
+    
+    
+
+    <script>$LAB.runQueue();</script>
+    <div id="uitk-live-announce" class="visuallyhidden" aria-live="assertive"></div>
+</body></html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true" 
+  xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="abstractAngularModel" abstract="true" class="com.hotwire.test.steps.angular.AngularModelTemplate">
+            <property name="webdriverInstance" ref="webdriverInstance"/>
+    </bean>
+
+  <beans profile="WebApp">
+    <bean id="angularModel" parent="abstractAngularModel" class="com.hotwire.test.steps.angular.AngularModelWebApp"/>
+  </beans>
+  <beans profile="RowWebApp">
+    <bean id="angularModel" parent="abstractAngularModel" class="com.hotwire.test.steps.angular.AngularModelRowWebApp"/>
+  </beans>
+  <beans profile="MobileWebApp">
+    <bean id="angularModel" parent="abstractAngularModel" class="com.hotwire.test.steps.angular.AngularModelMobileWebApp"/>
+  </beans>
+</beans>

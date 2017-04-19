@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--Main properties configuration-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="ignoreUnresolvablePlaceholders" value="true"/>
+        <property name="properties">
+            <props>
+                <prop key="env">dev</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--environment map-->
+    <util:map id="databaseProfiles">
+        <entry key="dev" value="jdbc:oracle:thin:@devdb03.dev.hotwire.com:1521:devbld3"/>
+        <entry key="qa" value="jdbc:oracle:thin:@qadb01.qa.hotwire.com:1521:qa9i" />
+        <entry key="qaci" value="jdbc:oracle:thin:@qacidb01.qaci.hotwire.com:1521:qacidb" />
+        <entry key="preprod" value="jdbc:oracle:thin:@ppdb01.preprod.hotwire.com:1521:prprd" />
+    </util:map>
+
+    <bean id="dataSource" factory-bean="dataSourceFactory" factory-method="getOracleDataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" />
+
+    <bean id="dataSourceFactory" class="com.hotwire.util.db.DataSourceFactory">
+        <constructor-arg name="profiles" ref="databaseProfiles" />
+        <property name="username" value="silktest"/>
+        <property name="password" value="silktest"/>
+        <property name="env" value="${env}"/>
+    </bean>
+
+</beans>

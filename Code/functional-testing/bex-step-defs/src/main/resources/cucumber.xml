@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+       default-lazy-init="true">
+
+    <!-- External context configuration files -->
+    <!--webdriver-->
+    <import resource="classpath*:application-webdriver-context.xml"/>
+
+    <!-- db integration -->
+    <import resource="classpath*:database-support-context.xml"/>
+
+    <!-- bex app context -->
+    <import resource="classpath*:bex-application-context.xml"/>
+
+    <!-- bex steps cucumber xml -->
+    <import resource="classpath*:bex-steps-cucumber.xml"/>
+
+
+</beans>

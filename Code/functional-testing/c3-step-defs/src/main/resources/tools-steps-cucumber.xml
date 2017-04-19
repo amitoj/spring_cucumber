@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+       default-lazy-init="true">
+
+    <!-- External context configuration files -->
+    <!--webdriver-->
+    <import resource="classpath*:application-webdriver-context.xml"/>
+
+    <!-- db integration -->
+    <import resource="classpath*:database-support-context.xml"/>
+
+    <!-- email integration -->
+    <import resource="classpath*:cucumber-mail-context.xml"/>
+
+    <!-- Internal context configuration files -->
+    <import resource="classpath*:tools-application-context.xml"/>
+
+    <!--C3-->
+    <import resource="classpath*:c3/c3-csraccount-context.xml"/>
+    <import resource="classpath*:c3/c3-search-context.xml"/>
+    <import resource="classpath*:c3/c3-casenotes-context.xml"/>
+    <import resource="classpath*:c3/c3-purchase-context.xml"/>
+    <import resource="classpath*:c3/c3-refund-context.xml"/>
+    <import resource="classpath*:c3/c3-hotel-context.xml" />
+    <import resource="classpath*:c3/c3-customer-context.xml" />
+    <import resource="classpath*:c3/c3-low-price-guarantee-context.xml" />
+    <import resource="classpath*:c3/c3-workflow-context.xml"/>
+    <import resource="classpath*:c3/c3-overcharges-context.xml"/>
+    <import resource="classpath*:c3/c3-hotelsupply-context.xml"/>
+    <import resource="classpath*:c3/c3-hotelconsumer-context.xml"/>
+    <import resource="classpath*:c3/c3-finance-context.xml"/>
+    <import resource="classpath*:c3/c3-travel-advisory-context.xml"/>
+    <import resource="classpath*:c3/c3-flightInfo-context.xml"/>
+
+    <!--Other tools-->
+    <import resource="classpath*:dmu-context.xml"/>
+
+    <import resource="classpath*:tools-product-context.xml"/>
+
+</beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="overchargesParams" class="com.hotwire.test.steps.tools.bean.c3.C3OverchargesInfo">
+        <property name="searchPeriod" value="0"/>
+        <property name="assignee" value=""/>
+    </bean>
+
+    <bean id="overchargesModelWebApp" class="com.hotwire.test.steps.tools.c3.overcharges.C3OverchargeModel" />
+
+</beans>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <option name="DEFAULT_COMPILER" value="Javac" />
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="bex-page-objects" />
+        <module name="bex-step-defs" />
+        <module name="c3-page-objects" />
+        <module name="c3-step-defs" />
+        <module name="common" />
+        <module name="Core_SF" />
+        <module name="database-support" />
+        <module name="desktop-page-objects" />
+        <module name="distributed-opaque-step-defs" />
+        <module name="DistributionAPIs" />
+        <module name="hotel-supply-step-defs" />
+        <module name="hotwire-step-defs" />
+        <module name="mobile-api" />
+        <module name="mobile-api-step-defs" />
+        <module name="mobile-page-objects" />
+        <module name="Platform_SF" />
+        <module name="SharedServices_SF" />
+        <module name="Site" />
+        <module name="SupplyJobs" />
+        <module name="Tools_GSI" />
+        <module name="Web_GSI" />
+        <module name="Web_SF" />
+        <module name="Xnet" />
+        <module name="xnet-api-1.0-step-defs" />
+        <module name="xnet-api-1.1-step-defs" />
+        <module name="Xnet1.1" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="c3-page-objects" target="1.7" />
+      <module name="c3-step-defs" target="1.7" />
+      <module name="common" target="1.7" />
+      <module name="Core_SF" target="1.7" />
+      <module name="database-support" target="1.7" />
+      <module name="desktop-page-objects" target="1.7" />
+      <module name="distributed-opaque-step-defs" target="1.7" />
+      <module name="DistributionAPIs" target="1.7" />
+      <module name="hotel-supply-step-defs" target="1.7" />
+      <module name="hotwire-step-defs" target="1.7" />
+      <module name="mobile-api" target="1.7" />
+      <module name="mobile-api-step-defs" target="1.7" />
+      <module name="mobile-page-objects" target="1.7" />
+      <module name="Platform_SF" target="1.7" />
+      <module name="SharedServices_SF" target="1.7" />
+      <module name="Site" target="1.7" />
+      <module name="SupplyJobs" target="1.7" />
+      <module name="Tools_GSI" target="1.7" />
+      <module name="Web_GSI" target="1.7" />
+      <module name="Web_SF" target="1.7" />
+      <module name="Xnet" target="1.7" />
+      <module name="xnet-api-1.0-step-defs" target="1.7" />
+      <module name="xnet-api-1.1-step-defs" target="1.7" />
+      <module name="Xnet1.1" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

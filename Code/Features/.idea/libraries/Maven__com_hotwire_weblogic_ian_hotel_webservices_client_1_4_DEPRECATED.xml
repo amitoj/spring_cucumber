@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hotwire.weblogic:ian-hotel-webservices-client:1.4-DEPRECATED">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/weblogic/ian-hotel-webservices-client/1.4-DEPRECATED/ian-hotel-webservices-client-1.4-DEPRECATED.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/weblogic/ian-hotel-webservices-client/1.4-DEPRECATED/ian-hotel-webservices-client-1.4-DEPRECATED-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/weblogic/ian-hotel-webservices-client/1.4-DEPRECATED/ian-hotel-webservices-client-1.4-DEPRECATED-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

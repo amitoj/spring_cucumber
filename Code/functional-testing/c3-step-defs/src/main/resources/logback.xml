@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false" debug="false">
+
+    <!--This contextListener will propagate changes of logback logger level to java.util.logging.Logger (JUL) used
+        by 3rd parties (e.g. selenium). In other words this config will work for both logback and JUL -->
+    <contextListener class="ch.qos.logback.classic.jul.LevelChangePropagator">
+        <resetJUL>true</resetJUL>
+    </contextListener>
+
+    <conversionRule conversionWord="threadName"
+                    converterClass="com.hotwire.test.logging.ThreadNameConverter"/>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <target>System.out</target>
+        <!-- encoders are  by default assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder -->
+        <encoder>
+            <pattern>%d{HH:mm:ss} %level %-10([%threadName]) %-20class{0} %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="THREAD" class="cucumber.runtime.formatter.ThreadedMemoryAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss} %level %-10([%threadName]) %-20([%class{0}]) %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="THREAD"/>
+    </root>
+
+    <logger name="org.openqa.selenium" level="INFO"/>
+
+    <logger name="org.springframework" level="WARN"/>
+
+    <logger name="com.gargoylesoftware.htmlunit" level="OFF"/>
+
+    <!-- Displaying list of installed beans -->
+    <logger name="org.springframework.beans.factory.support.DefaultListableBeanFactory" level="INFO"/>
+</configuration>

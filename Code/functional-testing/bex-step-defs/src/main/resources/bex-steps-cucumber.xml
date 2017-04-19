@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Main application model-->
+    <bean id="bexSetupModel" class="com.hotwire.test.steps.bex.setup.BexSetupModel" />
+    <bean id="bexHotelSearchModel" class="com.hotwire.test.steps.bex.hotel.search.HotelSearchModelWebApp" />
+    <bean id="bexHotelDetailsModel" class="com.hotwire.test.steps.bex.hotel.details.HotelDetailsModelWebApp" />
+    <bean id="bexHotelReviewModel" class="com.hotwire.test.steps.bex.hotel.review.HotelReviewModelWebApp" />
+    <bean id="bexHotelConfirmationModel" class="com.hotwire.test.steps.bex.hotel.confirmation.HotelConfirmationModelWebApp" />
+
+</beans>

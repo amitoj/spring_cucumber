@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.elandtech.eland:SIP_Api:2.7.0.004d">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/elandtech/eland/SIP_Api/2.7.0.004d/SIP_Api-2.7.0.004d.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/elandtech/eland/SIP_Api/2.7.0.004d/SIP_Api-2.7.0.004d-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/elandtech/eland/SIP_Api/2.7.0.004d/SIP_Api-2.7.0.004d-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--Containers-->
+    <bean id="billingInfo" class="com.hotwire.test.steps.tools.bean.BillingInfo">
+        <property name="ccFirstName" value="Guest"/>
+        <property name="ccLastName" value="TestBooking"/>
+        <property name="billingAddress" value="655 Montgomery St"/>
+        <property name="city" value="San Francisco"/>
+        <property name="state" value="CA"/>
+        <property name="country" value="United States"/>
+        <property name="zipCode" value="94111"/>
+        <property name="ccType" value="Visa"/>
+        <property name="ccNumber" value="4111111111111111"/>
+        <!--
+        <property name="ccNumber" value="5111005111051128"/>
+        -->
+        <property name="ccExpMonth" value="8"/>
+        <property name="ccExpYear" value="2018"/>
+        <property name="securityCode" value="111"/>
+    </bean>
+
+    <bean id="ROWBillingInfo" parent="billingInfo" class="com.hotwire.test.steps.tools.bean.BillingInfo">
+        <property name="ccNumber" value="4263971921001307"/>
+    </bean>
+
+    <bean id="tripInfo" class="com.hotwire.test.steps.tools.bean.TripInfo">
+        <property name="fromLocation" value="SFO"/>
+        <property name="destinationLocation" value="MIA"/>
+        <property name="shiftStartDate" value="20"/>
+        <property name="shiftEndDate" value="30"/>
+        <property name="numberOfHotelRooms" value="1"/>
+        <property name="numberOfAdults" value="2"/>
+        <property name="numberOfChildren" value="0"/>
+        <property name="passengers" value="2"/>
+        <property name="tripInsurance" value="true"/>
+        <property name="carInsurance" value="false"/>
+    </bean>
+
+    <!--Models-->
+    <!--Purchase Models-->
+    <bean id="airPurchaseModel" class="com.hotwire.test.steps.tools.c3.purchase.C3AirPurchaseModel" />
+
+    <bean id="carPurchaseModel" class="com.hotwire.test.steps.tools.c3.purchase.C3CarPurchaseModel" />
+
+    <bean id="hotelPurchaseModel" class="com.hotwire.test.steps.tools.c3.purchase.C3HotelPurchaseModel" />
+
+    <!--Customer-->
+    <!--profiles map-->
+    <util:map id="purchaseModels">
+        <entry key="air" value-ref="airPurchaseModel"/>
+        <entry key="car" value-ref="carPurchaseModel" />
+        <entry key="hotel" value-ref="hotelPurchaseModel" />
+    </util:map>
+
+
+</beans>

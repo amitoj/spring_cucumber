@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hotwire.crs.tourico:TouricoTx:2.2.0">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/crs/tourico/TouricoTx/2.2.0/TouricoTx-2.2.0.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/crs/tourico/TouricoTx/2.2.0/TouricoTx-2.2.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/crs/tourico/TouricoTx/2.2.0/TouricoTx-2.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

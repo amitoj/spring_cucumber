@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--Containers-->
+
+    <!--Customer-->
+    <!--profiles map-->
+    <util:map id="customerProfiles">
+        <entry key="DEFAULT" value-ref="customerInfo"/>
+        <entry key="NEW" value-ref="newCustomer" />
+        <entry key="GUEST" value-ref="guestCustomer" />
+        <entry key="NON_EXPRESS" value-ref="nonExpressCustomer" />
+        <entry key="EX_EXPRESS" value-ref="exExpressCustomer" />
+        <entry key="EXPRESS" value-ref="expressCustomer" />
+        <entry key="EXPRESS_ELITE" value-ref="expressEliteCustomer" />
+        <entry key="PARTNER" value-ref="partnerCustomer" />
+    </util:map>
+
+    <!--profiles-->
+    <bean id="customerInfo" class="com.hotwire.test.steps.tools.bean.CustomerInfo">
+        <property name="accountType" value="Hotwire Account"/>
+        <property name="firstName" value="GuestFN"/>
+        <property name="lastName" value="GuestLN"/>
+        <property name="phoneNumber" value="2512345678"/>
+        <property name="phoneCountryCode" value="4"/>
+        <property name="email" value="qa_regression@hotwire.com"/>
+        <property name="password" value="hotwire333"/>
+        <property name="zipCode" value="12345"/>
+        <property name="country" value="United States"/>
+        <property name="countryCode" value="US"/>
+        <property name="watermark" value=""/>
+        <property name="expressProgram" value="No"/>
+        <property name="breadcrumbs" value=""/>
+
+    </bean>
+
+    <bean id="newCustomer" parent="customerInfo">
+        <property name="firstName" value="NewCustomerFN"/>
+        <property name="lastName" value="NewCustomerLN"/>
+        <property name="password" value="hotwire"/>
+        <property name="zipCode" value="00000"/>
+    </bean>
+
+    <bean id="guestCustomer" parent="customerInfo">
+        <property name="accountType" value="Guest"/>
+        <property name="watermark" value=""/>
+    </bean>
+
+    <bean id="nonExpressCustomer" parent="customerInfo">
+        <property name="accountType" value="Hotwire Account"/>
+        <property name="email" value="caps-non-express@hotwire.com"/>
+        <property name="password" value="hotwire"/>
+        <property name="phoneNumber" value="(123) 123-4567"/>
+        <property name="zipCode" value="12345"/>
+        <property name="firstName" value="Non-express"/>
+        <property name="lastName" value="Hotwire"/>
+        <property name="watermark" value=""/>
+    </bean>
+
+    <bean id="exExpressCustomer" parent="customerInfo">
+        <property name="accountType" value="Hotwire Account"/>
+        <property name="email" value="caps-express@hotwire.com"/>
+        <property name="password" value="hotwire"/>
+        <property name="phoneNumber" value="+(011)44--2075555555"/>
+        <property name="zipCode" value="12345"/>
+        <property name="firstName" value="exExpress"/>
+        <property name="lastName" value="Hotwire"/>
+        <property name="watermark" value=""/>
+        <property name="expressProgram" value="No"/>
+    </bean>
+
+    <bean id="expressCustomer" parent="customerInfo">
+        <property name="accountType" value="Hotwire Account"/>
+        <property name="email" value="caps-express@hotwire.com"/>
+        <property name="password" value="hotwire"/>
+        <property name="phoneNumber" value="+(011)44--2075555555"/>
+        <property name="zipCode" value="12345"/>
+        <property name="firstName" value="Express"/>
+        <property name="lastName" value="Hotwire"/>
+        <property name="watermark" value="EXPRESS"/>
+        <property name="expressProgram" value="Yes"/>
+        <property name="breadcrumbs" value="Express"/>
+    </bean>
+
+    <bean id="expressEliteCustomer" parent="expressCustomer">
+        <property name="accountType" value="Hotwire Account"/>
+        <property name="watermark" value="EXPRESS_ELITE"/>
+        <property name="expressProgram" value="Yes"/>
+        <property name="breadcrumbs" value="Express Elite"/>
+    </bean>
+
+    <bean id="partnerCustomer" parent="customerInfo">
+        <property name="accountType" value="Partner Account"/>
+        <property name="email" value="caps-non-express@hotwire.com"/>
+        <property name="password" value="hotwire"/>
+        <property name="altPhone" value="(415) 555-1212"/>
+        <property name="zipCode" value="12345"/>
+        <property name="firstName" value="Expedia"/>
+        <property name="watermark" value="PARTNER"/>
+    </bean>
+
+    <!--Models-->
+    <bean id="customerAccModel" class="com.hotwire.test.steps.tools.c3.customer.account.C3CustomerAccModel" />
+
+</beans>

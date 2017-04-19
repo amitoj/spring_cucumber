@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd"
+       default-lazy-init="true">
+
+  <!-- Hotel Supply context -->
+  <import resource="classpath*:application-webdriver-context.xml"/>
+
+  <!-- Hotel supply - Xnet context context -->  
+  <import resource="classpath*:cucumber-xnet-api-1.1-service-context.xml"/>
+    
+  <!-- local definitions -->
+  <import resource="classpath*:cucumber-accessibility-context.xml"/>
+  <import resource="classpath*:cucumber-account-context.xml"/>
+  <import resource="classpath*:cucumber-advanced-fare-finder-context.xml"/>
+  <import resource="classpath*:cucumber-application-context.xml"/>
+  <import resource="classpath*:cucumber-authentication-context.xml"/>
+  <import resource="classpath*:cucumber-contact-context.xml"/>
+  <import resource="classpath*:cucumber-customer-care-module-context.xml"/>
+  <import resource="classpath*:cucumber-deals-context.xml"/>
+  <import resource="classpath*:cucumber-discount-context.xml"/>
+  <import resource="classpath*:cucumber-help-context.xml"/>
+  <import resource="classpath*:cucumber-mail-context.xml"/>
+  <import resource="classpath*:cucumber-partners-context.xml"/>
+  <import resource="classpath*:cucumber-purchase-context.xml"/>
+  <import resource="classpath*:cucumber-search-context.xml"/>
+  <import resource="classpath*:statsd-reporter.xml"/>
+  <import resource="classpath*:cucumber-db-context.xml"/>
+
+</beans>

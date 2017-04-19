@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.ingrian:IngrianLog4j:4.8.5.010-002">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ingrian/IngrianLog4j/4.8.5.010-002/IngrianLog4j-4.8.5.010-002.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ingrian/IngrianLog4j/4.8.5.010-002/IngrianLog4j-4.8.5.010-002-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/ingrian/IngrianLog4j/4.8.5.010-002/IngrianLog4j-4.8.5.010-002-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

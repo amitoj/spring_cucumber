@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: expedia:com.expedia.lodging.lpasresources:5.1.2">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/expedia/com.expedia.lodging.lpasresources/5.1.2/com.expedia.lodging.lpasresources-5.1.2.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/expedia/com.expedia.lodging.lpasresources/5.1.2/com.expedia.lodging.lpasresources-5.1.2-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/expedia/com.expedia.lodging.lpasresources/5.1.2/com.expedia.lodging.lpasresources-5.1.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

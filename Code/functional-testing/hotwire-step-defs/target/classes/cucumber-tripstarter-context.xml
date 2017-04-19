@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="abstractTripStarterModel" abstract="true" class="com.hotwire.test.steps.search.tripstarter.TripStarterSearchModelTemplate">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+    </bean>
+
+    <beans profile="WebApp">
+        <bean id="tripStarterSearchModel" parent="abstractTripStarterModel" class="com.hotwire.test.steps.search.tripstarter.TripStarterSearchModelWebApp"/>
+    </beans>
+    <beans profile="RowWebApp">
+        <bean id="tripStarterSearchModel" parent="abstractTripStarterModel" class="com.hotwire.test.steps.search.tripstarter.TripStarterSearchModelRowWebApp"/>
+    </beans>
+    <beans profile="MobileWebApp">
+        <bean id="tripStarterSearchModel" parent="abstractTripStarterModel" class="com.hotwire.test.steps.search.tripstarter.TripStarterSearchModelMobileWebApp"/>
+    </beans>
+</beans>

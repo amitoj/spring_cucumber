@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.hotwire.testing</groupId>
+        <artifactId>Features</artifactId>
+        <version>4.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>SharedServices_GSI</artifactId>
+    <version>4.0.1-SNAPSHOT</version>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>WebApp</id>
+                        <phase>test</phase>
+                    </execution>
+                    <execution>
+                        <id>RowWebApp</id>
+                        <phase>test</phase>
+                    </execution>
+                    <execution>
+                        <id>MobileWebApp</id>
+                        <phase>test</phase>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.hotwire.maven</groupId>
+                <artifactId>cucumber-fail-build-at-end-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.hotwire.testing</groupId>
+            <artifactId>HotwireStepDefs</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

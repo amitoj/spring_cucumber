@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2013 Hotwire. All Rights Reserved.
+  ~
+  ~ This software is the proprietary information of Hotwire.
+  ~ Use is subject to license terms.
+  -->
+
+<beans default-lazy-init="true" xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+">
+
+    <bean id="knownGoodAuthenticationParameters"
+          class="com.hotwire.test.steps.authentication.AuthenticationParameterImpl">
+        <property name="username" value="${known_good_username}"/>
+        <property name="password" value="${known_good_password}"/>
+    </bean>
+
+    <bean id="hotDollarsAuthenticationParameters"
+          class="com.hotwire.test.steps.authentication.AuthenticationParameterImpl">
+        <property name="username" value="savedCreditCard@hotwire.com" />
+        <property name="password" value="password"/>
+        <aop:scoped-proxy/>
+    </bean>
+
+    <bean id="payableUserAuthenticationParameters" class="com.hotwire.test.steps.authentication.AuthenticationParameterImpl">
+        <property name="username" value="savedCreditCard@hotwire.com" />
+        <property name="password" value="password" />
+    </bean>
+    
+    <!--  new user account - For testing different credit cards -->
+    <bean id="loginParameters" class="com.hotwire.test.steps.authentication.AuthenticationParameterImpl">
+        <property name="username" value="automationaccount@hotwire.com" />
+        <property name="password" value="password" />
+    </bean>
+
+    <bean id="authenticationParameters" class="com.hotwire.test.steps.authentication.AuthenticationParameterImpl">
+        <property name="knownGoodParametersStore" ref="knownGoodAuthenticationParameters"/>
+        <property name="hotDollarsAuthenticationParameters" ref="hotDollarsAuthenticationParameters"/>
+        <property name="payableUserAuthenticationParameters" ref="payableUserAuthenticationParameters"/>
+        <!--  For different credit card purchases  -->
+        <property name="loginParameters" ref="loginParameters"/>
+        
+    </bean>
+
+	  <!-- Valid auth params to use when changing e-mail, password, etc. -->
+    <bean id="newValidAuthenticationParameters" class="com.hotwire.test.steps.authentication.AuthenticationParameterImpl">
+        <property name="username" value="bdd_#{new java.text.SimpleDateFormat(&quot;yyyyMMdd_hhmmss&quot;).format(new java.util.Date())}_#{new java.lang.Integer(new java.util.Random().nextInt()).toString().replace('-','')}@hotwire.com"/>
+        <property name="password" value="someNewPassword"/>
+    </bean>
+
+    <bean id="authenticationModelTemplate" abstract="true"
+          class="com.hotwire.test.steps.authentication.AuthenticationModelTemplate">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+        <property name="authenticationParameters" ref="authenticationParameters"/>
+    </bean>
+    <beans profile="RowWebApp">
+      <bean id="authenticationModel" parent="authenticationModelTemplate"
+          class="com.hotwire.test.steps.authentication.AuthenticationModelRowWebApp">
+         <property name="purchaseParameters" ref="purchaseParameters"/>
+      </bean>
+    </beans>
+    <beans profile="WebApp">
+      <bean id="authenticationModel" parent="authenticationModelTemplate"
+          class="com.hotwire.test.steps.authentication.AuthenticationModelWebApp"/>
+    </beans>
+    <beans profile="MobileWebApp">
+      <bean id="authenticationModel" parent="authenticationModelTemplate"
+          class="com.hotwire.test.steps.authentication.AuthenticationModelMobileWebApp"/>
+    </beans>
+</beans>                      

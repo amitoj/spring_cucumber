@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <!--Models-->
+    <bean id="refundModel" class="com.hotwire.test.steps.tools.c3.refund.C3RefundModel">
+        <property name="documentsForCourtSummons" value="true"/>
+        <property name="pendingStatusOfPurchase" value="false"/>
+    </bean>
+
+    <bean id="c3PurchaseOperation" class="com.hotwire.test.steps.tools.bean.c3.C3ItineraryOperation">
+    </bean>
+
+    <util:map id="c3ItineraryOperations">
+        <entry key="SEARCH" value-ref="c3SearchDao"/>
+        <entry key="CANCEL" value-ref="c3CancellationDao"/>
+        <entry key="REFUND" value-ref="c3RefundDao"/>
+        <entry key="PARTIAL_REFUND" value-ref="c3PartialRefundDao"/>
+        <entry key="LPG_CLAIM" value-ref="c3LowPriceGuaranteeDao"/>
+    </util:map>
+
+    <bean id="c3SearchDao" class="com.hotwire.util.db.c3.C3SearchDao">
+        <constructor-arg ref="databaseSupport"/>
+    </bean>
+
+    <bean id="c3CancellationDao" class="com.hotwire.util.db.c3.service.C3CancellationDao">
+        <constructor-arg ref="databaseSupport"/>
+    </bean>
+
+    <bean id="c3RefundDao" class="com.hotwire.util.db.c3.service.C3RefundDao">
+        <constructor-arg ref="databaseSupport"/>
+    </bean>
+
+    <bean id="c3PartialRefundDao" class="com.hotwire.util.db.c3.service.C3PartialRefundDao">
+        <constructor-arg ref="databaseSupport"/>
+    </bean>
+
+    <bean id="c3LowPriceGuaranteeDao" class="com.hotwire.util.db.c3.lpg.C3LowPriceGuaranteeDao">
+        <constructor-arg ref="databaseSupport"/>
+    </bean>
+
+</beans>

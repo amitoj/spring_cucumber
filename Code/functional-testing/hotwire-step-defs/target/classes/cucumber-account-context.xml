@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="canadianZipCode" class="java.lang.String">
+        <constructor-arg value="K1A 0B1"/>
+    </bean>
+
+    <bean id="random" class="java.util.Random"/>
+
+    <bean id="dateUtilForYearShift" class="com.hotwire.test.steps.util.DateTool" factory-method="shiftCurrentYear">
+        <constructor-arg value="4"/>
+    </bean>
+
+    <bean id="emailSubscriptionParameters" class="com.hotwire.test.steps.account.EmailSubscriptionParametersImpl">
+        <property name="subscriptionMap">
+            <map/>
+        </property>
+        <property name="unsubscribeAll" value="false"/>
+    </bean>
+
+    <util:map id="creditCards" key-type="java.lang.String" value-type="com.hotwire.test.steps.account.UserInformation">
+        <entry key="American Express" value-ref="validAmericanExpressUser"/>
+        <entry key="Cybersource American Express" value-ref="validCybersourceAmericanExpressUser"/>
+        <entry key="Maestro" value-ref="validMaestroUser"/>
+        <entry key="Cybersource Maestro" value-ref="validCybersourceMaestroUser"/>
+        <entry key="MasterCard" value-ref="validMastercardUser"/>
+        <entry key="Diners Club" value-ref="validDinersUser"/>
+        <entry key="Cybersource MasterCard" value-ref="validCybersourceMasterCardUser"/>
+        <entry key="Visa Electron" value-ref="validVisaElectronUser"/>
+        <entry key="Cybersource Visa" value-ref="validCybersourceVisaUser"/>
+        <entry key="LiveProcessor VISA" value-ref="validLiveProcessorVISAUser"/>
+        <entry key="LiveProcessor American Express" value-ref="validLiveProcessorAmericanExpressUser"/>
+        <entry key="LiveProcessor MasterCard" value-ref="validLiveProcessorMasterCardUser"/>
+        <entry key="Intl Diners Card" value-ref="validIntlDinersMasterCard"/>
+        <entry key="Australian Visa" value-ref="validAustralianVisaUser"/>
+    </util:map>
+
+    <bean id="abstractUser" class="com.hotwire.test.steps.account.UserInformation" abstract="true">
+        <property name="emailId" value="savedCreditCard@hotwire.com"/>
+        <property name="primaryPhoneNumber" value="2345678999"/>
+        <property name="phoneCountryCode" value="1"/>
+        <property name="firstName" value="Test"/>
+        <property name="middleName" value=""/>
+        <property name="lastName" value="Booking"/>
+        <property name="ccFirstName" value="Test"/>
+        <property name="ccMiddleName" value=""/>
+        <property name="ccLastName" value="Booking"/>
+        <property name="billingInformationName" value="GuestBilling"/>
+        <property name="billingCountry" value="United States"/>
+        <property name="billingAddress" value="655 Montgomery St"/>
+        <property name="city" value="San Francisco"/>
+        <property name="state" value="3"/>
+        <property name="country" value="United States"/>
+        <property name="zipCode" value="94111"/>
+        <property name="ccExpMonth" value="12"/>
+        <property name="ccExpYear" ref="dateUtilForYearShift"/>
+    </bean>
+
+    <bean id="abstractVisaUser" parent="abstractUser" abstract="true">
+        <property name="ccType" value="Visa"/>
+        <property name="ccNumber" value="4111111111111111"/>
+        <property name="securityCode" value="111"/>
+    </bean>
+
+    <bean id="validAmericanExpressUser" parent="abstractUser">
+        <property name="ccNumber" value="340000698274585"/>
+        <property name="securityCode" value="9572"/>
+    </bean>
+
+    <bean id="validCanadianUser" parent="abstractVisaUser">
+        <property name="emailId" value="savedCanadianUser@hotwire.com"/>
+        <property name="zipCode" ref="canadianZipCode"/>
+        <property name="billingCountry" value="Canada"/>
+        <property name="country" value="Canada"/>
+        <property name="city" value="Ottawa"/>
+    </bean>
+
+    <bean id="validCybersourceAmericanExpressUser" parent="abstractUser">
+        <property name="ccNumber" value="371144371144376"/>
+        <property name="securityCode" value="9572"/>
+    </bean>
+
+    <bean id="validDinersUser" parent="abstractUser">
+        <property name="ccNumber" value="30414393953143"/>
+        <property name="securityCode" value="888"/>
+    </bean>
+
+    <bean id="validMaestroUser" parent="abstractUser">
+        <property name="ccNumber" value="67725565432101231"/>
+        <property name="securityCode" value="321"/>
+    </bean>
+
+    <bean id="validCybersourceMaestroUser" parent="abstractUser">
+        <property name="ccNumber" value="6759411100000008"/>
+        <property name="securityCode" value="321"/>
+    </bean>
+
+
+    <bean id="validMastercardUser" parent="abstractUser">
+        <property name="ccType" value="MasterCard"/>
+        <property name="ccNumber" value="5111005111051128"/>
+        <property name="securityCode" value="624"/>
+    </bean>
+
+    <bean id="validCybersourceMasterCardUser" parent="abstractUser">
+        <property name="ccType" value="MasterCard"/>
+        <property name="ccNumber" value="5111005111051128"/>
+        <property name="securityCode" value="624"/>
+    </bean>
+
+    <bean id="validVisaElectronUser" parent="abstractUser">
+        <property name="ccNumber" value="4844441283672242"/>
+        <property name="securityCode" value="344"/>
+    </bean>
+
+    <bean id="validCybersourceVisaUser" parent="abstractUser">
+        <property name="ccNumber" value="4112344112344113"/>
+        <property name="securityCode" value="123"/>
+    </bean>
+
+    <bean id="validLiveProcessorVISAUser" parent="abstractUser">
+        <property name="ccType" value="Visa"/>
+        <property name="ccNumber" value="4111111111111111"/>
+        <property name="securityCode" value="411"/>
+    </bean>
+
+    <bean id="validLiveProcessorAmericanExpressUser" parent="abstractUser">
+        <property name="ccNumber" value="373235387881007"/>
+        <property name="securityCode" value="1234"/>
+    </bean>
+
+    <bean id="validLiveProcessorMasterCardUser" parent="abstractUser">
+        <property name="ccType" value="MasterCard"/>
+        <property name="ccNumber" value="5555555555554444"/>
+        <property name="securityCode" value="411"/>
+    </bean>
+
+    <bean id="validIntlDinersMasterCard" parent="abstractUser">
+        <property name="ccType" value="MasterCard"/>
+        <property name="ccNumber" value="36000000000008"/>
+        <property name="securityCode" value="111"/>
+        <property name="billingAddress" value="123 Market st"/>
+        <property name="zipCode" value="94133"/>
+    </bean>
+
+    <bean id="validAustralianVisaUser" parent="abstractUser">
+            <property name="ccType" value="Visa"/>
+            <property name="ccNumber" value="4000004454624333"/>
+            <property name="securityCode" value="111"/>
+            <property name="billingAddress" value="333 Lenin Street"/>
+            <property name="zipCode" value="94133"/>
+    </bean>
+
+    <bean id="invalidMasterCardUser" parent="abstractVisaUser">
+        <property name="ccType" value="MasterCard"/>
+        <property name="ccNumber" value="5500001111111110"/>
+    </bean>
+
+    <bean id="invalidCardLengthUser" parent="abstractUser">
+        <property name="ccType" value="Visa"/>
+        <property name="primaryPhoneNumber" value="4153431221"/>
+        <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+        <property name="ccNumber" value="4006162"/>
+        <property name="securityCode" value="624"/>
+        <property name="phoneCountryCode" value="44"/>
+    </bean>
+
+
+   <bean id="abstractAccountAccess" class="com.hotwire.test.steps.account.AccountAccessTemplate" abstract="true">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+        <property name="expectedUserName" value="${known_users_name}"/>
+        <property name="authenticationParameters" ref="authenticationParameters"/>
+        <property name="applicationUrl" ref="applicationUrl"/>
+        <property name="sessionParameters" ref="sessionParameters" />
+    </bean>
+
+    <bean id="payableUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+        <property name="ccType" value="Visa"/>
+        <property name="primaryPhoneNumber" value="2345678999"/>
+        <property name="emailId" value="savedCreditCard@hotwire.com"/>
+        <property name="ccNumber" value="4263971921001307"/>
+        <property name="ccExpMonth" value="03"/>
+        <property name="ccExpYear" ref="dateUtilForYearShift"/>
+        <property name="securityCode" value="624"/>
+        <property name="phoneCountryCode" value="44"/>
+    </bean>
+
+
+    <beans profile="RowWebApp">
+        <bean id="accountAccess" parent="abstractAccountAccess" class="com.hotwire.test.steps.account.AccountAccessRowWebApp">
+            <property name="emailSubscriptionParameters" ref="emailSubscriptionParameters"/>
+            <property name="purchaseParameters" ref="purchaseParameters"/>
+        </bean>
+
+      <bean id="authenticatedUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+         <property name="ccType" value="Visa"/>
+         <property name="ccNumber" value="4263971921001307"/>
+         <property name="ccExpMonth" value="03"/>
+          <property name="ccExpYear" ref="dateUtilForYearShift"/>
+          <property name="securityCode" value="624"/>
+      </bean>
+
+       <bean id="payableUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="Visa"/>
+           <property name="primaryPhoneNumber" value="2345678999"/>
+           <property name="emailId" value="savedCreditCard@hotwire.com"/>
+           <property name="ccNumber" value="4263971921001307"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="624"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+
+      <bean id="randomGuestUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+          <property name="ccType" value="Visa"/>
+          <property name="primaryPhoneNumber" value="4153431221"/>
+          <property name="emailId" value="#{'email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+          <property name="ccNumber" value="4263971921001307"/>
+          <property name="ccExpMonth" value="03"/>
+          <property name="ccExpYear" ref="dateUtilForYearShift"/>
+          <property name="securityCode" value="624"/>
+          <property name="phoneCountryCode" value="44"/>
+      </bean>
+    </beans>
+
+    <beans profile="WebApp">
+      <bean id="accountAccess" parent="abstractAccountAccess" class="com.hotwire.test.steps.account.AccountAccessWebApp">
+        <property name="emailSubscriptionParameters" ref="emailSubscriptionParameters" />
+        <property name="newValidAuthenticationParameters" ref="newValidAuthenticationParameters"/>
+      </bean>
+    </beans>
+
+    <beans profile="MobileWebApp">
+      <bean id="accountAccess" parent="abstractAccountAccess" class="com.hotwire.test.steps.account.AccountAccessMobileWebApp">
+        <property name="emailSubscriptionParameters" ref="emailSubscriptionParameters" />
+      </bean>
+    </beans>
+
+    <beans profile="WebApp,MobileWebApp">
+      <bean id="authenticatedUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+          <property name="ccType" value="Visa"/>
+          <property name="ccNumber" value="4111111111111111"/>
+          <property name="ccExpMonth" value="03"/>
+          <property name="ccExpYear">
+              <ref bean="dateUtilForYearShift"/>
+          </property>
+          <property name="securityCode" value="624"/>
+      </bean>
+
+      <bean id="randomGuestUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+         <property name="primaryPhoneNumber" value="4153431221"/>
+         <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+         <property name="phoneCountryCode" value="44"/>
+         <property name="vmeUsername" value="vmesandbox@hotwire.com"/>
+         <property name="vmePassword" value="KrPce6yM"/>
+      </bean>
+    </beans>
+
+    <beans profile="WebApp,RowWebApp,MobileWebApp">
+        <bean id="blankBillingInformationUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+            <property name="ccFirstName" value=""/>
+            <property name="ccMiddleName" value=""/>
+            <property name="ccLastName" value=""/>
+            <property name="billingInformationName" value=""/>
+            <property name="billingAddress" value=""/>
+            <property name="city" value=""/>
+            <property name="zipCode" value=""/>
+            <property name="ccType" value="Select card"/>
+            <property name="ccNumber" value=""/>
+            <property name="ccExpMonth" value="01"/>
+            <property name="ccExpYear" value="- - - -"/>
+            <property name="securityCode" value=""/>
+            <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+            <property name="phoneCountryCode" value="1"/>
+        </bean>
+
+        <bean id="specialCharactersBillingInformationUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+            <property name="ccFirstName" value="!@#"/>
+            <property name="ccLastName" value="!@#"/>
+            <property name="billingInformationName" value="!@*"/>
+            <property name="billingAddress" value="!@*"/>
+            <property name="city" value="!@*"/>
+            <property name="zipCode" value="!@*"/>
+            <property name="ccNumber" value="!@*()"/>
+            <property name="securityCode" value="*()"/>
+            <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+            <property name="phoneCountryCode" value="1"/>
+        </bean>
+
+        <bean id="obsoleteBillingInformationUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+            <property name="ccExpMonth" value="01"/>
+            <property name="ccExpYear" value="#{''.concat(T(java.util.Calendar).getInstance().get(T(java.util.Calendar).YEAR))}"/>
+        </bean>
+
+        <bean id="invalidPhoneNumberBillingInformationUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+            <property name="primaryPhoneNumber" value="4151234567890"/>
+        </bean>
+
+       <bean id="blankTravelerInformationUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+            <property name="primaryPhoneNumber" value=""/>
+            <property name="firstName" value=""/>
+            <property name="lastName" value=""/>
+            <property name="emailId" value=""/>
+            <property name="phoneCountryCode" value=""/>
+        </bean>
+
+       <bean id="specialCharactersTravelerInformationUser" class="com.hotwire.test.steps.account.UserInformation" parent="abstractVisaUser">
+            <property name="primaryPhoneNumber" value="!@*"/>
+            <property name="firstName" value="!@*"/>
+            <property name="lastName" value="!@*"/>
+            <property name="emailId" value="a!*@b.com"/>
+            <property name="phoneCountryCode" value="!@*"/>
+        </bean>
+        
+        <!-- Master card -->
+        <bean id="masterCard4444" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="Master"/>
+           <property name="primaryPhoneNumber" value="4151231234"/>
+           <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+           <property name="ccNumber" value="5555555555554444"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="123"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+      
+      <!-- AmericanExp card -->
+        <bean id="americanExp007" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="AmericanExpress"/>
+           <property name="primaryPhoneNumber" value="4151231234"/>
+           <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+           <property name="ccNumber" value="373235387881007"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="1234"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+      
+      <!-- Visa card -->
+        <bean id="visa1111" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="Visa"/>
+           <property name="primaryPhoneNumber" value="4151231234"/>
+           <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+           <property name="ccNumber" value="4111111111111111"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="123"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+      
+       <!-- Discover card -->
+        <bean id="discover9424" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="Visa"/>
+           <property name="primaryPhoneNumber" value="4151231234"/>
+           <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+           <property name="ccNumber" value="6011000990139424"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="123"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+      
+      <!-- JCB card -->
+        <bean id="jcb1113" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="JCB"/>
+           <property name="primaryPhoneNumber" value="4151231234"/>
+           <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+           <property name="ccNumber" value="3566111111111113"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="123"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+      
+      <!-- Maestro card -->
+        <bean id="maestro0162" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="maestro"/>
+           <property name="primaryPhoneNumber" value="4151231234"/>
+           <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+           <property name="ccNumber" value="6759411100000008"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="123"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+
+        <!-- Diners Club card -->
+        <bean id="diners3143" class="com.hotwire.test.steps.account.UserInformation" parent="abstractUser">
+           <property name="ccType" value="diners"/>
+           <property name="primaryPhoneNumber" value="4151231234"/>
+           <property name="emailId" value="#{'Email'.concat(random.nextDouble()).concat('@hotwire.com')}"/>
+           <property name="ccNumber" value="30414393953143"/>
+           <property name="ccExpMonth" value="03"/>
+           <property name="ccExpYear" ref="dateUtilForYearShift"/>
+           <property name="securityCode" value="888"/>
+           <property name="phoneCountryCode" value="44"/>
+      </bean>
+    </beans>
+
+</beans>

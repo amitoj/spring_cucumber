@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="validMastercardUser" parent="abstractUser">
+        <property name="ccType" value="MasterCard"/>
+        <property name="ccNumber" value="5555555555554444"/>
+        <property name="securityCode" value="411"/>
+    </bean>
+
+    <bean id="invalidVisaUser" parent="abstractUser">
+        <property name="ccNumber" value="44444444444444877777"/>
+    </bean>
+
+    <bean id="validAmexUser" parent="abstractUser">
+        <property name="ccType" value="American Express"/>
+        <property name="ccNumber" value="373235387881007"/>
+        <property name="securityCode" value="9572"/>
+    </bean>
+
+    <bean id="validDiscoverUser" parent="abstractUser">
+        <property name="ccType" value="Discover"/>
+        <property name="ccNumber" value="6011000990139424"/>
+    </bean>
+
+    <bean id="hotDollarsUser" parent="abstractUser">
+        <property name="emailId" value="gp.holodiuk@gmail.com"/>
+        <property name="password" value="123456"/>
+    </bean>
+
+    <bean id="validJCBUser" parent="abstractUser">
+        <property name="ccType" value="JCB"/>
+        <property name="ccNumber" value="3566111111111113"/>
+    </bean>
+
+    <bean id="randomUser" parent="abstractUser">
+        <property name="emailId" ref="randomEmailId"/>
+        <property name="password" value="hotwire"/>
+    </bean>
+
+    <bean id="randomUserWithCancelledTrips" parent="abstractUser">
+        <property name="emailId" ref="randomEmailIdWithCancelledTrips"/>
+        <property name="password" value="hotwire"/>
+    </bean>
+
+    <bean id="updatedCustomer" parent="randomUser">
+        <property name="firstName" value="Updated"/>
+        <property name="lastName" value="Customer"/>
+        <property name="billingAddress" value="4261 Lincoln Blvd"/>
+        <property name="zipCode" value="V5K 1A5"/>
+        <property name="city" value="Santa Monica"/>
+        <property name="country" value="CA"/>
+        <property name="primaryPhoneNumber" value="2098678692"/>
+        <property name="creditEmailNotify" value="true"/>
+        <property name="promotionalDeals" value="true"/>
+    </bean>
+
+    <bean id="abstractUser" class="com.hotwire.test.steps.UserInformation">
+        <property name="emailId" value="savedcreditcard@hotwire.com"/>
+        <property name="password" value="password"/>
+        <property name="customerID" ref="customerID"/>
+        <property name="firstName" value="Test"/>
+        <property name="lastName" value="Booking"/>
+        <property name="primaryPhoneNumber" value="+12345678999"/>
+        <property name="ccNumber" value="4111111111111111"/>
+        <property name="securityCode" value="123"/>
+        <property name="ccFirstName" value="Test"/>
+        <property name="ccMiddleName" value=""/>
+        <property name="ccLastName" value="Booking"/>
+        <property name="billingAddress" value="655 Montgomery St"/>
+        <property name="billingCountry" value="United States"/>
+        <property name="city" value="San Francisco"/>
+        <property name="state" value="CA"/>
+        <property name="countryCode" value="US"/>
+        <property name="country" value="US"/>
+        <property name="zipCode" value="94111"/>
+        <property name="savedCardName" ref="savedCreditCardNickName"/>
+
+        <property name="ccType" value="Visa"/>
+        <property name="driverFirstName" value="Test"/>
+        <property name="driverLastName" value="Driver"/>
+        <property name="driverEmailAddress" value="savedCreditCard@hotwire.com"/>
+        <property name="driverPhoneNumber" value="2345678999"/>
+
+        <property name="randomCreditCardNumber" ref="cardNumber"/>
+        <property name="randomCreditCardNickName" ref="cardNickName"/>
+        <property name="expirationDate" ref="expirationDate"/>
+    </bean>
+
+    <bean id="cardNumber" class="com.hotwire.test.steps.util.RandomCreditCardGenerator" factory-method="useRandomCreditCardNumber"/>
+    <bean id="cardNickName" class="com.hotwire.test.steps.util.RandomCreditCardGenerator" factory-method="generateRandCardNickName"/>
+    <bean id="expirationDate" class="com.hotwire.test.steps.util.RandomCreditCardGenerator" factory-method="generateRandomExpirationDate"/>
+
+    <bean id="randomEmailId" class="com.hotwire.test.steps.util.RandomCustomerEmailFactoryBean">
+        <property name="databaseSupport" ref="databaseSupport"/>
+        <property name="defaultValue" value="savedcreditcard@hotwire.com"/>
+        <property name="statusCodeGreater" value="30020"/>
+    </bean>
+
+    <bean id="randomEmailIdWithCancelledTrips" class="com.hotwire.test.steps.util.RandomCustomerEmailFactoryBean">
+        <property name="databaseSupport" ref="databaseSupport"/>
+        <property name="defaultValue" value="savedcreditcard@hotwire.com"/>
+        <property name="statusCodeGreater" value="30035"/>
+    </bean>
+
+    <bean id="savedCreditCardNickName" class="com.hotwire.test.steps.util.SavedCreditCardNickNameFactoryBean">
+        <property name="databaseSupport" ref="databaseSupport"/>
+        <property name="emailId" value="savedcreditcard@hotwire.com"/>
+        <property name="defaultValue" value="Visa-4111"/>
+    </bean>
+
+    <bean id="customerID" class="com.hotwire.test.steps.util.CustomerIdByEmailFactoryBean">
+         <property name="databaseSupport" ref="databaseSupport"/>
+         <property name="emailId" value="savedcreditcard@hotwire.com"/>
+         <property name="defaultValue" value="2290530351"/>
+    </bean>
+
+</beans>

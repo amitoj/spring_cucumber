@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Core_SF/Core_SF.iml" filepath="$PROJECT_DIR$/Core_SF/Core_SF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DistributionAPIs/DistributionAPIs.iml" filepath="$PROJECT_DIR$/DistributionAPIs/DistributionAPIs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Features.iml" filepath="$PROJECT_DIR$/Features.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Supply_SF/HotelXnet/HotelXnet.iml" filepath="$PROJECT_DIR$/Supply_SF/HotelXnet/HotelXnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobileAPIs_GSI/MobileAPIs_GSI.iml" filepath="$PROJECT_DIR$/MobileAPIs_GSI/MobileAPIs_GSI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Platform_SF/Platform_SF.iml" filepath="$PROJECT_DIR$/Platform_SF/Platform_SF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SharedServices_SF/SharedServices_SF.iml" filepath="$PROJECT_DIR$/SharedServices_SF/SharedServices_SF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Supply_SF/Site/Site.iml" filepath="$PROJECT_DIR$/Supply_SF/Site/Site.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs/SpringMVC_MobileAPIs.iml" filepath="$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs/SpringMVC_MobileAPIs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Supply_SF/SupplyJobs/SupplyJobs.iml" filepath="$PROJECT_DIR$/Supply_SF/SupplyJobs/SupplyJobs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Supply_SF/Supply_SF.iml" filepath="$PROJECT_DIR$/Supply_SF/Supply_SF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tools_GSI/Tools_GSI.iml" filepath="$PROJECT_DIR$/Tools_GSI/Tools_GSI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Web_GSI/Web_GSI.iml" filepath="$PROJECT_DIR$/Web_GSI/Web_GSI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Web_SF/Web_SF.iml" filepath="$PROJECT_DIR$/Web_SF/Web_SF.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Supply_SF/HotelXnet/XNet/Xnet.iml" filepath="$PROJECT_DIR$/Supply_SF/HotelXnet/XNet/Xnet.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Supply_SF/HotelXnet/XNet11/Xnet1.1.iml" filepath="$PROJECT_DIR$/Supply_SF/HotelXnet/XNet11/Xnet1.1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/bex-page-objects/bex-page-objects.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/bex-page-objects/bex-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/bex-step-defs/bex-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/bex-step-defs/bex-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/c3-page-objects/c3-page-objects.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/c3-page-objects/c3-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/c3-step-defs/c3-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/c3-step-defs/c3-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/common/common.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/common/common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/database-support/database-support.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/database-support/database-support.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/desktop-page-objects.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects/desktop-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/distributed-opaque-step-defs/distributed-opaque-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/distributed-opaque-step-defs/distributed-opaque-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/features-parent/features-parent.iml" filepath="$PROJECT_DIR$/features-parent/features-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/functional-testing.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/functional-testing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/hotel-supply-step-defs/hotel-supply-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/hotel-supply-step-defs/hotel-supply-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/hotwire-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs/hotwire-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs/mobile-api/mobile-api.iml" filepath="$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs/mobile-api/mobile-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/mobile-api-step-defs/mobile-api-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/mobile-api-step-defs/mobile-api-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/mobile-page-objects/mobile-page-objects.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/mobile-page-objects/mobile-page-objects.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.0-step-defs/xnet-api-1.0-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.0-step-defs/xnet-api-1.0-step-defs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.1-step-defs/xnet-api-1.1-step-defs.iml" filepath="$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.1-step-defs/xnet-api-1.1-step-defs.iml" />
+    </modules>
+  </component>
+</project>

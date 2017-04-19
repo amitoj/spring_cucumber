@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="classpath*:webclient-api-context.xml"/>
+    <import resource="classpath*:database-support-context.xml"/>
+    <import resource="classpath*:cucumber-request-properties.xml"/>
+    <import resource="classpath*:cucumber-user-information.xml"/>
+
+    <bean id="loginService" class="com.hotwire.test.steps.login.LoginService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+    </bean>
+
+    <bean id="searchService" class="com.hotwire.test.steps.search.SearchService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="searchResponseHolder" ref="searchResponseHolder"/>
+    </bean>
+
+    <bean id="tripSummaryService" class="com.hotwire.test.steps.trips.TripSummaryService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="userInformation" ref="abstractUser"/>
+    </bean>
+
+    <bean id="tripDetailsService" class="com.hotwire.test.steps.trips.TripDetailsService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="databaseSupport" ref="databaseSupport"/>
+        <property name="userInformation" ref="abstractUser"/>
+        <property name="randomEmailId" ref="randomEmailId"/>
+    </bean>
+
+    <bean id="profileService" class="com.hotwire.test.steps.user.ProfileService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="userInformation" ref="abstractUser"/>
+    </bean>
+
+    <bean id="hotelAmenitiesService" class="com.hotwire.test.steps.hotel_amenities.HotelAmenitiesService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+    </bean>
+
+    <bean id="versionTestsService" class="com.hotwire.test.steps.user.VersionTestsService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+    </bean>
+
+    <bean id="currencyListService" class="com.hotwire.test.steps.currency_list.CurrencyListService" parent="mobileApiService">
+        <property name="paths" ref="paths"/>
+        <property name="databaseSupport" ref="databaseSupport"/>
+    </bean>
+
+    <bean id="hotelReviewsService" class="com.hotwire.test.steps.hotel_reviews.HotelReviewsService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="searchResponseHolder" ref="searchResponseHolder"/>
+    </bean>
+
+    <bean id="hotelBookingService" class="com.hotwire.test.steps.purchase.HotelPurchaseService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="purchaseService" ref="purchaseService"/>
+        <property name="hotelCouponCodeMap" ref="hotelCouponCodeMap"/>
+    </bean>
+
+    <bean id="couponCodesService" class="com.hotwire.test.steps.coupons.CouponCodesService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="searchResponseHolder" ref="searchResponseHolder"/>
+        <property name="hwGenericDaoProxy" ref="hwGenericDaoProxy"/>
+    </bean>
+
+    <bean id="carBookingService" class="com.hotwire.test.steps.purchase.CarPurchaseService" parent="mobileApiService">
+        <property name="requestProperties" ref="requestProperties"/>
+        <property name="paths" ref="paths"/>
+        <property name="purchaseService" ref="purchaseService"/>
+    </bean>
+
+    <bean id="mobileApiService" class="com.hotwire.test.steps.MobileApiService"  init-method="init">
+        <property name="webClient" ref="webClient"/>
+    </bean>
+
+    <bean id="purchaseService" class="com.hotwire.test.steps.purchase.PurchaseService">
+        <property name="requestProperties" ref="requestProperties"/>
+    </bean>
+
+    <bean id="databaseSupport" class="org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="hwGenericDaoProxy" class="org.springframework.remoting.httpinvoker.HttpInvokerProxyFactoryBean">
+        <property name="serviceUrl" value="${remote_url}/springWebApp/ejbRemote/caching/HwGenericDao"/>
+        <property name="serviceInterface" value="hotwire.eis.dao.HwGenericDao"/>
+    </bean>
+
+    <bean id="searchResponseHolder" class="com.hotwire.test.steps.search.SearchResponseHolder"/>
+
+</beans>

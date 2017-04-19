@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean id="customerTravelAdvisoryModel" class="com.hotwire.test.steps.tools.c3.travelAdvisory.C3TravelAdvisoryModel" />
+
+    <!--profiles map-->
+    <util:map id="travelAdvisoryProfiles">
+        <entry key="FIRST" value-ref="travelAdvisoryIssue"/>
+        <entry key="SECOND" value-ref="secondTravelAdvisoryIssue" />
+        <entry key="EMPTY" value-ref="emptyTravelAdvisoryIssue" />
+        <entry key="WRONG" value-ref="wrongTravelAdvisoryIssue" />
+    </util:map>
+
+    <!--Travel advisory profiles-->
+    <bean id="travelAdvisoryIssue" class="com.hotwire.test.steps.tools.bean.TravelAdvisoryInfo">
+        <property name="title" value="Aliens Attack, the World Unites!"/>
+        <property name="dateUpdated" value="07/22/2014"/>
+        <property name="displayOnDomestic" value="true"/>
+        <property name="displayOnIntl" value="false"/>
+        <property name="message" value="Three giant alien spaceships are again heading for Earth! Scientists predict the new ships will arrive in December. Three similar giant ships landed in China and the Indonesia Sea in November, 2011. They were identified as alien spaceships from Planet Gootan. Three more giant Gootan ships are headed her for December."/>
+        <property name="dateExpired" value="07/26/2014"/>
+        <property name="index" value="0"/>
+    </bean>
+
+    <bean id="secondTravelAdvisoryIssue" parent="travelAdvisoryIssue">
+        <property name="title" value="Rare snow in Johannesburg"/>
+        <property name="dateUpdated" value="07/22/2014"/>
+        <property name="displayOnDomestic" value="true"/>
+        <property name="displayOnIntl" value="true"/>
+        <property name="message" value="Rare snow fell in and around South Africa's city of Johannesburg on Tuesday. It began snowing in the morning and flurries continued all day. Some said they had never seen snow before. 'Amazing. Never happened in my life,' security guard Mizundile Eseu, 23, told the AFP news agency."/>
+        <property name="dateExpired" value="07/26/2014"/>
+        <property name="index" value="1"/>
+    </bean>
+
+    <bean id="emptyTravelAdvisoryIssue" parent="travelAdvisoryIssue">
+        <property name="title" value=""/>
+        <property name="dateUpdated" value=""/>
+        <property name="displayOnDomestic" value="false"/>
+        <property name="displayOnIntl" value="false"/>
+        <property name="message" value="" />
+        <property name="dateExpired" value=""/>
+        <property name="index" value="0"/>
+    </bean>
+
+    <bean id="wrongTravelAdvisoryIssue" parent="travelAdvisoryIssue">
+        <property name="title" value="WRONG"/>
+        <property name="dateUpdated" value="220/01/2014"/>
+        <property name="index" value="1"/>
+    </bean>
+
+</beans>

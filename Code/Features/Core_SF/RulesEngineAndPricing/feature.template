@@ -1,0 +1,18 @@
+@{TAG}
+Feature: Feature
+  As a {role} I want {feature} so that {benefit}
+
+  Background:
+    {Something that gets executed before each scenario}
+    
+
+  Scenario Outline: Scenario description. (use scenarios to explore edge cases and different paths through a feature)
+    Given {Application state}
+    When {declarative change of the state}
+    Then {declarative output describing business logic}
+    Examples: {test data to be run with the scenario}
+    | test1          | 
+    | test2          | 
+    | test3          |
+
+

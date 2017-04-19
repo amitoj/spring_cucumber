@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:property-placeholder location="mobile-api-paths.properties" ignore-unresolvable="true"/>
+
+    <import resource="classpath*:application-testscope-context.xml"/>
+    <import resource="classpath*:cucumber-user-information.xml"/>
+
+    <bean id="requestProperties" class="com.hotwire.test.steps.RequestProperties">
+        <property name="userInformation" ref="abstractUser"/>
+        <property name="clientId" value="12345"/>
+        <property name="customerId" ref="customerID"/>
+        <property name="channelID" value=""/>
+        <property name="countryCode" value="US"/>
+        <property name="currencyCode" value="USD"/>
+        <property name="latLong" value="41.53255,-42.57845"/>
+
+        <property name="destinationLocation" value=""/>
+        <property name="numberOfAdults" value="2"/>
+        <property name="numberOfRooms" value="1"/>
+        <property name="numberOfChildren" value="0"/>
+        <property name="hotelSearchDealHash" value=""/>
+
+        <property name="pickupLocation" value=""/>
+        <property name="dropOffLocation" value=""/>
+        <property name="depositMethod" value=""/>
+        <property name="isInsuranceSelected" value="false"/>
+        <property name="isPaymentRequired" value="true"/>
+        <property name="isOneWayTrip" value="false"/>
+
+        <property name="excludeCanceledRefunded" value="false"/>
+
+        <property name="limit" value="25"/>
+        <property name="offset" value="0"/>
+
+
+        <property name="oauthToken" value=""/>
+        <property name="createdUserEmail" value=""/>
+
+    </bean>
+
+
+    <util:map id="hotelCouponCodeMap" map-class="java.util.HashMap">
+        <entry key="minimum 3 star rating" value="CCALL15D"/>
+        <entry key="invalid" value="fake150"/>
+    </util:map>
+
+    <bean id="paths" class="com.hotwire.test.steps.RequestPaths">
+        <property name="loginUserPath" value="${login.user}"/>
+        <property name="hotelSearchOpaquePath" value="${hotel.search.opaque}"/>
+        <property name="hotelSearchRetailPath" value="${hotel.search.retail}"/>
+        <property name="hotelDetailsOpaquePath" value="${hotel.details.opaque}"/>
+        <property name="hotelDetailsRetailPath" value="${hotel.details.retail}"/>
+        <property name="hotelSecureBookingPath" value="${hotel.booking.secure}"/>
+        <property name="hotelBookingPath" value="${hotel.booking}"/>
+        <property name="hotelReviewsPath" value="${hotel.reviews}"/>
+        <property name="carSearchPath" value="${car.search}"/>
+        <property name="carDetailsPath" value="${car.details}"/>
+        <property name="carBookingPath" value="${car.booking}"/>
+        <property name="carSecureBookingPath" value="${car.booking.secure}"/>
+        <property name="carApplyCouponPath" value="${car.apply.coupon}"/>
+        <property name="hotelApplyCouponPath" value="${hotel.apply.coupon}"/>
+        <property name="tripSummaryPath" value="${trip.summary}"/>
+        <property name="tripDetailsPath" value="${trip.details}"/>
+        <property name="retrieveCustomerProfilePath" value="${customer.profile.retrieve}"/>
+        <property name="updateCustomerProfilePath" value="${customer.profile.update}"/>
+        <property name="createAccountPath" value="${customer.create.account}"/>
+        <property name="addCreditCardPath" value="${add.credit_card}"/>
+        <property name="currencyListPath" value="${currency.list}"/>
+        <property name="versionTestsPath" value="${versiontests}"/>
+        <property name="hotelAmenitiesPath" value="${hotel.amenities}"/>
+
+    </bean>
+
+</beans>

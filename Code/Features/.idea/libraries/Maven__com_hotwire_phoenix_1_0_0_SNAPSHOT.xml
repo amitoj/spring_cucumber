@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hotwire:phoenix:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/phoenix/1.0.0-SNAPSHOT/phoenix-1.0.0-20150319.183850-18871.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/phoenix/1.0.0-SNAPSHOT/phoenix-1.0.0-20150319.183850-18871-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/phoenix/1.0.0-SNAPSHOT/phoenix-1.0.0-20150319.183850-18871-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

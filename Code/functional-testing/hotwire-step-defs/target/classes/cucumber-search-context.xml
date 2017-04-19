@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.1.xsd
+http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd"
+>
+    <bean id="searchModelTemplate" abstract="true" class="com.hotwire.test.steps.search.SearchModelTemplate">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+        <property name="applicationUrl" ref="applicationUrl"/>
+    </bean>
+    
+    <bean id="selectedDateList" class="java.util.ArrayList" />
+    <bean id="searchResults" class="java.util.ArrayList" />
+    <bean id="filteredResults" class="java.util.ArrayList" />
+
+    <bean id="searchModel" parent="searchModelTemplate"
+          class="com.hotwire.test.steps.search.DelegatingSearchModel">
+        <property name="searchParameters" ref="searchParameters"/>
+        <property name="hotelSearchModel" ref="hotelSearchModel"/>
+        <property name="carSearchModel" ref="carSearchModel"/>
+        <property name="airSearchModel" ref="airSearchModel"/>
+        <property name="cruiseSearchModel" ref="cruiseSearchModel"/>
+        <property name="packagesSearchModel" ref="packagesSearchModel"/>
+        <property name="activitiesSearchModel" ref="activitiesSearchModel"/>
+    </bean>
+
+    <bean id="hotelSearchParameters" class="com.hotwire.test.steps.search.hotel.HotelSearchParametersImpl">
+        <property name="globalSearchParameters" ref="searchParameters"/>
+    </bean>
+    <bean id="airSearchParameters" class="com.hotwire.test.steps.search.air.AirSearchParametersImpl">
+        <property name="globalSearchParameters" ref="searchParameters"/>
+    </bean>
+    <bean id="cruiseSearchParameters" class="com.hotwire.test.steps.search.cruise.CruiseSearchParametersImpl">
+        <property name="globalSearchParameters" ref="searchParameters"/>
+    </bean>
+    <bean id="packagesSearchParameters" class="com.hotwire.test.steps.search.packages.PackagesSearchParametersImpl">
+        <property name="globalSearchParameters" ref="searchParameters"/>
+    </bean>
+    <bean id="activitiesSearchParameters" class="com.hotwire.test.steps.search.activities.ActivitiesSearchParametersImp">
+        <property name="globalSearchParameters" ref="searchParameters"/>
+    </bean>
+
+    <beans profile="MobileWebApp">
+        <bean id="sdf" class="java.text.SimpleDateFormat">
+           <constructor-arg type="java.lang.String" value="MM/dd/yyyy"/>
+        </bean>
+        <bean id="hotelSearchModel" parent="searchModelTemplate"
+              class="com.hotwire.test.steps.search.hotel.HotelSearchModelMobileWebApp">
+            <property name="searchParameters" ref="hotelSearchParameters"/>
+            <property name="searchResults" ref="searchResults"/>
+            <property name="filteredResults" ref="filteredResults"/>
+        </bean>
+        <bean id="carSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.car.CarSearchModelMobileWebApp">
+            <property name="searchParameters" ref="carSearchParameters"/>
+        </bean>
+        <bean id="airSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.air.AirSearchModelMobileWebApp">
+            <property name="searchParameters" ref="airSearchParameters"/>
+        </bean>
+        <bean id="cruiseSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.cruise.CruiseSearchModelMobileWebApp">
+            <property name="searchParameters" ref="cruiseSearchParameters"/>
+        </bean>
+         <bean id="packagesSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.packages.PackagesSearchModelMobileWebApp">
+            <property name="searchParameters" ref="packagesSearchParameters"/>
+        </bean>
+        <bean id="carSearchParameters" class="com.hotwire.test.steps.search.car.CarSearchParametersImpl">
+            <property name="globalSearchParameters" ref="searchParameters"/>
+        </bean>
+        <bean id="activitiesSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.activities.ActivitiesSearchModelMobileWebApp">
+            <property name="searchParameters" ref="activitiesSearchParameters"/>
+        </bean>
+        <bean id="searchParameters" class="com.hotwire.test.steps.search.SearchParametersImpl"/>
+    </beans>
+    <beans profile="RowWebApp">
+        <bean id="sdf" class="java.text.SimpleDateFormat">
+           <constructor-arg type="java.lang.String" value="dd/MM/yyyy"/>
+        </bean>
+        <bean id="hotelSearchModel" parent="searchModelTemplate"
+              class="com.hotwire.test.steps.search.hotel.HotelSearchModelRowWebApp">
+            <property name="searchParameters" ref="hotelSearchParameters"/>
+            <property name="searchResults" ref="searchResults"/>
+            <property name="filteredResults" ref="filteredResults"/>
+        </bean>
+        <bean id="carSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.car.CarSearchModelRowWebApp">
+            <property name="searchParameters" ref="carSearchParameters"/>
+        </bean>
+        <bean id="airSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.air.AirSearchModelRowWebApp">
+            <property name="searchParameters" ref="airSearchParameters"/>
+        </bean>
+        <bean id="cruiseSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.cruise.CruiseSearchModelRowWebApp">
+            <property name="searchParameters" ref="cruiseSearchParameters"/>
+        </bean>
+          <bean id="packagesSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.packages.PackagesSearchModelRowWebApp">
+            <property name="searchParameters" ref="packagesSearchParameters"/>
+        </bean>
+         <bean id="activitiesSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.activities.ActivitiesSearchModelRowWebApp">
+            <property name="searchParameters" ref="activitiesSearchParameters"/>
+        </bean>
+        <bean id="carSearchParameters" class="com.hotwire.test.steps.search.car.CarSearchParametersImpl">
+            <property name="globalSearchParameters" ref="searchParameters"/>
+            <property name="driversAge" value="30"/>
+            <property name="dropoffTime" value="08:00"/>
+            <property name="pickupTime" value="08:00"/>
+            <property name="countryOfResidence" value="United Kingdom"/>
+        </bean>
+        <bean id="searchParameters" class="com.hotwire.test.steps.search.SearchParametersImpl">
+            <property name="destinationLocation" value="LHR"/>
+            <property name="startDateString" value="tomorrow"/>
+            <property name="endDateString" value="6 day from now"/>
+        </bean>
+    </beans>
+    <beans profile="WebApp">
+        <bean id="sdf" class="java.text.SimpleDateFormat">
+           <constructor-arg type="java.lang.String" value="MM/dd/yyyy"/>
+        </bean>
+        <bean id="hotelSearchModel" parent="searchModelTemplate"
+              class="com.hotwire.test.steps.search.hotel.HotelSearchModelWebApp">
+            <property name="searchParameters" ref="hotelSearchParameters"/>
+            <property name="searchResults" ref="searchResults"/>
+            <property name="filteredResults" ref="filteredResults"/>
+        </bean>
+        <bean id="carSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.car.CarSearchModelWebApp">
+            <property name="searchParameters" ref="carSearchParameters"/>
+        </bean>
+        <bean id="airSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.air.AirSearchModelWebApp">
+            <property name="searchParameters" ref="airSearchParameters"/>
+            <property name="selectedDateList" ref="selectedDateList"/>
+        </bean>
+        <bean id="cruiseSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.cruise.CruiseSearchModelWebApp">
+            <property name="searchParameters" ref="cruiseSearchParameters"/>
+        </bean>
+        <bean id="packagesSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.packages.PackagesSearchModelWebApp">
+            <property name="searchParameters" ref="packagesSearchParameters"/>
+        </bean>
+        <bean id="carSearchParameters" class="com.hotwire.test.steps.search.car.CarSearchParametersImpl">
+            <property name="globalSearchParameters" ref="searchParameters"/>
+            <property name="carType" value="any"/>
+        </bean>
+        <bean id="activitiesSearchModel" parent="searchModelTemplate" class="com.hotwire.test.steps.search.activities.ActivitiesSearchModelWebApp">
+            <property name="searchParameters" ref="activitiesSearchParameters"/>
+        </bean>
+        <bean id="searchParameters" class="com.hotwire.test.steps.search.SearchParametersImpl" />
+    </beans>
+</beans>

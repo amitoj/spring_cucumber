@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean lazy-init="false" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property value="SYSTEM_PROPERTIES_MODE_OVERRIDE" name="systemPropertiesModeName"/>
+
+        <property name="properties">
+            <props>
+                <prop key="xnet_api_application_url">http://dev07.dev.hotwire.com:7001</prop>
+            </props>
+        </property>
+    </bean>
+    
+    <bean id="applicationUrlStringV1.1" class="java.lang.String" factory-method="valueOf">
+        <constructor-arg index="0" value="${xnet_api_application_url}/xnetApi/v1.1/XnetHotelService"
+                         type="java.lang.Object"/>
+    </bean>
+    
+    <bean id="apikey" class="java.lang.String" factory-method="valueOf">
+        <constructor-arg index="0" value="apikey=6hbe2w6ehhepdc53ua8ewbbn"
+                         type="java.lang.Object"/>
+    </bean>
+
+    <bean id="applicationUrlStringV1.0" class="java.lang.String" factory-method="valueOf">
+        <constructor-arg index="0" value="${xnet_api_application_url}"
+                         type="java.lang.Object"/>
+    </bean>
+
+    <beans profile="V1.0">
+        <bean id="xnetAriService" class="com.hotwire.test.hotel.xnet.api.XnetAriServiceApi">
+            <property name="service" ref="xnetClient"/>
+            <property name="validUserName" value="xnettest@hotwire.com"/>
+            <property name="validPassword" value="hotwire"/>
+            <property name="invalidValidUserName" value="skolluriasdfasd@hotwire.com"/>
+            <property name="invalidPassword" value="hotwire.com"/>
+            <property name="applicationUrl" ref="applicationUrlStringV1.0"/>
+        </bean>
+
+        <bean id="xnetClient" class="com.hotwire.test.hotel.xnet.api.XnetApiClientCxfFactory"
+              factory-method="createXnetHotelServiceClient">
+            <constructor-arg index="0" ref="applicationUrlStringV1.0"/>
+        </bean>
+
+        <bean id="xnetAuthpolicy" class="com.hotwire.test.hotel.xnet.api.XnetApiClientCxfFactory"
+              factory-method="createXnetHotelServiceConduit">
+            <constructor-arg index="0" ref="xnetClient"/>
+            <constructor-arg index="1" ref="apikey"/>
+        </bean>
+    </beans>
+
+    <beans profile="V1.1">
+        <bean id="xnetAriService" class="com.hotwire.test.hotel.xnet.api.XnetAriServiceApi">
+            <property name="service" ref="xnetClient"/>
+            <property name="validUserName" value="xnettest@hotwire.com"/>
+            <property name="validPassword" value="hotwire"/>
+            <property name="invalidValidUserName" value="skolluriasdfasd@hotwire.com"/>
+            <property name="invalidPassword" value="hotwire.com"/>
+            <property name="applicationUrl" ref="applicationUrlStringV1.1"/>
+        </bean>
+
+        <bean id="xnetClient" class="com.hotwire.test.hotel.xnet.api.XnetApiClientCxfFactory"
+              factory-method="createXnetHotelServiceClient">
+            <constructor-arg index="0" ref="applicationUrlStringV1.1"/>
+        </bean>
+
+        <bean id="xnetAuthpolicy" class="com.hotwire.test.hotel.xnet.api.XnetApiClientCxfFactory"
+              factory-method="createXnetHotelServiceConduit">
+            <constructor-arg index="0" ref="xnetClient"/>
+            <constructor-arg index="1" ref="apikey"/>
+        </bean>
+    </beans>
+
+
+</beans>

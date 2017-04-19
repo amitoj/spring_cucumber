@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--Models-->
+    <bean id="oldHelpCenterModel" class="com.hotwire.test.steps.helpcenter.OldHelpCenterModel">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+    </bean>
+
+    <bean id="salesforceHelpCenterModel" class="com.hotwire.test.steps.helpcenter.SalesforceHelpCenterModel">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+    </bean>
+
+    <bean id="liveChatModel" class="com.hotwire.test.steps.livechat.LiveChatModelWebApp">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+    </bean>
+
+    <!--Containers-->
+    <bean id="helpCenterInfo" class="com.hotwire.test.steps.helpcenter.HelpCenterInfo">
+        <property name="articleCategory" value="Cruises"/>
+        <property name="servicePhone" value="1-855-677-0745"/>
+        <property name="salesPhone" value="1-855-326-0772"/>
+        <property name="rowPhone" value="1-417-520-1680"/>
+        <property name="usExpressPhone" value="1-800-845-4026"/>
+        <property name="rowExpressPhone" value="1-417-520-1695"/>
+        <property name="expressEmail" value="hotwireexpress@hotwire.com"/>
+        <property name="intl" value="false"/>
+    </bean>
+
+
+</beans>

@@ -1,0 +1,19 @@
+@US @ROW
+Feature: Retail Hotel Examples
+    Retail hotel examples on opaque hotel results page.
+
+    Background:
+        Given default dataset
+        Given the application is accessible
+
+  Scenario Outline: Retail examples are enabled on hotel results
+    Given I'm searching for a hotel in "<destinationLocation>"
+    And I want to travel between <startDateShift> days from now and <endDateShift> days from now
+    And I request quotes
+    And I choose opaque hotels tab on results
+    When I want to see examples of retail hotels
+    Then I should see examples of retail hotels
+
+  Examples:
+    | destinationLocation | startDateShift | endDateShift |
+    | San Francisco, CA   | 3              | 5            |

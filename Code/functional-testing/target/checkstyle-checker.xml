@@ -1,0 +1,386 @@
+<?xml version="1.0"?>
+<!DOCTYPE module PUBLIC
+        "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
+        "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+
+<!--
+
+  Checkstyle configuration that checks the sun coding conventions from:
+
+    - the Java Language Specification at
+      http://java.sun.com/docs/books/jls/second_edition/html/index.html
+
+    - the Sun Code Conventions at http://java.sun.com/docs/codeconv/
+
+    - the Javadoc guidelines at
+      http://java.sun.com/j2se/javadoc/writingdoccomments/index.html
+
+    - the JDK Api documentation http://java.sun.com/j2se/docs/api/index.html
+
+    - some best practices
+
+  Checkstyle is very configurable. Be sure to read the documentation at
+  http://checkstyle.sf.net (or in your downloaded distribution).
+
+  Most Checks are configurable, be sure to consult the documentation.
+
+  To completely disable a check, just comment it out or delete it from the file.
+
+  Finally, it is worth reading the documentation.
+
+-->
+
+<module name="Checker">
+
+    <!-- Filter SuppressionCommentFilter uses pairs of comments to suppress audit events. -->
+    <!-- http://checkstyle.sourceforge.net/config.html#SuppressionCommentFilter           -->
+    <module name="SuppressionCommentFilter">
+        <property name="onCommentFormat" value="CHECKSTYLE\:ON"/>
+        <property name="offCommentFormat" value="CHECKSTYLE\:OFF"/>
+    </module>
+    <!-- Filter SuppressWarningsFilter uses annotations to suppress audit events. -->
+    <!-- http://checkstyle.sourceforge.net/config.html#SuppressWarningsFilter     -->
+    <module name="SuppressWarningsFilter"/>
+
+
+    <!-- DUPLICATE CODE                                           -->
+    <!-- http://checkstyle.sourceforge.net/config_duplicates.html -->
+    <!--
+    <module name="StrictDuplicateCode"/>
+    -->
+
+
+    <!-- HEADERS                                              -->
+    <!-- http://checkstyle.sourceforge.net/config_header.html -->
+    <!--
+    <module name="Header"/>
+    -->
+    <!-- Following interprets the header file as regular expressions. -->
+    <module name="RegexpHeader">
+        <!-- Property added by Hotwire -->
+        <!-- note that this property is in-line'ed in order to make the IDEA jetstyle plugin work  -->
+        <!-- since it wasn't possible to set a property in the plugin to point it at a header file -->
+        <property name="header"
+                  value="/*\n * Copyright 20\d\d(-20\d\d)? Hotwire. All Rights Reserved.\n *\n * This software is the proprietary information of Hotwire.\n * Use is subject to license terms.\n */\n"/>
+        <property name="fileExtensions" value="java"/>
+    </module>
+
+
+    <!-- MISCELLANEOUS                                      -->
+    <!-- http://checkstyle.sourceforge.net/config_misc.html -->
+    <!--
+    <module name="UniqueProperties"/>
+    -->
+    <module name="NewlineAtEndOfFile"/>
+    <!-- Commented out by Hotwire -->
+    <!--
+    <module name="Translation"/>
+    -->
+
+
+    <!-- REGEXP                                               -->
+    <!-- http://checkstyle.sourceforge.net/config_regexp.html -->
+    <!--
+    <module name="RegexpSingleline"/>
+    <module name="RegexpMultiline"/>
+    -->
+
+
+    <!-- SIZE VIOLATIONS                                     -->
+    <!-- http://checkstyle.sourceforge.net/config_sizes.html -->
+    <module name="FileLength"/>
+
+
+    <!-- WHITESPACE                                               -->
+    <!-- http://checkstyle.sourceforge.net/config_whitespace.html -->
+    <module name="FileTabCharacter"/>
+
+
+    <module name="TreeWalker">
+
+        <!-- ANNOTATIONS                                              -->
+        <!-- http://checkstyle.sourceforge.net/config_annotation.html -->
+        <!--
+        <module name="AnnotationUseStyle"/>
+        <module name="MissingDeprecated"/>
+        <module name="MissingOverride"/>
+        <module name="PackageAnnotation"/>
+        <module name="SuppressWarnings"/>
+        <module name="AnnotationLocation"/>
+        -->
+        <!-- Added by Hotwire -->
+        <module name="SuppressWarningsHolder"/>
+
+
+        <!-- BLOCK CHECKS                                         -->
+        <!-- http://checkstyle.sourceforge.net/config_blocks.html -->
+        <module name="EmptyBlock">
+            <property name="option" value="text"/>
+        </module>
+        <module name="LeftCurly"/>
+        <module name="NeedBraces"/>
+        <module name="RightCurly">
+            <!-- Property added by Hotwire -->
+            <property name="option" value="alone"/>
+        </module>
+        <module name="AvoidNestedBlocks"/>
+
+
+        <!-- CLASS DESIGN                                         -->
+        <!-- http://checkstyle.sourceforge.net/config_design.html -->
+        <!--
+        <module name="MutableException"/>
+        <module name="ThrowsCount"/>
+        <module name="InnerTypeLast"/>
+        <module name="OneTopLevelClass"/>
+        -->
+        <module name="FinalClass"/>
+        <module name="InterfaceIsType"/>
+        <module name="HideUtilityClassConstructor"/>
+        <module name="HiddenField">
+            <!-- Property added by Hotwire -->
+            <property name="tokens" value="VARIABLE_DEF"/>
+        </module>
+        <!-- Commented out by Hotwire -->
+        <!--
+        <module name="VisibilityModifier"/>
+        <module name="DesignForExtension"/>
+        -->
+
+
+        <!-- CODING                                               -->
+        <!-- http://checkstyle.sourceforge.net/config_coding.html -->
+        <!--
+        <module name="ArrayTrailingComma"/>
+        <module name="CovariantEquals"/>
+        <module name="EqualsAvoidNull"/>
+        <module name="FinalLocalVariable"/>
+        <module name="IllegalToken"/>
+        <module name="IllegalTokenText"/>
+        <module name="ModifiedControlVariable"/>
+        <module name="StringLiteralEquality"/>
+        <module name="NestedForDepth"/>
+        <module name="NestedIfDepth"/>
+        <module name="NestedTryDepth"/>
+        <module name="NoClone"/>
+        <module name="NoFinalizer"/>
+        <module name="SuperClone"/>
+        <module name="SuperFinalize"/>
+        <module name="IllegalCatch"/>
+        <module name="IllegalThrows"/>
+        <module name="PackageDeclaration"/>
+        <module name="JUnitTestCase"/>
+        <module name="ReturnCount"/>
+        <module name="IllegalType"/>
+        <module name="ParameterAssignment"/>
+        <module name="ExplicitInitialization"/>
+        <module name="MissingCtor"/>
+        <module name="FallThrough"/>
+        <module name="MultipleStringLiterals"/>
+        <module name="MultipleVariableDeclarations"/>
+        <module name="RequireThis"/>
+        <module name="OneStatementPerLine"/>
+        <module name="VariableDeclarationUsageDistance"/>
+        <module name="OverloadMethodsDeclarationOrder"/>
+        -->
+        <module name="EmptyStatement"/>
+        <module name="EqualsHashCode"/>
+        <module name="IllegalInstantiation"/>
+        <module name="InnerAssignment"/>
+        <module name="MissingSwitchDefault"/>
+        <module name="SimplifyBooleanExpression"/>
+        <module name="SimplifyBooleanReturn"/>
+        <!-- Added by Hotwire -->
+        <module name="DeclarationOrder"/>
+        <module name="DefaultComesLast"/>
+        <module name="UnnecessaryParentheses"/>
+        <!-- Commented out by Hotwire -->
+        <!--
+        <module name="AvoidInlineConditionals"/>
+        <module name="MagicNumber"/>
+        <module name="RedundantThrows"/>
+        -->
+
+
+        <!-- IMPORTS                                               -->
+        <!-- http://checkstyle.sourceforge.net/config_imports.html -->
+        <!--
+        <module name="AvoidStaticImport"/>
+        <module name="ImportOrder"/>
+        <module name="ImportControl"/>
+        <module name="CustomImportOrder"/>
+        -->
+        <module name="AvoidStarImport">
+            <!-- Property added by Hotwire -->
+            <property name="excludes" value="java.io,java.net,java.util"/>
+        </module>
+        <module name="IllegalImport"/>
+        <module name="RedundantImport"/>
+        <module name="UnusedImports"/>
+
+
+        <!-- JAVADOC COMMENTS                                      -->
+        <!-- http://checkstyle.sourceforge.net/config_javadoc.html -->
+        <!--
+        <module name="JavadocPackage"/>
+        <module name="WriteTag"/>
+        <module name="NonEmptyAtclauseDescription"/>
+        <module name="JavadocTagContinuationIndentation"/>
+        <module name="SummaryJavadoc"/>
+        <module name="AtclauseOrder"/>
+        <module name="JavadocParagraph"/>
+        <module name="SingleLineJavadoc"/>
+        -->
+        <module name="JavadocType"/>
+        <module name="JavadocMethod">
+            <!-- Property added by Hotwire -->
+            <property name="excludeScope" value="private"/>
+        </module>
+        <module name="JavadocVariable">
+            <!-- Property added by Hotwire -->
+            <property name="excludeScope" value="private"/>
+        </module>
+        <module name="JavadocStyle">
+            <!-- Property added by Hotwire -->
+            <property name="checkFirstSentence" value="false"/>
+        </module>
+
+
+        <!-- METRICS                                               -->
+        <!-- http://checkstyle.sourceforge.net/config_metrics.html -->
+        <!--
+        <module name="BooleanExpressionComplexity"/>
+        <module name="ClassDataAbstractionCoupling"/>
+        <module name="ClassFanOutComplexity"/>
+        <module name="NPathComplexity"/>
+        -->
+        <!-- Added by Hotwire -->
+        <module name="CyclomaticComplexity">
+            <property name="max" value="15"/>
+        </module>
+        <module name="JavaNCSS"/>
+
+
+        <!-- MISCELLANEOUS                                      -->
+        <!-- http://checkstyle.sourceforge.net/config_misc.html -->
+        <!--
+        <module name="UncommentedMain"/>
+        <module name="DescendantToken"/>
+        <module name="TrailingComment"/>
+        <module name="OuterTypeFilename"/>
+        <module name="AvoidEscapedUnicodeCharacters"/>
+        -->
+        <module name="TodoComment">
+            <!-- Property added by Hotwire -->
+            <property name="format" value="FIXME|TODO"/>
+            <property name="severity" value="warning"/>
+        </module>
+        <module name="UpperEll"/>
+        <module name="ArrayTypeStyle"/>
+        <module name="Regexp">
+            <property name="format" value="[ \t]+$"/>
+            <property name="illegalPattern" value="true"/>
+            <property name="message" value="Line has trailing spaces."/>
+        </module>
+        <!-- Added by Hotwire -->
+        <module name="Indentation"/>
+        <module name="FileContentsHolder"/>
+        <!-- Commented out by Hotwire -->
+        <!--
+        <module name="FinalParameters"/>
+        -->
+
+
+        <!-- MODIFIERS                                              -->
+        <!-- http://checkstyle.sourceforge.net/config_modifier.html -->
+        <module name="ModifierOrder"/>
+        <module name="RedundantModifier"/>
+
+
+        <!-- NAMING CONVENTIONS                                   -->
+        <!-- http://checkstyle.sourceforge.net/config_naming.html -->
+        <!--
+        <module name="AbstractClassName"/>
+        <module name="ClassTypeParameterName"/>
+        <module name="MethodTypeParameterName"/>
+        <module name="InterfaceTypeParameterName"/>
+        <module name="AbbreviationAsWordInName"/>
+        -->
+        <module name="ConstantName">
+            <property name="format" value="^[A-Z][_A-Z0-9]*(_[A-Z0-9]+)*|logger$"/>
+        </module>
+        <module name="LocalFinalVariableName">
+            <property name="format" value="^[a-z][_a-zA-Z0-9]*$"/>
+        </module>
+        <module name="LocalVariableName">
+            <property name="format" value="^[a-z][_a-zA-Z0-9]*$"/>
+        </module>
+        <module name="StaticVariableName">
+            <property name="format" value="^[a-zA-Z][_a-zA-Z0-9]*$"/>
+        </module>
+        <module name="ParameterName">
+            <property name="format" value="^[a-z][_a-zA-Z0-9]*$"/>
+        </module>
+        <module name="MemberName">
+            <property name="format" value="^([a-z]|_NAE)[_a-zA-Z0-9]*$"/>
+        </module>
+        <module name="MethodName">
+            <property name="format" value="^[a-z][_a-zA-Z0-9]*$"/>
+        </module>
+        <module name="PackageName"/>
+        <module name="TypeName">
+            <property name="format" value="^[A-Z][_a-zA-Z0-9]*$"/>
+        </module>
+
+
+        <!-- REGEXP                                               -->
+        <!-- http://checkstyle.sourceforge.net/config_regexp.html -->
+        <!--
+        <module name="RegexpSinglelineJava"/>
+        -->
+
+
+        <!-- SIZE VIOLATIONS                                     -->
+        <!-- http://checkstyle.sourceforge.net/config_sizes.html -->
+        <!--
+        <module name="ExecutableStatementCount"/>
+        <module name="AnonInnerLength"/>
+        <module name="OuterTypeNumber"/>
+        <module name="MethodCount"/>
+        -->
+        <module name="LineLength">
+            <!-- Property added by Hotwire -->
+            <property name="max" value="120"/>
+        </module>
+        <module name="MethodLength"/>
+        <module name="ParameterNumber"/>
+
+
+        <!-- WHITESPACE                                               -->
+        <!-- http://checkstyle.sourceforge.net/config_whitespace.html -->
+        <!--
+        <module name="GenericWhitespace"/>
+        <module name="EmptyForInitializerPad"/>
+        <module name="NoLineWrap"/>
+        <module name="EmptyLineSeparator"/>
+        <module name="SeparatorWrap"/>
+        -->
+        <module name="EmptyForIteratorPad"/>
+        <module name="MethodParamPad"/>
+        <module name="NoWhitespaceAfter"/>
+        <module name="NoWhitespaceBefore"/>
+        <module name="OperatorWrap">
+            <!-- Property added by Hotwire -->
+            <property name="option" value="eol"/>
+        </module>
+        <module name="ParenPad"/>
+        <module name="TypecastParenPad"/>
+        <module name="WhitespaceAfter"/>
+        <module name="WhitespaceAround">
+            <property name="tokens"
+                      value="ASSIGN, BAND, BAND_ASSIGN, BOR, BOR_ASSIGN, BSR, BSR_ASSIGN, BXOR, BXOR_ASSIGN, COLON, DIV, DIV_ASSIGN, EQUAL, GE, GT, LAND, LCURLY, LE, LITERAL_ASSERT, LITERAL_CATCH, LITERAL_DO, LITERAL_ELSE, LITERAL_FINALLY, LITERAL_FOR, LITERAL_IF, LITERAL_RETURN, LITERAL_SYNCHRONIZED, LITERAL_TRY, LITERAL_WHILE, LOR, LT, MINUS, MINUS_ASSIGN, MOD, MOD_ASSIGN, NOT_EQUAL, PLUS, PLUS_ASSIGN, QUESTION, RCURLY, SL, SLIST, SL_ASSIGN, SR, SR_ASSIGN, STAR, STAR_ASSIGN, TYPE_EXTENSION_AND, WILDCARD_TYPE"/>
+        </module>
+
+    </module>
+
+</module>

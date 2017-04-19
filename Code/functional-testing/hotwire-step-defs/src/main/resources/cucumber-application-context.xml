@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-init-method="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+
+                           http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer" lazy-init="false">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="properties">
+            <props>
+                <prop key="desiredProxyFactory">nullProxyFactory</prop>
+                <prop key="application_url">http://dev01.dev.hotwire.com:7001</prop>
+                <prop key="env">dev</prop>
+                <prop key="posa_path">/uk</prop>
+                <prop key="remote_url">http://dev01.dev.hotwire.com:7101</prop>
+                <!-- or MobileWebApp or AppContext -->
+                <prop key="use_cluster">0</prop>
+                <!-- if this port is not 0, will start grid on that specific port, very bad for automation, good for iphone development -->
+                <prop key="known_good_username">savedCreditCard@hotwire.com</prop>
+                <prop key="known_good_password">password</prop>
+                <prop key="known_users_name">Test Booking</prop>
+                <prop key="browserType">firefox</prop>
+                <prop key="maxActiveBrowsers">1</prop>
+                <prop key="runEnv_name">dev01</prop>
+                <prop key="payment_processor">default</prop>
+            </props>
+        </property>
+    </bean>
+
+    <util:map id="posToCountryOrigin" map-class="java.util.HashMap">
+        <entry key="United States" value="United States"/>
+        <entry key="US" value="United States"/>
+        <entry key="US/Canada" value="United States"/>
+        <entry key="Canada" value="Canada"/>
+        <entry key="United Kingdom" value="United Kingdom"/>
+        <entry key="Ireland" value="Ireland"/>
+        <entry key="Sverige" value="Sweden"/>
+        <entry key="Norge" value="Norway"/>
+        <entry key="Danmark" value="Denmark"/>
+        <entry key="Australia" value="Australia"/>
+        <entry key="New Zealand" value="New Zealand"/>
+        <entry key="Deutschland" value="Germany"/>
+        <entry key="Hong Kong" value="Hong Kong"/>
+        <entry key="Singapore" value="Singapore"/>
+        <entry key="México" value="Mexico"/>
+        <!-- Mobile pos selection which is just 2 letter country code in URL -->
+        <entry key="uk" value="U.K."/>
+        <entry key="ie" value="Ireland"/>
+        <entry key="se" value="Sweden"/>
+        <entry key="no" value="Norway"/>
+        <entry key="dk" value="Denmark"/>
+        <entry key="au" value="Australia"/>
+        <entry key="nz" value="New Zealand"/>
+        <entry key="de" value="Germany"/>
+        <entry key="hk" value="Hong Kong"/>
+        <entry key="sg" value="Singapore"/>
+        <entry key="mx" value="Mexico"/>
+        <entry key="ca" value="Canada"/>
+        <entry key="us" value="United States"/>
+    </util:map>
+
+    <util:map id="desktopPosCurrencyMap" map-class="java.util.HashMap">
+        <entry key="United States" value="USD"/>
+        <entry key="US/Canada" value="USD"/>
+        <entry key="United Kingdom" value="GBP"/>
+        <entry key="Ireland" value="EUR"/>
+        <entry key="Sverige" value="SEK"/>
+        <entry key="Norge" value="NOK"/>
+        <entry key="Danmark" value="DKK"/>
+        <entry key="Australia" value="AUD"/>
+        <entry key="New Zealand" value="NZD"/>
+        <entry key="Deutschland" value="EUR"/>
+        <entry key="Hong Kong" value="HKD"/>
+        <entry key="Singapore" value="SGD"/>
+        <entry key="México" value="MXN"/>
+        <entry key="uk" value="GBP"/>
+        <entry key="ie" value="EUR"/>
+        <entry key="se" value="SEK"/>
+        <entry key="no" value="NOK"/>
+        <entry key="dk" value="DKK"/>
+        <entry key="au" value="AUD"/>
+        <entry key="nz" value="NZD"/>
+        <entry key="de" value="EUR"/>
+        <entry key="hk" value="HKD"/>
+        <entry key="sg" value="SGD"/>
+        <entry key="mx" value="MXN"/>
+        <entry key="ca" value="CAD"/>
+        <entry key="us" value="USD"/>
+    </util:map>
+
+    <bean id="testVT" class="java.lang.String">
+        <constructor-arg value="vt.FOO13=2"/>
+    </bean>
+    <bean id="testAutParam" class="java.lang.String">
+        <constructor-arg value="aut=true"/>
+    </bean>
+
+    <bean id="sessionModifingParams" class="com.hotwire.util.webdriver.SessionModifingParams"/>
+    <bean id="sessionParameters" class="com.hotwire.test.steps.application.SessionParameters"/>
+
+
+    <util:properties id="applicationProperties"/>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="${jdbcUrl}"/>
+        <property name="username" value="silktest"/>
+        <property name="password" value="silktest"/>
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <bean id="abstractApplicationModel"
+          abstract="true"
+          class="com.hotwire.test.steps.application.ApplicationModelTemplate">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+        <property name="applicationUrl" ref="applicationUrl"/>
+        <property name="sessionModifingParams" ref="sessionModifingParams"/>
+        <property name="refreshUtilPath" value="test/refreshUtil.jsp"/>
+        <property name="sessionParameters" ref="sessionParameters" />
+        <property name="paymentProcessor" value="${payment_processor}"/>
+    </bean>
+
+    <!--Database queries support-->
+    <bean id="databaseSupport" class="org.springframework.jdbc.core.simple.SimpleJdbcDaoSupport">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <beans profile="WebApp">
+      <bean id="applicationModel" parent="abstractApplicationModel" class="com.hotwire.test.steps.application.ApplicationModelWebApp"/>
+      <bean id="applicationUrl" class="java.net.URL" >
+          <constructor-arg value="${application_url}"/>
+      </bean>
+      <bean id="posaPath" class="java.lang.String">
+          <constructor-arg value="${posa_path}"/>
+      </bean>
+      <bean id="retailHeroLinkFactory" class="com.hotwire.test.steps.util.RetailHeroLinkFactory" init-method="init"/>
+    </beans>
+
+    <beans profile="RowWebApp">
+        <bean id="applicationModel" parent="abstractApplicationModel" class="com.hotwire.test.steps.application.ApplicationModelRowWebApp"/>
+        <bean id="applicationUrl" class="java.net.URL">
+            <constructor-arg value="${application_url}${posa_path}"/>
+        </bean>
+        <bean id="posaPath" class="java.lang.String">
+          <constructor-arg value="${posa_path}"/>
+        </bean>
+        <bean id="retailHeroLinkFactory" class="com.hotwire.test.steps.util.RetailHeroLinkFactory" init-method="init"/>
+    </beans>
+
+    <beans profile="MobileWebApp">
+      <bean id="applicationUrl" class="java.net.URL" >
+          <constructor-arg value="${application_url}/mobile"/>
+      </bean>
+      <bean id="posaPath" class="java.lang.String">
+          <constructor-arg value="${posa_path}"/>
+      </bean>
+      <bean id="applicationModel" parent="abstractApplicationModel" class="com.hotwire.test.steps.application.ApplicationModelMobileWebApp"/>
+      <bean id="retailHeroLinkFactory" class="com.hotwire.test.steps.util.RetailHeroLinkFactory" init-method="init"/>
+    </beans>
+
+</beans>

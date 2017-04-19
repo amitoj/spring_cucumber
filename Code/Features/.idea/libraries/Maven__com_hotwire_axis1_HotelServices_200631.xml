@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hotwire.axis1:HotelServices:200631">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/axis1/HotelServices/200631/HotelServices-200631.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/axis1/HotelServices/200631/HotelServices-200631-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/axis1/HotelServices/200631/HotelServices-200631-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

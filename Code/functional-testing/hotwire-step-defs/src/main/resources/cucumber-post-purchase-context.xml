@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2014 Hotwire. All Rights Reserved.
+  ~
+  ~ This software is the proprietary information of Hotwire.
+  ~ Use is subject to license terms.
+  -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans profile="WebApp">
+        <bean id="carPostPurchaseModel" class="com.hotwire.test.steps.post.purchase.car.CarPostPurchaseModelWebApp">
+            <property name="webdriverInstance" ref="webdriverInstance"/>
+        </bean>
+    </beans>
+
+</beans>

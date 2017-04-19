@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2013 Hotwire. All Rights Reserved.
+  ~
+  ~ This software is the proprietary information of Hotwire.
+  ~ Use is subject to license terms.
+  -->
+
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <bean id="purchaseParameters" class="com.hotwire.test.steps.purchase.PurchaseParametersImpl">
+        <property name="userInformation" ref="randomGuestUser"/>
+        <property name="paymentMethodType" value="CreditCard"/>
+        <property name="passengerList">
+            <list>
+                <bean class="com.hotwire.test.steps.search.air.PassengerData">
+                    <property name="firstName" value="Test"/>
+                    <property name="lastName" value="Hotwire"/>
+                    <property name="dayBirthdayDate" value="10"/>
+                    <property name="monthBirthdayDate" value="10"/>
+                    <property name="yearBirthdayDate" value="1979"/>
+                    <property name="gender" value="male"/>
+                </bean>
+            </list>
+        </property>
+        <property name="listADAAmenities" ref = "adaAmenitiesId" />
+        <property name="savedCreditCard" value="VISA1111" />
+    </bean>
+
+    <bean id="carDataVerificationParameters" class="com.hotwire.selenium.desktop.row.models.CarDataVerificationParameters" />
+    <bean id="adaAmenitiesId" class="java.util.ArrayList" />
+
+    <bean id="purchaseModelTemplate" abstract="true" class="com.hotwire.test.steps.purchase.PurchaseModelTemplate">
+        <property name="webdriverInstance" ref="webdriverInstance"/>
+        <property name="purchaseParameters" ref="purchaseParameters"/>
+        <property name="searchParameters" ref="searchParameters"/>
+        <property name="authenticationParameters" ref="knownGoodAuthenticationParameters"/>
+    </bean>
+
+    <bean id="purchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.DelegatingPurchaseModel">
+        <property name="hotelPurchaseModel" ref="hotelPurchaseModel"/>
+        <property name="airPurchaseModel" ref="airPurchaseModel"/>
+        <property name="carPurchaseModel" ref="carPurchaseModel"/>
+    </bean>
+
+    <beans profile="WebApp">
+        <bean id="hotelPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.hotel.HotelPurchaseModelWebApp">
+            <property name="runEnv_name" value="${runEnv_name}"/>
+        </bean>
+        <bean id="airPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.air.AirPurchaseModelWebApp"/>
+        <bean id="carPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.car.CarPurchaseModelWebApp"/>
+    </beans>
+
+    <beans profile="MobileWebApp">
+        <bean id="hotelPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.hotel.HotelPurchaseModelMobileWebApp"/>
+        <bean id="airPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.air.AirPurchaseModelTemplate"/>
+        <bean id="carPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.car.CarPurchaseModelMobileWebApp"/>
+    </beans>
+
+    <beans profile="RowWebApp">
+        <bean id="hotelPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.hotel.HotelPurchaseModelRowWebApp"/>
+        <bean id="airPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.air.AirPurchaseModelTemplate"/>
+        <bean id="carPurchaseModel" parent="purchaseModelTemplate" class="com.hotwire.test.steps.purchase.car.CarPurchaseModelRowWebApp"/>
+    </beans>
+
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/bex-page-objects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/bex-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/c3-page-objects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/c3-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/database-support" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/desktop-page-objects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/distributed-opaque-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/hotel-supply-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/hotwire-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/mobile-api-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/mobile-page-objects" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.0-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../../modules/functional-testing/xnet-api-1.1-step-defs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Core_SF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/DistributionAPIs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MobileAPIs_GSI" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MobileAPIs_GSI/SpringMVC_MobileAPIs/mobile-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Platform_SF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SharedServices_SF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Supply_SF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Supply_SF/HotelXnet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Supply_SF/HotelXnet/XNet" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Supply_SF/HotelXnet/XNet11" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Supply_SF/Site" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Supply_SF/SupplyJobs" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Tools_GSI" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Web_GSI" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Web_SF" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/features-parent" charset="UTF-8" />
+  </component>
+</project>

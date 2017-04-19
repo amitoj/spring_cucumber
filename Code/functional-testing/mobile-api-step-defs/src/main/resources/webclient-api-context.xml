@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context" xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.2.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context-3.2.xsd">
+
+    <context:property-placeholder location="cxf-webclient.properties" ignore-unresolvable="true"/>
+
+    <bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider">
+        <property name="supportUnwrapped" value="true"/>
+        <property name="wrapperName" value="nodeName"/>
+    </bean>
+
+    <util:list id="webClientProviders">
+        <ref bean="jsonProvider"/>
+    </util:list>
+
+    <bean id="webClient" class="org.apache.cxf.jaxrs.client.WebClient" factory-method="create">
+        <constructor-arg type="java.lang.String" value="${application_url}"/>
+        <constructor-arg ref="webClientProviders"/>
+        <constructor-arg type="boolean" value="true"/>
+    </bean>
+</beans>

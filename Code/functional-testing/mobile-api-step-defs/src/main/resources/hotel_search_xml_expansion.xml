@@ -1,0 +1,9 @@
+<!DOCTYPE foo [ <!ENTITY a "1234567890" > <!ENTITY b "&a;&a;&a;&a;&a;&a;&a;&a;&a;&a;" > <!ENTITY c "&b;&b;&b;&b;&b;&b;&b;&b;&b;&b;" > <!ENTITY d "&c;&c;&c;&c;&c;&c;&c;&c;&c;&c;" > <!ENTITY e "&d;&d;&d;&d;&d;&d;&d;&d;&d;&d;" > <!ENTITY f "&e;&e;&e;&e;&e;&e;&e;&e;&e;&e;" > <!ENTITY g "&f;&f;&f;&f;&f;&f;&f;&f;&f;&f;" > <!ENTITY h "&g;&g;&g;&g;&g;&g;&g;&g;&g;&g;" > <!ENTITY i "&h;&h;&h;&h;&h;&h;&h;&h;&h;&h;" > <!ENTITY j "&i;&i;&i;&i;&i;&i;&i;&i;&i;&i;" > ]>
+<HotelSearchRQ requestResultType = "BEST">
+    <ClientInfo clientID="12345" customerID="2290530351" latLong="41.53255,-42.57845" countryCode="us" currencyCode="USD" />
+    <SearchCriteria>
+        <Location destinationLocation="sfo"/>
+        <StartAndEndDate start="2014-07-15T00:00:00" end="2014-07-18T00:00:00"/>
+        <GuestCount numberOfRooms="1" adults="2" children="0" >&j;</GuestCount>
+    </SearchCriteria>
+</HotelSearchRQ>

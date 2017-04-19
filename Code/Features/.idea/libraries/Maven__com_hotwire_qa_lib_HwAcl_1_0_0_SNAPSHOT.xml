@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.hotwire.qa.lib:HwAcl:1.0.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/qa/lib/HwAcl/1.0.0-SNAPSHOT/HwAcl-1.0.0-20141212.073742-43.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/qa/lib/HwAcl/1.0.0-SNAPSHOT/HwAcl-1.0.0-20141212.073742-43-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/hotwire/qa/lib/HwAcl/1.0.0-SNAPSHOT/HwAcl-1.0.0-20141212.073742-43-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

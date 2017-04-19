@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CheckStyle-IDEA">
+    <option name="configuration">
+      <map>
+        <entry key="active-configuration" value="HTTP_URL:http://nexus01.hotwire.com:8081/nexus/service/local/artifact/maven/redirect?r=public&amp;g=com.hotwire.maven&amp;a=StaticAnalysisConfig&amp;v=3.1.0&amp;c=checkstyle&amp;e=xml :CheckStyle - Hotwire" />
+        <entry key="check-nonjava-files" value="false" />
+        <entry key="check-test-classes" value="false" />
+        <entry key="location-0" value="HTTP_URL:http://nexus01.hotwire.com:8081/nexus/service/local/artifact/maven/redirect?r=public&amp;g=com.hotwire.maven&amp;a=StaticAnalysisConfig&amp;v=3.1.0&amp;c=checkstyle&amp;e=xml :CheckStyle - Hotwire" />
+        <entry key="location-1" value="CLASSPATH:/sun_checks.xml:The default CheckStyle rules" />
+        <entry key="suppress-errors" value="false" />
+        <entry key="thirdparty-classpath" value="" />
+      </map>
+    </option>
+  </component>
+</project>

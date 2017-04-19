@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+    <!--Main properties configuration-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE"/>
+        <property name="properties">
+            <props>
+                <prop key="desiredProxyFactory">nullProxyFactory</prop>
+                <prop key="application_url">http://dev10.dev.hotwire.com:7001</prop>
+                <prop key="env">dev</prop>
+                <!-- or MobileWebApp or AppContext -->
+                <prop key="localGrid">false</prop>
+                <prop key="use_cluster">0</prop>
+                <prop key="seleniumGridUrl">http://this.invalid.url.will.result.in.a.localgrid.on.the.local.port/</prop>
+                <prop key="localGridPort">0</prop>
+                <!-- if this port is not 0, will start grid on that specific port, very bad for automation, good for iphone development -->
+                <prop key="use_cluster">0</prop>
+                <prop key="known_good_username">savedCreditCard@hotwire.com</prop>
+                <prop key="known_good_password">password</prop>
+                <prop key="known_users_name">Test Booking</prop>
+                <prop key="browserType">firefox</prop>
+                <prop key="userAgentString">userAgentValue</prop>
+                <prop key="clientDebug">false</prop>
+                <prop key="maxActiveBrowsers">2</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!--Convertors-->
+    <bean id="applicationUrl" class="java.net.URL">
+        <constructor-arg value="${application_url}"/>
+    </bean>
+
+
+
+</beans>

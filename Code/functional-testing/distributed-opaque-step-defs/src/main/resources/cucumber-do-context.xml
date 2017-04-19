@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-lazy-init="true"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd"
+       xmlns:util="http://www.springframework.org/schema/util">
+
+    <bean lazy-init="false" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property value="SYSTEM_PROPERTIES_MODE_OVERRIDE" name="systemPropertiesModeName"/>
+        <property name="properties">
+            <props>
+                <prop key="api_application_url">http://dev01.dev.hotwire.com</prop>
+                <prop key="use_cluster">0</prop>
+            </props>
+        </property>
+    </bean>
+
+     <bean id="apiUrl" class="java.net.URI">
+         <constructor-arg value="${api_application_url}" />
+     </bean>
+
+    <bean id="apiProperties" class="com.hotwire.test.openapi.ApiProperties">
+        <property name="apiUrl" ref="apiUrl"/>
+        <property name="useCluster" value="${use_cluster}"/>
+        <property name="apiKey" value="g8yyq9p5detdm873n5cjkrdx"/>
+    </bean>
+
+    <bean id="searchProperties" class="com.hotwire.test.openapi.SearchProperties">
+        <property name="carSearchPath" value="search/car"/>
+        <property name="hotelSearchPath" value="search/hotel"/>
+        <property name="hotelDetailsPath" value="availability/hotel"/>
+        <property name="carDetailsPath" value="availability/car"/>
+        <property name="hotelDealsPath" value="deal/hotel"/>
+        <property name="neighborhoodPath" value="meta/neighborhood"/>
+        <property name="amenitiesPath" value="secure/amenities/hotel"/>
+        <property name="hotelTrtPath" value="trt/hotel"/>
+        <property name="pickupTime" value="11:30"/>
+        <property name="dropoffTime" value="13:00"/>
+        <property name="rooms" value="1"/>
+        <property name="adults" value="2"/>
+        <property name="children" value="0"/>
+    </bean>
+
+    <bean id="bookingProperties" class="com.hotwire.test.openapi.BookingProperties">
+        <!--<property name="carBookingPath" value="secure/booking/car"/>-->
+        <property name="hotelBookingPath" value="secure/booking/hotel"/>
+        <property name="hotelStatusPath" value="secure/status/hotel"/>
+        <property name="firstName" value="Test"/>
+        <property name="lastName" value="Booking"/>
+        <property name="email" value="test@hotwire.com"/>
+        <property name="phone" value="415-377-6601"/>
+        <property name="currencyCode" value="USD"/>
+    </bean>
+
+    <bean id="refundProperties" class="com.hotwire.test.openapi.RefundProperties">
+        <property name="refundPath" value="secure/cancel/hotel"/>
+        <property name="refundType" value="2"/>
+        <property name="shouldCancel" value="true"/>
+        <property name="refundReason" value="45"/>
+        <property name="refundCurrencyCode" value="USD"/>
+        <property name="rebooked" value="false"/>
+        <property name="comments" value="TestRefund"/>
+    </bean>
+
+    <bean id="carService" class="com.hotwire.test.openapi.CarService" />
+    <bean id="hotelService" class="com.hotwire.test.openapi.HotelService"/>
+
+    <util:map id="models">
+        <entry key="car" value-ref="carService"/>
+        <entry key="hotel" value-ref="hotelService"/>
+    </util:map>
+
+</beans>

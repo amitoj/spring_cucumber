@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: com.perforce:p4:DEPRECATED">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/perforce/p4/DEPRECATED/p4-DEPRECATED.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/com/perforce/p4/DEPRECATED/p4-DEPRECATED-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/com/perforce/p4/DEPRECATED/p4-DEPRECATED-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
